@@ -1,0 +1,13 @@
+{
+  "name": "narcan-delivery",
+  "private": true,
+  "version": "1.0.0",
+  "description": "State-by-state guide to getting naloxone in the United States.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "serve": "python -m http.server 8080",
+    "clean": "node -e \"import('node:fs/promises').then(fs=>fs.rm('states',{recursive:true,force:true}))\""
+  },
+  "engines": { "node": ">=18" }
+}
