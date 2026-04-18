@@ -1,0 +1,31 @@
+name: Nightly rebuild (Google Sheet pickup)
+
+# Rebuilds the site once a day so changes made in the Google Sheet flow into
+# the prerendered HTML. Cloudflare Pages builds on every push, so this just
+# triggers a fresh build via its deploy hook.
+#
+# Setup:
+#   1. In Cloudflare Pages → the project → Settings → Builds & deployments,
+#      create a "Deploy hook" and copy the URL.
+#   2. In this GitHub repo → Settings → Secrets and variables → Actions,
+#      add a secret named CLOUDFLARE_DEPLOY_HOOK with that URL.
+#
+# You can also fire it on-demand from the Actions tab.
+
+on:
+  schedule:
+    - cron: '0 9 * * *'   # 09:00 UTC daily (~4am ET / 2am MT)
+  workflow_dispatch: {}
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Cloudflare Pages deploy hook
+        run: |
+          if [ -z "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" ]; then
+            echo "::warning::CLOUDFLARE_DEPLOY_HOOK secret not set — skipping."
+            exit 0
+          fi
+          curl -fsSL -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+          echo "✓ Triggered Cloudflare Pages rebuild"

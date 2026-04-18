@@ -1,0 +1,28 @@
+name: Build check
+
+# Runs the prerender build on every push / PR to make sure nothing broke
+# before Cloudflare Pages picks it up.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Build
+        run: npm run build
+      - name: Verify outputs
+        run: |
+          test -f index.html
+          test -f data.json
+          test -f sitemap.xml
+          test -f states/california/index.html
+          echo "✓ All expected files present"
