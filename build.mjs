@@ -359,11 +359,18 @@ async function main() {
   await fs.writeFile(path.join(ROOT, 'data.json'), JSON.stringify(dataJson, null, 2), 'utf8');
 
   // ----- sitemap.xml (clean URLs) -----
+  // Sitemap spec requires W3C Datetime for <lastmod>. Anything else (e.g. the
+  // sentinel "UNKNOWN" used in data.js) causes Google Search Console to reject
+  // the whole file. Validate, otherwise fall back to the build date.
+  const BUILD_DATE = new Date().toISOString().slice(0, 10);
+  const isW3CDate = v => typeof v === 'string' && /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:?\d{2})?)?$/.test(v);
+  const safeLastmod = v => (isW3CDate(v) ? v : BUILD_DATE);
+
   const urls = [
-    { loc: `${SITE}/`, freq: 'weekly', pri: '1.0' },
+    { loc: `${SITE}/`, lastmod: BUILD_DATE, freq: 'weekly', pri: '1.0' },
     ...data.map(s => ({
       loc: `${SITE}/states/${slugify(s.state)}/`,
-      lastmod: s.last_updated,
+      lastmod: safeLastmod(s.last_updated),
       freq: 'monthly',
       pri: '0.8'
     }))
@@ -371,7 +378,8 @@ async function main() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
-    <loc>${u.loc}</loc>${u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : ''}
+    <loc>${u.loc}</loc>
+    <lastmod>${u.lastmod}</lastmod>
     <changefreq>${u.freq}</changefreq>
     <priority>${u.pri}</priority>
   </url>`).join('\n')}
