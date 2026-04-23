@@ -1,0 +1,10 @@
+# Vulnerability disclosure for narcan.delivery
+# If you've found a security issue, please email the address below.
+# This is a public-interest, non-commercial reference site — we don't
+# run a bug bounty, but responsible reports are genuinely appreciated.
+
+Contact: mailto:security@narcan.delivery
+Contact: mailto:corrections@narcan.delivery
+Expires: 2027-04-22T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://narcan.delivery/.well-known/security.txt
