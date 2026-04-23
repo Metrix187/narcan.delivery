@@ -7,7 +7,7 @@
   Cross-Origin-Opener-Policy: same-origin
   Cross-Origin-Resource-Policy: same-origin
   Permissions-Policy: geolocation=(), camera=(), microphone=(), interest-cohort=(), browsing-topics=()
-  X-Robots-Tag: all, noai, noimageai
+  X-Robots-Tag: all
 
 /*.css
   Cache-Control: public, max-age=31536000, immutable
