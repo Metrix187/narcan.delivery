@@ -1,6 +1,6 @@
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com https://docs.google.com https://doc-00-c8-sheets.googleusercontent.com https://*.googleusercontent.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com https://cdn.amplitude.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: blob:; media-src 'self' blob:; worker-src 'self' blob:; connect-src 'self' https://static.cloudflareinsights.com https://cloudflareinsights.com https://docs.google.com https://doc-00-c8-sheets.googleusercontent.com https://*.googleusercontent.com https://api2.amplitude.com https://api-sr.amplitude.com https://sr-client-cfg.amplitude.com https://*.amplitude.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
@@ -11,6 +11,9 @@
 
 /*.css
   Cache-Control: public, max-age=31536000, immutable
+
+/analytics.js
+  Cache-Control: public, max-age=300, must-revalidate
 
 /*.js
   Cache-Control: public, max-age=31536000, immutable
