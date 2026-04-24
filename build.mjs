@@ -287,10 +287,34 @@ async function applySheetOverrides(data) {
   }
 }
 
+// Refresh the inlined <style> block in index.html from styles.css so the
+// stylesheet has a single source of truth. The block is delimited by
+// <!-- BUILD:INLINE-CSS --> ... <!-- /BUILD:INLINE-CSS --> sentinels.
+async function syncInlinedCSS() {
+  const htmlPath = path.join(ROOT, 'index.html');
+  const [html, css] = await Promise.all([
+    fs.readFile(htmlPath, 'utf8'),
+    fs.readFile(path.join(ROOT, 'styles.css'), 'utf8'),
+  ]);
+  const re = /<!-- BUILD:INLINE-CSS[^>]*-->[\s\S]*?<!-- \/BUILD:INLINE-CSS -->/;
+  if (!re.test(html)) {
+    throw new Error('index.html is missing the BUILD:INLINE-CSS sentinels');
+  }
+  const next = html.replace(
+    re,
+    `<!-- BUILD:INLINE-CSS (regenerated from styles.css by build.mjs — edit styles.css, not here) -->\n<style>\n${css}</style>\n<!-- /BUILD:INLINE-CSS -->`
+  );
+  if (next !== html) {
+    await fs.writeFile(htmlPath, next, 'utf8');
+    console.log('✓ Inlined styles.css into index.html');
+  }
+  return next;
+}
+
 async function main() {
   let data = await loadData();
   data = await applySheetOverrides(data);
-  const tpl  = await fs.readFile(path.join(ROOT, 'index.html'), 'utf8');
+  const tpl  = await syncInlinedCSS();
 
   // ----- per-state HTML -----
   for (const s of data) {
