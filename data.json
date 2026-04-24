@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-18T01:53:15.184Z",
+  "generated_at": "2026-04-24T03:45:47.718Z",
   "source": "https://narcan.delivery",
   "license": "Public domain (CC0). Attribution appreciated.",
   "count": 50,
@@ -7,7 +7,7 @@
     {
       "state": "Alabama",
       "abbreviation": "AL",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Prescription/Standing Order/OTC",
         "good_samaritan_overdose_immunity": {
@@ -50,7 +50,7 @@
     {
       "state": "Alaska",
       "abbreviation": "AK",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist Independent Prescribing",
         "good_samaritan_overdose_immunity": {
@@ -87,7 +87,7 @@
     {
       "state": "Arizona",
       "abbreviation": "AZ",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -129,7 +129,7 @@
     {
       "state": "Arkansas",
       "abbreviation": "AR",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Protocol",
         "good_samaritan_overdose_immunity": {
@@ -166,7 +166,7 @@
     {
       "state": "California",
       "abbreviation": "CA",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist Furnishing Protocol",
         "good_samaritan_overdose_immunity": {
@@ -208,7 +208,7 @@
     {
       "state": "Colorado",
       "abbreviation": "CO",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -250,7 +250,7 @@
     {
       "state": "Connecticut",
       "abbreviation": "CT",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist Prescribing Protocol",
         "good_samaritan_overdose_immunity": {
@@ -288,7 +288,7 @@
     {
       "state": "Delaware",
       "abbreviation": "DE",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Standing Order / Community Access",
         "good_samaritan_overdose_immunity": {
@@ -325,7 +325,7 @@
     {
       "state": "Florida",
       "abbreviation": "FL",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -362,7 +362,7 @@
     {
       "state": "Georgia",
       "abbreviation": "GA",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-04-17",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
