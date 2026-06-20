@@ -1,4 +1,4 @@
-/* narcan.delivery — app.js
+/* narcan.delivery app.js
  * Vanilla JS. No framework. No build step.
  *
  * Responsibilities:
@@ -6,7 +6,7 @@
  *   - Read / write ?state=XX in the URL.
  *   - Render the state view from the embedded dataset.
  *   - If a published Google Sheet CSV is available, fetch it and override
- *     matching fields at runtime (automation-friendly — no redeploy needed).
+ *     matching fields at runtime (automation-friendly, no redeploy needed).
  *   - Update <title>, <meta description>, and canonical on state change.
  */
 
@@ -60,7 +60,9 @@
     if (!iso) return null;
     const d = new Date(iso);
     if (Number.isNaN(d.getTime())) return null;
-    return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+    // Date-only values (YYYY-MM-DD) parse as UTC midnight; format in UTC too so
+    // a "2026-06-10" date never displays as the previous day west of Greenwich.
+    return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
   };
 
   const isStale = (iso) => {
@@ -68,6 +70,12 @@
     const d = new Date(iso); if (Number.isNaN(d.getTime())) return false;
     const cutoff = new Date(); cutoff.setMonth(cutoff.getMonth() - 6);
     return d < cutoff;
+  };
+
+  // Human-readable label for a source URL (bare hostname).
+  const hostLabel = (url) => {
+    try { return new URL(url).hostname.replace(/^www\./, ''); }
+    catch { return String(url); }
   };
 
   // =========================================================================
@@ -103,34 +111,41 @@
     return out;
   }
 
+  // A sheet cell is "absent" if it's empty or the literal sentinel "UNKNOWN".
+  // Treating "UNKNOWN" as a real value would let an un-researched sheet row
+  // clobber good embedded data, so it must always fall through to the base.
+  const isBlankCell = (v) => v == null || String(v).trim() === '' || String(v).trim().toUpperCase() === 'UNKNOWN';
+  const pickCell = (ov, base) => (isBlankCell(ov) ? base : String(ov).trim());
+
   function mergeSheet(base, ov) {
     if (!ov || !base) return base;
-    const gsExists = ov.gs_exists === 'true' ? true
-                   : ov.gs_exists === 'false' ? false
+    const gsCell = String(ov.gs_exists ?? '').trim().toLowerCase();
+    const gsExists = gsCell === 'true' ? true
+                   : gsCell === 'false' ? false
                    : base.legal_framework?.good_samaritan_overdose_immunity?.exists;
     return {
       ...base,
-      last_updated: ov.last_updated || base.last_updated,
+      last_updated: pickCell(ov.last_updated, base.last_updated),
       legal_framework: {
         ...base.legal_framework,
-        naloxone_legal_status: ov.naloxone_legal_status || base.legal_framework?.naloxone_legal_status,
+        naloxone_legal_status: pickCell(ov.naloxone_legal_status, base.legal_framework?.naloxone_legal_status),
         good_samaritan_overdose_immunity: {
           exists: gsExists,
-          scope:  ov.gs_scope || base.legal_framework?.good_samaritan_overdose_immunity?.scope,
+          scope:  pickCell(ov.gs_scope, base.legal_framework?.good_samaritan_overdose_immunity?.scope),
         }
       },
       access_channels: {
         ...base.access_channels,
         pharmacies: {
           ...base.access_channels.pharmacies,
-          mechanism:               ov.pharmacy_mechanism || base.access_channels.pharmacies.mechanism,
-          medicaid_coverage_notes: ov.medicaid_notes     || base.access_channels.pharmacies.medicaid_coverage_notes,
-          typical_cost:            ov.typical_cost       || base.access_channels.pharmacies.typical_cost,
+          mechanism:               pickCell(ov.pharmacy_mechanism, base.access_channels.pharmacies.mechanism),
+          medicaid_coverage_notes: pickCell(ov.medicaid_notes,     base.access_channels.pharmacies.medicaid_coverage_notes),
+          typical_cost:            pickCell(ov.typical_cost,        base.access_channels.pharmacies.typical_cost),
         }
       },
       practical_guidance: {
-        how_to_get_naloxone_quickly: ov.how_to_get_quickly || base.practical_guidance.how_to_get_naloxone_quickly,
-        barriers_and_workarounds:    ov.barriers           || base.practical_guidance.barriers_and_workarounds,
+        how_to_get_naloxone_quickly: pickCell(ov.how_to_get_quickly, base.practical_guidance.how_to_get_naloxone_quickly),
+        barriers_and_workarounds:    pickCell(ov.barriers,           base.practical_guidance.barriers_and_workarounds),
       }
     };
   }
@@ -149,7 +164,7 @@
       // If we're already rendering a state, re-render with overrides applied.
       const abbr = new URLSearchParams(location.search).get('state');
       if (abbr) renderState(abbr.toUpperCase());
-    } catch { /* silent — embedded data is fine */ }
+    } catch { /* silent; embedded data is fine */ }
   }
 
   // =========================================================================
@@ -252,9 +267,9 @@
 
     // Pharmacy
     const ph = s.access_channels?.pharmacies || {};
-    node.querySelector('[data-k="mechanism"]').textContent = ph.mechanism || '—';
-    node.querySelector('[data-k="medicaid"]').textContent  = ph.medicaid_coverage_notes || '—';
-    node.querySelector('[data-k="cost"]').textContent      = ph.typical_cost || '—';
+    node.querySelector('[data-k="mechanism"]').textContent = ph.mechanism || 'Not listed';
+    node.querySelector('[data-k="medicaid"]').textContent  = ph.medicaid_coverage_notes || 'Not listed';
+    node.querySelector('[data-k="cost"]').textContent      = ph.typical_cost || 'Not listed';
 
     // Mail
     const mailWrap = node.querySelector('[data-k="mail-wrap"]');
@@ -280,6 +295,16 @@
     if (s.practical_guidance?.barriers_and_workarounds) {
       barEl.textContent = s.practical_guidance.barriers_and_workarounds;
     } else barWrap.remove();
+
+    // Sources (provenance / link-rot trail)
+    const srcWrap = node.querySelector('[data-k="sources-wrap"]');
+    const srcList = node.querySelector('[data-k="sources"]');
+    const sources = Array.isArray(s.sources) ? s.sources : [];
+    if (sources.length) {
+      srcList.innerHTML = sources.map(u =>
+        `<li><a href="${encodeURI(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(hostLabel(u))}</a></li>`
+      ).join('');
+    } else srcWrap.remove();
 
     // Mount
     view.innerHTML = '';
@@ -339,7 +364,7 @@
   const DEFAULT_DESC  = 'The fastest way to get naloxone (Narcan) where you live. State-by-state guide to pharmacies, mail-order programs, local distributors, and Good Samaritan laws.';
 
   function updateDocMeta(s) {
-    document.title = `Naloxone in ${s.state} — how to get it fast | narcan.delivery`;
+    document.title = `Naloxone in ${s.state}. How to get it fast | narcan.delivery`;
     setMeta('description', `${s.practical_guidance?.how_to_get_naloxone_quickly || ''} Pharmacy, mail, and local options for naloxone in ${s.state}.`.trim());
     setCanonical(`https://narcan.delivery${stateUrl(s.abbreviation)}`);
   }

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/* narcan.delivery — prerender build
+/* narcan.delivery prerender build
  *
  * Reads data.js + index.html and emits:
  *   /states/<slug>/index.html   (one per state, with content inlined and
@@ -23,7 +23,7 @@ const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://narcan.delivery';
 
 // Same Google Sheet URL used by the client. If this URL is reachable at build
-// time, its values are merged INTO the prerendered HTML — so crawlers see the
+// time, its values are merged INTO the prerendered HTML, so crawlers see the
 // same data humans see. Override via SHEET_CSV_URL env var.
 const SHEET_CSV_URL = process.env.SHEET_CSV_URL ||
   'https://docs.google.com/spreadsheets/d/e/2PACX-1vQo7lo4oD6rLjt4NWISOR3AJy1AtPOA3com6ntoo6LX_lSV8dmylHDjLcj3KIklR44peURjksWPo86R/pub?gid=0&single=true&output=csv';
@@ -53,7 +53,9 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
 const formatDate = (iso) => {
   if (!iso) return '';
   const d = new Date(iso); if (isNaN(d)) return '';
-  return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric' });
+  // Date-only values (YYYY-MM-DD) parse as UTC midnight; format in UTC too so
+  // a "2026-06-10" date never displays as the previous day west of Greenwich.
+  return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
 };
 
 const isStale = (iso) => {
@@ -61,6 +63,12 @@ const isStale = (iso) => {
   const d = new Date(iso); if (isNaN(d)) return false;
   const cutoff = new Date(); cutoff.setMonth(cutoff.getMonth() - 6);
   return d < cutoff;
+};
+
+// Human-readable label for a source URL (bare hostname).
+const hostLabel = (url) => {
+  try { return new URL(url).hostname.replace(/^www\./, ''); }
+  catch { return String(url); }
 };
 
 // ---------------------------------------------------------------------------
@@ -118,9 +126,9 @@ function renderStateHTML(s) {
         <h3>At a pharmacy</h3>
       </div>
       <dl class="kv">
-        <dt>How it's dispensed</dt><dd>${esc(ph.mechanism || '—')}</dd>
-        <dt>Medicaid</dt><dd>${esc(ph.medicaid_coverage_notes || '—')}</dd>
-        <dt>Typical cost</dt><dd>${esc(ph.typical_cost || '—')}</dd>
+        <dt>How it's dispensed</dt><dd>${esc(ph.mechanism || 'Not listed')}</dd>
+        <dt>Medicaid</dt><dd>${esc(ph.medicaid_coverage_notes || 'Not listed')}</dd>
+        <dt>Typical cost</dt><dd>${esc(ph.typical_cost || 'Not listed')}</dd>
       </dl>
     </div>
 
@@ -146,6 +154,21 @@ function renderStateHTML(s) {
       <ul class="org-list">${comm.map(orgItemHTML).join('')}</ul>
     </div>` : ''}
 
+    <div class="card card-fallback">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 4h3l2 5-2.2 1.1a11 11 0 005.1 5.1L14 14l5 2v3a1 1 0 01-1 1A14 14 0 014 5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>If a link here stops working</h3>
+      </div>
+      <p class="card-body">Programs and websites change. These free phone lines work nationwide and can point you to naloxone near you, no internet needed.</p>
+      <ul class="org-list fallback-list">
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>SAMHSA National Helpline</strong><span class="services">Free, confidential, 24/7, in English &amp; Spanish. Finds naloxone and treatment in any state.</span><span class="contact"><a href="tel:18006624357">1-800-662-4357</a></span></div></li>
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>988 Suicide &amp; Crisis Lifeline</strong><span class="services">Call or text, 24/7.</span><span class="contact"><a href="tel:988">988</a></span></div></li>
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>If someone is overdosing right now</strong><span class="services">Emergency services.</span><span class="contact"><a href="tel:911">911</a></span></div></li>
+      </ul>
+    </div>
+
     <div class="card card-legal">
       <div class="card-head">
         <span class="card-badge badge-lavender" aria-hidden="true">
@@ -167,6 +190,12 @@ function renderStateHTML(s) {
       <p class="card-body">${esc(s.practical_guidance.barriers_and_workarounds)}</p>
     </div>` : ''}
 
+    ${Array.isArray(s.sources) && s.sources.length ? `
+    <details class="sources">
+      <summary>Sources &amp; how this was verified</summary>
+      <ul class="source-list">${s.sources.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(hostLabel(u))}</a></li>`).join('')}</ul>
+    </details>` : ''}
+
     <div class="share">
       <button class="btn btn-ghost" id="share-btn" type="button">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 14a3.5 3.5 0 004.9 0l4-4a3.5 3.5 0 00-5-5l-1 1M14 10a3.5 3.5 0 00-4.9 0l-4 4a3.5 3.5 0 005 5l1-1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
@@ -178,7 +207,7 @@ function renderStateHTML(s) {
 }
 
 // ---------------------------------------------------------------------------
-// Per-state structured data (JSON-LD) — GovernmentService + BreadcrumbList
+// Per-state structured data (JSON-LD): GovernmentService + BreadcrumbList
 // ---------------------------------------------------------------------------
 function jsonLdForState(s, url) {
   const gs = s.legal_framework?.good_samaritan_overdose_immunity;
@@ -242,30 +271,37 @@ function parseSheetCSV(csv) {
   return out;
 }
 
+// A sheet cell is "absent" if it's empty or the literal sentinel "UNKNOWN".
+// Treating "UNKNOWN" as a real value would let an un-researched sheet row
+// clobber good embedded data, so it must always fall through to the base.
+const isBlankCell = (v) => v == null || String(v).trim() === '' || String(v).trim().toUpperCase() === 'UNKNOWN';
+const pickCell = (ov, base) => (isBlankCell(ov) ? base : String(ov).trim());
+
 function mergeSheet(base, ov) {
   if (!ov) return base;
   const gs = base.legal_framework?.good_samaritan_overdose_immunity || {};
-  const gsExists = ov.gs_exists === 'true' ? true : ov.gs_exists === 'false' ? false : gs.exists;
+  const gsCell = String(ov.gs_exists ?? '').trim().toLowerCase();
+  const gsExists = gsCell === 'true' ? true : gsCell === 'false' ? false : gs.exists;
   return {
     ...base,
-    last_updated: ov.last_updated || base.last_updated,
+    last_updated: pickCell(ov.last_updated, base.last_updated),
     legal_framework: {
       ...base.legal_framework,
-      naloxone_legal_status: ov.naloxone_legal_status || base.legal_framework?.naloxone_legal_status,
-      good_samaritan_overdose_immunity: { exists: gsExists, scope: ov.gs_scope || gs.scope }
+      naloxone_legal_status: pickCell(ov.naloxone_legal_status, base.legal_framework?.naloxone_legal_status),
+      good_samaritan_overdose_immunity: { exists: gsExists, scope: pickCell(ov.gs_scope, gs.scope) }
     },
     access_channels: {
       ...base.access_channels,
       pharmacies: {
         ...base.access_channels.pharmacies,
-        mechanism:               ov.pharmacy_mechanism || base.access_channels.pharmacies?.mechanism,
-        medicaid_coverage_notes: ov.medicaid_notes     || base.access_channels.pharmacies?.medicaid_coverage_notes,
-        typical_cost:            ov.typical_cost       || base.access_channels.pharmacies?.typical_cost,
+        mechanism:               pickCell(ov.pharmacy_mechanism, base.access_channels.pharmacies?.mechanism),
+        medicaid_coverage_notes: pickCell(ov.medicaid_notes,     base.access_channels.pharmacies?.medicaid_coverage_notes),
+        typical_cost:            pickCell(ov.typical_cost,        base.access_channels.pharmacies?.typical_cost),
       }
     },
     practical_guidance: {
-      how_to_get_naloxone_quickly: ov.how_to_get_quickly || base.practical_guidance?.how_to_get_naloxone_quickly,
-      barriers_and_workarounds:    ov.barriers           || base.practical_guidance?.barriers_and_workarounds,
+      how_to_get_naloxone_quickly: pickCell(ov.how_to_get_quickly, base.practical_guidance?.how_to_get_naloxone_quickly),
+      barriers_and_workarounds:    pickCell(ov.barriers,           base.practical_guidance?.barriers_and_workarounds),
     }
   };
 }
@@ -279,10 +315,10 @@ async function applySheetOverrides(data) {
     const map = parseSheetCSV(csv);
     const hits = Object.keys(map).length;
     if (!hits) { console.log('  (sheet returned no rows, using embedded only)'); return data; }
-    console.log(`✓ Fetched Google Sheet — ${hits} row(s) merged`);
+    console.log(`✓ Fetched Google Sheet: ${hits} row(s) merged`);
     return data.map(s => map[s.abbreviation] ? mergeSheet(s, map[s.abbreviation]) : s);
   } catch (err) {
-    console.log(`  (sheet fetch skipped: ${err.message} — using embedded only)`);
+    console.log(`  (sheet fetch skipped: ${err.message}; using embedded only)`);
     return data;
   }
 }
@@ -302,7 +338,7 @@ async function syncInlinedCSS() {
   }
   const next = html.replace(
     re,
-    `<!-- BUILD:INLINE-CSS (regenerated from styles.css by build.mjs — edit styles.css, not here) -->\n<style>\n${css}</style>\n<!-- /BUILD:INLINE-CSS -->`
+    `<!-- BUILD:INLINE-CSS (regenerated from styles.css by build.mjs; edit styles.css, not here) -->\n<style>\n${css}</style>\n<!-- /BUILD:INLINE-CSS -->`
   );
   if (next !== html) {
     await fs.writeFile(htmlPath, next, 'utf8');
@@ -327,7 +363,7 @@ async function main() {
       // Title
       .replace(
         /<title>[\s\S]*?<\/title>/,
-        `<title>Naloxone in ${esc(s.state)} — how to get it fast | narcan.delivery</title>`
+        `<title>Naloxone in ${esc(s.state)}. How to get it fast | narcan.delivery</title>`
       )
       // Meta description
       .replace(
@@ -342,7 +378,7 @@ async function main() {
       // OG title
       .replace(
         /<meta property="og:title"[^>]*>/,
-        `<meta property="og:title" content="Naloxone in ${esc(s.state)} — how to get it fast" />`
+        `<meta property="og:title" content="Naloxone in ${esc(s.state)}. How to get it fast" />`
       )
       // OG description
       .replace(
