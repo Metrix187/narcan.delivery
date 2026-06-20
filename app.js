@@ -32,6 +32,8 @@
   const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   const SLUG_TO_ABBR = Object.fromEntries(DATA.map(s => [slugify(s.state), s.abbreviation]));
   const ABBR_TO_SLUG = Object.fromEntries(DATA.map(s => [s.abbreviation, slugify(s.state)]));
+  const ABBR_TO_NAME = Object.fromEntries(DATA.map(s => [s.abbreviation, s.state]));
+  const ADJACENCY = window.NALOXONE_ADJACENCY || {};
 
   // Read the requested state from either /states/<slug>/ or ?state=XX
   function abbrFromLocation() {
@@ -305,6 +307,16 @@
         `<li><a href="${encodeURI(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(hostLabel(u))}</a></li>`
       ).join('');
     } else srcWrap.remove();
+
+    // Bordering states (compare access across the line)
+    const nbrWrap = node.querySelector('[data-k="neighbors-wrap"]');
+    const nbrEl   = node.querySelector('[data-k="neighbors"]');
+    const nbrs = (ADJACENCY[abbr] || []).filter(a => ABBR_TO_SLUG[a]);
+    if (nbrs.length) {
+      nbrEl.innerHTML = nbrs.map(a =>
+        `<a class="chip" href="${stateUrl(a)}">${escapeHTML(ABBR_TO_NAME[a])}</a>`
+      ).join('');
+    } else nbrWrap.remove();
 
     // Mount
     view.innerHTML = '';

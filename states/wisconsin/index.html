@@ -409,6 +409,18 @@ p  { margin: 0 0 1em; }
 }
 .source-list a { font-size: .88rem; color: var(--sky-ink); word-break: break-word; }
 
+/* Bordering-states navigation */
+.neighbor-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 7px 14px; border-radius: 999px;
+  font-size: .9rem; font-weight: 500;
+  color: var(--sky-ink); background: var(--sky);
+  border: 1px solid var(--sky-bd);
+}
+.chip:hover { background: #D8E6F1; text-decoration: none; }
+.chip:focus-visible { outline: none; box-shadow: var(--focus); }
+
 /* Share row */
 .share {
   display: flex; gap: 10px; flex-wrap: wrap;
@@ -571,6 +583,7 @@ p  { margin: 0 0 1em; }
       <a href="#how-to-use">If it's happening now</a>
       <a href="#what-is">About naloxone</a>
       <a href="#faq">FAQ</a>
+      <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
   </div>
 </header>
@@ -688,6 +701,18 @@ p  { margin: 0 0 1em; }
     </div>
 
     
+    <div class="card card-neighbors">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 4v13M15 7v13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        </span>
+        <h3>Near a border?</h3>
+      </div>
+      <p class="card-body">Access and laws change at the state line. If you live near one of these, check there too.</p>
+      <div class="neighbor-chips"><a class="chip" href="/states/iowa/">Iowa</a><a class="chip" href="/states/illinois/">Illinois</a><a class="chip" href="/states/michigan/">Michigan</a><a class="chip" href="/states/minnesota/">Minnesota</a></div>
+    </div>
+
+    
     <details class="sources">
       <summary>Sources &amp; how this was verified</summary>
       <ul class="source-list"><li><a href="https://www.dhs.wisconsin.gov/aoda/naloxone.htm" target="_blank" rel="noopener noreferrer">dhs.wisconsin.gov</a></li><li><a href="https://wisconsinvoicesforrecovery.org/naloxzone/" target="_blank" rel="noopener noreferrer">wisconsinvoicesforrecovery.org</a></li><li><a href="https://www.dhs.wisconsin.gov/contracts/narcanr-direct-program.htm" target="_blank" rel="noopener noreferrer">dhs.wisconsin.gov</a></li></ul>
@@ -738,6 +763,7 @@ p  { margin: 0 0 1em; }
         </li>
       </ol>
       <p class="band-footnote">Naloxone cannot hurt someone who isn't on opioids. If you are unsure, give it anyway.</p>
+      <p class="band-cta"><a class="btn btn-ghost" href="/card/">Print a card to carry &rarr;</a></p>
     </div>
   </section>
 
@@ -810,6 +836,7 @@ p  { margin: 0 0 1em; }
     <div class="footer-meta">
       <p><strong>Data last reviewed:</strong> <time id="last-reviewed" datetime="">…</time></p>
       <p><strong>Data source:</strong> <span id="data-source-label">Embedded reference</span></p>
+      <p><a href="/es/" lang="es" hreflang="es">En español</a> · <a href="/card/">Print a rescue card</a></p>
       <p><a href="mailto:corrections@narcan.delivery?subject=Data%20correction">Submit a correction</a> · <a href="/data.json">Public JSON</a> · <a href="/sitemap.xml">Sitemap</a></p>
     </div>
     <p class="footer-emergency">In an emergency, call <a href="tel:911">911</a>. If you are in crisis, call or text <a href="tel:988">988</a>. To find naloxone or treatment anywhere in the U.S., call SAMHSA's free 24/7 line, <a href="tel:18006624357">1-800-662-4357</a>.</p>

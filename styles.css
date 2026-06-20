@@ -383,6 +383,18 @@ p  { margin: 0 0 1em; }
 }
 .source-list a { font-size: .88rem; color: var(--sky-ink); word-break: break-word; }
 
+/* Bordering-states navigation */
+.neighbor-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 7px 14px; border-radius: 999px;
+  font-size: .9rem; font-weight: 500;
+  color: var(--sky-ink); background: var(--sky);
+  border: 1px solid var(--sky-bd);
+}
+.chip:hover { background: #D8E6F1; text-decoration: none; }
+.chip:focus-visible { outline: none; box-shadow: var(--focus); }
+
 /* Share row */
 .share {
   display: flex; gap: 10px; flex-wrap: wrap;

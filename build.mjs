@@ -38,7 +38,10 @@ async function loadData() {
   new Function('window', src)(sandbox.window);
   const data = sandbox.window.NALOXONE_DATA;
   if (!Array.isArray(data)) throw new Error('data.js did not set window.NALOXONE_DATA');
-  return data.slice().sort((a, b) => a.state.localeCompare(b.state));
+  return {
+    data: data.slice().sort((a, b) => a.state.localeCompare(b.state)),
+    adjacency: sandbox.window.NALOXONE_ADJACENCY || {},
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -87,7 +90,7 @@ function orgItemHTML(org) {
   return `<li class="org-item"><div style="flex:1;min-width:0;">${parts.join('')}</div>${cost}</li>`;
 }
 
-function renderStateHTML(s) {
+function renderStateHTML(s, neighbors = []) {
   const gs   = s.legal_framework?.good_samaritan_overdose_immunity || {};
   const legal = s.legal_framework?.naloxone_legal_status;
   const upd   = s.last_updated;
@@ -188,6 +191,18 @@ function renderStateHTML(s) {
         <h3>Known barriers &amp; workarounds</h3>
       </div>
       <p class="card-body">${esc(s.practical_guidance.barriers_and_workarounds)}</p>
+    </div>` : ''}
+
+    ${neighbors.length ? `
+    <div class="card card-neighbors">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 4v13M15 7v13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        </span>
+        <h3>Near a border?</h3>
+      </div>
+      <p class="card-body">Access and laws change at the state line. If you live near one of these, check there too.</p>
+      <div class="neighbor-chips">${neighbors.map(n => `<a class="chip" href="${n.url}">${esc(n.name)}</a>`).join('')}</div>
     </div>` : ''}
 
     ${Array.isArray(s.sources) && s.sources.length ? `
@@ -348,8 +363,12 @@ async function syncInlinedCSS() {
 }
 
 async function main() {
-  let data = await loadData();
+  let { data, adjacency } = await loadData();
   data = await applySheetOverrides(data);
+  const byAbbr = Object.fromEntries(data.map(s => [s.abbreviation, s]));
+  const neighborsFor = (s) => (adjacency[s.abbreviation] || [])
+    .map(a => byAbbr[a]).filter(Boolean)
+    .map(n => ({ name: n.state, url: `/states/${slugify(n.state)}/` }));
   const tpl  = await syncInlinedCSS();
 
   // ----- per-state HTML -----
@@ -375,6 +394,9 @@ async function main() {
         /<link rel="canonical"[^>]*>/,
         `<link rel="canonical" href="${url}" />`
       )
+      // State pages have no per-state translation, so drop the homepage's
+      // hreflang set (keeping it would point en/x-default at the wrong page).
+      .replace(/\n?\s*<link rel="alternate" hreflang="[^"]*"[^>]*>/g, '')
       // OG title
       .replace(
         /<meta property="og:title"[^>]*>/,
@@ -393,7 +415,7 @@ async function main() {
       // Inline the state view so crawlers see real content (remove `hidden`)
       .replace(
         /<section id="state-view"[^>]*hidden><\/section>/,
-        `<section id="state-view" class="state-view" aria-live="polite">${renderStateHTML(s)}</section>`
+        `<section id="state-view" class="state-view" aria-live="polite">${renderStateHTML(s, neighborsFor(s))}</section>`
       )
       // Prerendered pages don't need the client-side <template> (the content
       // is already inlined). Strip it to save bytes.
@@ -428,6 +450,8 @@ async function main() {
 
   const urls = [
     { loc: `${SITE}/`, lastmod: BUILD_DATE, freq: 'weekly', pri: '1.0' },
+    { loc: `${SITE}/es/`, lastmod: BUILD_DATE, freq: 'monthly', pri: '0.7' },
+    { loc: `${SITE}/card/`, lastmod: BUILD_DATE, freq: 'monthly', pri: '0.6' },
     ...data.map(s => ({
       loc: `${SITE}/states/${slugify(s.state)}/`,
       lastmod: safeLastmod(s.last_updated),
