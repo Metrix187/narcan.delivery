@@ -1,9 +1,9 @@
 /* ==========================================================================
-   narcan.delivery — design system
+   narcan.delivery design system
    Calm, pastel, trustworthy. One shadow. One radius scale. No gradients.
    ========================================================================== */
 
-/* Self-hosted fonts — no Google Fonts round-trip */
+/* Self-hosted fonts; no Google Fonts round-trip */
 @font-face {
   font-family: "Inter";
   font-style: normal;
@@ -355,6 +355,45 @@ p  { margin: 0 0 1em; }
   padding: 3px 10px; border-radius: 999px;
   white-space: nowrap;
 }
+
+/* Fallback (link-resilience) card: always-present national phone lines */
+.card-fallback { background: var(--sky); border-color: var(--sky-bd); }
+.fallback-list { margin-top: 4px; }
+.fallback-list .org-item { background: var(--surface); border-color: var(--sky-bd); }
+
+/* Sources disclosure (per-state provenance) */
+.sources {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 2px 18px;
+}
+.sources summary {
+  cursor: pointer; list-style: none;
+  padding: 13px 0; font-size: .9rem; font-weight: 600; color: var(--ink-muted);
+  display: flex; justify-content: space-between; gap: 16px;
+}
+.sources summary::-webkit-details-marker { display: none; }
+.sources summary::after { content: "+"; font-weight: 400; color: var(--ink-subtle); }
+.sources[open] summary::after { content: "–"; }
+.sources summary:focus-visible { outline: none; box-shadow: var(--focus); border-radius: 6px; }
+.source-list {
+  list-style: none; padding: 0 0 14px; margin: 0;
+  display: grid; gap: 8px;
+}
+.source-list a { font-size: .88rem; color: var(--sky-ink); word-break: break-word; }
+
+/* Bordering-states navigation */
+.neighbor-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  display: inline-flex; align-items: center;
+  padding: 7px 14px; border-radius: 999px;
+  font-size: .9rem; font-weight: 500;
+  color: var(--sky-ink); background: var(--sky);
+  border: 1px solid var(--sky-bd);
+}
+.chip:hover { background: #D8E6F1; text-decoration: none; }
+.chip:focus-visible { outline: none; box-shadow: var(--focus); }
 
 /* Share row */
 .share {

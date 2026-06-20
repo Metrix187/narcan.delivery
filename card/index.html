@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#FBF9F5" />
+<meta name="color-scheme" content="light" />
+
+<title>Overdose rescue card: print and carry | narcan.delivery</title>
+<meta name="description" content="A printable wallet card with the four steps to reverse an opioid overdose, plus the phone numbers that work without internet. Free to print or save as PDF." />
+<link rel="canonical" href="https://narcan.delivery/card/" />
+<link rel="alternate" hreflang="en" href="https://narcan.delivery/card/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="narcan.delivery" />
+<meta property="og:title" content="Print an overdose rescue card" />
+<meta property="og:description" content="The four steps to reverse an opioid overdose, plus the numbers that work offline. Print it, fold it, carry it." />
+<meta property="og:url" content="https://narcan.delivery/card/" />
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23A8D8C6'/%3E%3Cpath d='M28 52l14 14 30-30' stroke='%231F2933' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+
+<style>
+@font-face {
+  font-family: "Inter"; font-style: normal; font-weight: 100 900; font-display: swap;
+  src: url("/fonts/InterVariable.woff2") format("woff2-variations"), url("/fonts/InterVariable.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Fraunces"; font-style: normal; font-weight: 400 700; font-display: swap;
+  src: url("/fonts/Fraunces-Variable-latin.woff2") format("woff2");
+}
+:root {
+  --bg:#FBF9F5; --surface:#FFFFFF; --ink:#1A2330; --ink-muted:#525C68;
+  --mint:#E6F2EC; --mint-ink:#1F6B52; --mint-bd:#CCE5D7;
+  --peach:#F6E9DD; --peach-ink:#8A4A1F; --peach-bd:#EFD7C1;
+  --border:#ECE7DC; --border-2:#E1DACB;
+  --font-sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  --font-serif:"Fraunces",Georgia,serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; font-family: var(--font-sans); color: var(--ink); background: var(--bg);
+  line-height: 1.5; font-size: 17px; -webkit-font-smoothing: antialiased;
+}
+.page { max-width: 720px; margin-inline: auto; padding: 32px 20px 64px; }
+.eyebrow { font-size: .9rem; font-weight: 600; margin: 0 0 14px; }
+.eyebrow a { color: var(--ink-muted); text-decoration: none; }
+.eyebrow a:hover { color: var(--ink); }
+h1 { font-family: var(--font-serif); font-weight: 500; font-size: clamp(1.8rem,4vw,2.5rem); letter-spacing: -.01em; margin: 0 0 .3em; }
+.intro { color: var(--ink-muted); max-width: 56ch; margin: 0 0 22px; }
+.actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 16px; margin-bottom: 36px; }
+.btn {
+  font: inherit; font-weight: 600; cursor: pointer;
+  background: var(--mint); color: var(--mint-ink); border: 1px solid var(--mint-bd);
+  border-radius: 14px; padding: 13px 22px;
+}
+.btn:hover { background: #D9ECE1; }
+.btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(59,110,143,.28); }
+.hint { color: var(--ink-muted); font-size: .92rem; }
+
+/* The card */
+.card {
+  background: var(--surface); border: 1px solid var(--border-2); border-radius: 16px;
+  width: 3.5in; max-width: 100%; margin: 0 auto; padding: 20px 22px;
+  box-shadow: 0 1px 2px rgba(31,41,51,.04), 0 8px 24px rgba(31,41,51,.05);
+}
+.card-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 12px; }
+.card-brand { font-family: var(--font-serif); font-size: 1rem; }
+.card-kicker { font-size: .72rem; font-weight: 600; color: var(--mint-ink); text-align: right; }
+.card-steps { margin: 0 0 12px; padding-left: 1.1em; display: grid; gap: 7px; font-size: .9rem; }
+.card-steps b { color: var(--ink); }
+.card-note {
+  margin: 0 0 12px; font-size: .82rem; color: var(--peach-ink);
+  background: var(--peach); border: 1px solid var(--peach-bd); border-radius: 10px; padding: 8px 10px;
+}
+.card-phones { display: grid; gap: 4px; font-size: .9rem; padding: 10px 12px; background: var(--mint); border: 1px solid var(--mint-bd); border-radius: 10px; margin-bottom: 12px; }
+.card-phones b { color: var(--mint-ink); }
+.card-local { font-size: .85rem; margin: 0; }
+.write-line { display: inline-block; min-width: 55%; border-bottom: 1px solid var(--ink); }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; font-size: 12pt; }
+  .page { padding: 0; max-width: none; }
+  .card {
+    box-shadow: none; border: 1px dashed #888; width: 3.5in; margin: .3in auto;
+    page-break-inside: avoid; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  @page { margin: .4in; }
+}
+</style>
+</head>
+<body>
+
+<main class="page">
+  <header class="no-print">
+    <p class="eyebrow"><a href="/">&larr; narcan.delivery</a></p>
+    <h1>Print a rescue card.</h1>
+    <p class="intro">Print this, cut it out, and keep it in your wallet or with your naloxone. The four steps and the phone numbers all work without internet. To keep a copy on your phone, choose "Save as PDF" in the print dialog.</p>
+    <div class="actions">
+      <button id="print" class="btn" type="button">Print / Save as PDF</button>
+      <span class="hint">or press Ctrl+P (Cmd+P on a Mac)</span>
+    </div>
+  </header>
+
+  <article class="card" aria-label="Opioid overdose rescue card">
+    <div class="card-top">
+      <strong class="card-brand">narcan.delivery</strong>
+      <span class="card-kicker">Opioid overdose<br>Four calm steps</span>
+    </div>
+    <ol class="card-steps">
+      <li><b>Call 911.</b> Say "I think this is an opioid overdose."</li>
+      <li><b>Give naloxone.</b> One spray in one nostril, plunger all the way down.</li>
+      <li><b>Wait 2 to 3 minutes.</b> No response? Give a second dose in the other nostril.</li>
+      <li><b>Lay them on their side</b> and stay until help arrives.</li>
+    </ol>
+    <p class="card-note">Naloxone can't hurt someone who isn't on opioids. If you're unsure, give it anyway.</p>
+    <div class="card-phones">
+      <span><b>Emergency:</b> 911</span>
+      <span><b>Crisis (call or text):</b> 988</span>
+      <span><b>Find naloxone, free 24/7:</b> 1-800-662-4357</span>
+    </div>
+    <p class="card-local"><b>My local naloxone source:</b> <span class="write-line"></span></p>
+  </article>
+</main>
+
+<script src="/card/card.js" defer></script>
+</body>
+</html>
