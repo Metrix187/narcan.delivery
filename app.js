@@ -58,6 +58,18 @@
     (m) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])
   );
 
+  // Appended to links that open a new tab so screen readers warn before activating.
+  const NEW_TAB = ' <span class="sr-only">(opens in new tab)</span>';
+
+  // Briefly announce a message in the polite live region (clears first so the
+  // same message re-announces).
+  const announce = (msg) => {
+    const r = $('#sr-status');
+    if (!r) return;
+    r.textContent = '';
+    requestAnimationFrame(() => { r.textContent = msg; });
+  };
+
   const formatDate = (iso) => {
     if (!iso) return null;
     const d = new Date(iso);
@@ -217,7 +229,7 @@
     parts.push(`<strong>${escapeHTML(org.name)}</strong>`);
     if (org.services) parts.push(`<span class="services">${escapeHTML(org.services)}</span>`);
     const contact = [];
-    if (org.website) contact.push(`<a href="${encodeURI(org.website)}" target="_blank" rel="noopener noreferrer">Visit website ↗</a>`);
+    if (org.website) contact.push(`<a href="${encodeURI(org.website)}" target="_blank" rel="noopener noreferrer">Visit website ↗${NEW_TAB}</a>`);
     if (org.phone)   contact.push(`<a href="tel:${escapeHTML(org.phone.replace(/[^0-9+]/g,''))}">${escapeHTML(org.phone)}</a>`);
     if (org.email)   contact.push(`<a href="mailto:${escapeHTML(org.email)}">${escapeHTML(org.email)}</a>`);
     if (contact.length) parts.push(`<span class="contact">${contact.join('')}</span>`);
@@ -225,7 +237,7 @@
     return `<li class="org-item"><div style="flex:1;min-width:0;">${parts.join('')}</div>${cost}</li>`;
   }
 
-  function renderState(abbr) {
+  function renderState(abbr, { focus = false } = {}) {
     const view = $('#state-view');
     const tpl  = $('#tpl-state');
     const s = getMergedState(abbr);
@@ -304,7 +316,7 @@
     const sources = Array.isArray(s.sources) ? s.sources : [];
     if (sources.length) {
       srcList.innerHTML = sources.map(u =>
-        `<li><a href="${encodeURI(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(hostLabel(u))}</a></li>`
+        `<li><a href="${encodeURI(u)}" target="_blank" rel="noopener noreferrer">${escapeHTML(hostLabel(u))}${NEW_TAB}</a></li>`
       ).join('');
     } else srcWrap.remove();
 
@@ -339,6 +351,7 @@
         await navigator.clipboard.writeText(location.href);
         const prev = lbl.textContent;
         lbl.textContent = 'Link copied ✓';
+        announce('Link copied');
         setTimeout(() => lbl.textContent = prev, 2000);
       } catch { /* no-op */ }
     });
@@ -346,9 +359,14 @@
     // SEO metadata
     updateDocMeta(s);
 
-    // Smooth scroll to the state view
+    // On user-initiated changes, move focus to the heading so screen-reader and
+    // keyboard users land on the new content. Reveal it either way, honoring
+    // the reduced-motion preference for the scroll.
+    const heading = view.querySelector('.state-title');
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (focus && heading) heading.focus({ preventScroll: true });
     requestAnimationFrame(() => {
-      view.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      view.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
     });
   }
 
@@ -360,7 +378,7 @@
     const href = stateUrl(abbr);
     (push ? history.pushState : history.replaceState).call(history, {}, '', href);
     $('#state').value = abbr;
-    renderState(abbr);
+    renderState(abbr, { focus: true });
   }
 
   function clearState() {
@@ -421,7 +439,7 @@
       const abbr = abbrFromLocation();
       if (abbr) {
         select.value = abbr;
-        renderState(abbr);
+        renderState(abbr, { focus: true });
       } else clearState();
     });
 
