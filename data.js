@@ -242,7 +242,7 @@ window.NALOXONE_DATA = [
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/minnesota"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Steve Rummler HOPE Network: free kits at Naloxone Access Points statewide (map at steverummlerhopenetwork.org) or free MAIL delivery anywhere in Minnesota via their request form (952-943-3937); MDH Naloxone Finder lists more sites; NEXT Distro at nextdistro.org/minnesota.","barriers_and_workarounds":"Northern and rural Minnesota is sparse, so the SRHN mail program covers it."},
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Steve Rummler HOPE Network: free kits at Naloxone Access Points statewide (map at steverummlerhopenetwork.org) or free mail delivery anywhere in Minnesota via their request form (952-943-3937); MDH Naloxone Finder lists more sites; NEXT Distro at nextdistro.org/minnesota.","barriers_and_workarounds":"Northern and rural Minnesota is sparse, so the SRHN mail program covers it."},
     "sources":["https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/","https://www.health.state.mn.us/communities/opioids/basics/naloxone.html","https://nextdistro.org/minnesota"]
   },
   { "state":"Mississippi","abbreviation":"MS","last_updated":"2026-06-10",
@@ -278,7 +278,7 @@ window.NALOXONE_DATA = [
   { "state":"Nebraska","abbreviation":"NE","last_updated":"2026-06-10",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Weak. It is evidentiary protection only (evidence from the call can't be used), not true arrest or prosecution immunity."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Participating pharmacies dispense FREE Narcan kits, no prescription, through the DHHS/Nebraska Pharmacists Association program (short form at pharmacy; NE residents).","medicaid_coverage_notes":"Covered by Nebraska Medicaid.","typical_cost":"Free at 60+ participating pharmacies; OTC ~$45 elsewhere"},
+      "pharmacies":{"mechanism":"Participating pharmacies dispense free Narcan kits, no prescription, through the DHHS/Nebraska Pharmacists Association program (short form at pharmacy; NE residents).","medicaid_coverage_notes":"Covered by Nebraska Medicaid.","typical_cost":"Free at 60+ participating pharmacies; OTC ~$45 elsewhere"},
       "community_programs":[{"name":"Stop Overdose Nebraska","services":"Free pharmacy locator","website":"https://stopodne.com/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/nebraska"}]
     },
@@ -332,7 +332,7 @@ window.NALOXONE_DATA = [
       "community_programs":[{"name":"OEND Programs","services":"Free kits and training","website":"https://health.ny.gov"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newyork"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"NYC: free naloxone kits BY MAIL at nyc.gov/naloxone (2026 \"Just in Case\" campaign, fulfilled with NEXT Distro) plus free kits at pharmacies, health dept events, and community orgs; rest of NYS: registered OOPP directory at health.ny.gov (overdose@health.ny.gov) and free rural mail via nextdistro.org/newyork.","barriers_and_workarounds":"NYC mail takes three to four weeks, so use a community access point if you need it now."},
+    "practical_guidance":{"how_to_get_naloxone_quickly":"NYC: free naloxone kits by mail at nyc.gov/naloxone (2026 \"Just in Case\" campaign, fulfilled with NEXT Distro) plus free kits at pharmacies, health dept events, and community orgs; rest of NYS: registered OOPP directory at health.ny.gov (overdose@health.ny.gov) and free rural mail via nextdistro.org/newyork.","barriers_and_workarounds":"NYC mail takes three to four weeks, so use a community access point if you need it now."},
     "sources":["https://www.nyc.gov/site/doh/health/health-topics/naloxone.page","https://www.health.ny.gov/diseases/aids/general/opioid_overdose_prevention/","https://nextdistro.org/newyork"]
   },
   { "state":"North Carolina","abbreviation":"NC","last_updated":"2026-06-10",
@@ -348,7 +348,7 @@ window.NALOXONE_DATA = [
   { "state":"North Dakota","abbreviation":"ND","last_updated":"2026-06-10",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects up to three people per overdose incident from possession charges if they remain and cooperate."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Pharmacists dispense without prescription; HHS standing order covers Medicaid members at no cost.","medicaid_coverage_notes":"NEW: standing order makes naloxone $0 for ND Medicaid members at enrolled pharmacies.","typical_cost":"OTC ~$45; free kits from ND HHS"},
+      "pharmacies":{"mechanism":"Pharmacists dispense without prescription; HHS standing order covers Medicaid members at no cost.","medicaid_coverage_notes":"A standing order makes naloxone $0 for ND Medicaid members at enrolled pharmacies.","typical_cost":"OTC ~$45; free kits from ND HHS"},
       "community_programs":[
         {"name":"ND HHS Opioid Response","services":"Free kits by request","website":"https://www.hhs.nd.gov/opioids","phone":"701-328-8920"},
         {"name":"Bismarck-Burleigh Public Health","services":"Free training","phone":"701-355-1540"}
