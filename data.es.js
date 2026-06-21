@@ -50,6 +50,7 @@ window.NALOXONE_ES_LABELS = {
   "gsLimited": "Ley del Buen Samaritano: limitada",
   "verified": "Verificado ",
   "needsReview": "Revisión pendiente · ",
+  "dateLocale": "es-ES",
   "fastest": "Tu opción más rápida",
   "pharmacy": "En la farmacia",
   "howDispensed": "Cómo se entrega",
@@ -76,6 +77,7 @@ window.NALOXONE_ES_LABELS = {
   "howToUse": "Cómo usarla →",
   "howToUseHref": "/es/#pasos",
   "visitWebsite": "Visitar el sitio ↗",
+  "newTab": "(se abre en una pestaña nueva)",
   "jsonLdName": "Cómo conseguir naloxona en",
   "home": "Inicio"
 };

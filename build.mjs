@@ -84,12 +84,12 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
   (m) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])
 );
 
-const formatDate = (iso) => {
+const formatDate = (iso, locale = 'en-US') => {
   if (!iso) return '';
   const d = new Date(iso); if (isNaN(d)) return '';
   // Date-only values (YYYY-MM-DD) parse as UTC midnight; format in UTC too so
   // a "2026-06-10" date never displays as the previous day west of Greenwich.
-  return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
+  return d.toLocaleDateString(locale, { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
 };
 
 const isStale = (iso) => {
@@ -116,7 +116,7 @@ const EN_LABELS = {
   changeStateHref: '/', changeState: '← Change state',
   naloxoneIn: 'Naloxone in',
   gsYes: 'Good Samaritan law: yes', gsLimited: 'Good Samaritan law: limited',
-  verified: 'Verified ', needsReview: 'Needs review · ',
+  verified: 'Verified ', needsReview: 'Needs review · ', dateLocale: 'en-US',
   fastest: 'Your fastest option',
   pharmacy: 'At a pharmacy', howDispensed: "How it's dispensed", medicaid: 'Medicaid',
   typicalCost: 'Typical cost', notListed: 'Not listed',
@@ -135,7 +135,7 @@ const EN_LABELS = {
   sourcesSummary: 'Sources &amp; how this was verified',
   shareLabel: 'Copy link to this state',
   howToUse: 'How to use it →', howToUseHref: '/#how-to-use',
-  visitWebsite: 'Visit website ↗',
+  visitWebsite: 'Visit website ↗', newTab: '(opens in new tab)',
   jsonLdName: 'How to get naloxone in', home: 'Home',
 };
 
@@ -143,7 +143,7 @@ function orgItemHTML(org, L = EN_LABELS) {
   const parts = [`<strong>${esc(org.name)}</strong>`];
   if (org.services) parts.push(`<span class="services">${esc(org.services)}</span>`);
   const contact = [];
-  if (org.website) contact.push(`<a href="${esc(org.website)}" target="_blank" rel="noopener noreferrer">${L.visitWebsite}</a>`);
+  if (org.website) contact.push(`<a href="${esc(org.website)}" target="_blank" rel="noopener noreferrer">${L.visitWebsite}<span class="sr-only"> ${L.newTab}</span></a>`);
   if (org.phone)   contact.push(`<a href="tel:${esc(org.phone.replace(/[^0-9+]/g,''))}">${esc(org.phone)}</a>`);
   if (org.email)   contact.push(`<a href="mailto:${esc(org.email)}">${esc(org.email)}</a>`);
   if (contact.length) parts.push(`<span class="contact">${contact.join('')}</span>`);
@@ -160,20 +160,20 @@ function renderStateHTML(s, neighbors = [], L = EN_LABELS) {
   const comm  = s.access_channels?.community_programs || [];
 
   const pills = [];
-  if (legal) pills.push(`<span class="pill pill-legal">${esc(legal)}</span>`);
+  if (legal) pills.push(`<span class="pill pill-legal" role="listitem">${esc(legal)}</span>`);
   pills.push(gs.exists
-    ? `<span class="pill pill-gs ok">${L.gsYes}</span>`
-    : `<span class="pill pill-gs none">${L.gsLimited}</span>`);
+    ? `<span class="pill pill-gs ok" role="listitem">${L.gsYes}</span>`
+    : `<span class="pill pill-gs none" role="listitem">${L.gsLimited}</span>`);
   if (upd) {
     const stale = isStale(upd);
-    pills.push(`<span class="pill pill-updated${stale ? ' stale' : ''}">${stale ? L.needsReview : L.verified}${esc(formatDate(upd))}</span>`);
+    pills.push(`<span class="pill pill-updated${stale ? ' stale' : ''}" role="listitem">${stale ? L.needsReview : L.verified}${esc(formatDate(upd, L.dateLocale))}</span>`);
   }
 
   return `
   <article class="wrap narrow state-article">
     <header class="state-header">
       <p class="eyebrow"><a href="${L.changeStateHref}" class="change-state">${L.changeState}</a></p>
-      <h2 class="state-title">${L.naloxoneIn} ${esc(s.state)}</h2>
+      <h2 class="state-title" tabindex="-1">${L.naloxoneIn} ${esc(s.state)}</h2>
       <div class="pills" role="list">${pills.join('')}</div>
     </header>
 
@@ -269,7 +269,7 @@ function renderStateHTML(s, neighbors = [], L = EN_LABELS) {
     ${Array.isArray(s.sources) && s.sources.length ? `
     <details class="sources">
       <summary>${L.sourcesSummary}</summary>
-      <ul class="source-list">${s.sources.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(hostLabel(u))}</a></li>`).join('')}</ul>
+      <ul class="source-list">${s.sources.map(u => `<li><a href="${esc(u)}" target="_blank" rel="noopener noreferrer">${esc(hostLabel(u))}<span class="sr-only"> ${L.newTab}</span></a></li>`).join('')}</ul>
     </details>` : ''}
 
     <div class="share">
@@ -481,7 +481,7 @@ async function main() {
       // Inline the state view so crawlers see real content (remove `hidden`)
       .replace(
         /<section id="state-view"[^>]*hidden><\/section>/,
-        `<section id="state-view" class="state-view" aria-live="polite">${renderStateHTML(s, neighborsFor(s))}</section>`
+        `<section id="state-view" class="state-view">${renderStateHTML(s, neighborsFor(s))}</section>`
       )
       // Prerendered pages don't need the client-side <template> (the content
       // is already inlined). Strip it to save bytes.
@@ -537,7 +537,7 @@ async function main() {
         .replace(/<!-- ES-STATE-LINKS:START -->[\s\S]*?<!-- ES-STATE-LINKS:END -->/, '')
         .replace(
           /<section id="state-view"[^>]*hidden><\/section>/,
-          `<section id="state-view" class="state-view" aria-live="polite">${renderStateHTML(sLoc, esNeighborsFor(sLoc), L)}</section>`
+          `<section id="state-view" class="state-view">${renderStateHTML(sLoc, esNeighborsFor(sLoc), L)}</section>`
         );
       const ld = `\n<script type="application/ld+json">${JSON.stringify(jsonLdForState(sLoc, url, L))}</script>\n`;
       html = html.replace('</head>', ld + '</head>');

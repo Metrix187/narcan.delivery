@@ -150,6 +150,16 @@ p  { margin: 0 0 1em; }
 }
 .skip:focus { left: 12px; }
 
+/* Visually hidden but available to screen readers. */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%);
+  white-space: nowrap; border: 0;
+}
+/* Headings/regions focused programmatically shouldn't show a focus ring. */
+[tabindex="-1"]:focus { outline: none; }
+
 /* ===== Header ============================================================ */
 .site-header {
   position: sticky; top: 0; z-index: 50;
@@ -590,6 +600,9 @@ p  { margin: 0 0 1em; }
 
 <main id="main">
 
+  <!-- Polite live region for transient announcements (state changes, copy) -->
+  <p id="sr-status" class="sr-only" role="status" aria-live="polite"></p>
+
   <!-- HERO -->
   <section class="hero">
     <div class="wrap">
@@ -615,12 +628,12 @@ p  { margin: 0 0 1em; }
   </section>
 
   <!-- STATE VIEW (populated by JS) -->
-  <section id="state-view" class="state-view" aria-live="polite">
+  <section id="state-view" class="state-view">
   <article class="wrap narrow state-article">
     <header class="state-header">
       <p class="eyebrow"><a href="/" class="change-state">← Change state</a></p>
-      <h2 class="state-title">Naloxone in South Dakota</h2>
-      <div class="pills" role="list"><span class="pill pill-legal">Statewide standing order</span><span class="pill pill-gs ok">Good Samaritan law: yes</span><span class="pill pill-updated">Verified Jun 10, 2026</span></div>
+      <h2 class="state-title" tabindex="-1">Naloxone in South Dakota</h2>
+      <div class="pills" role="list"><span class="pill pill-legal" role="listitem">Statewide standing order</span><span class="pill pill-gs ok" role="listitem">Good Samaritan law: yes</span><span class="pill pill-updated" role="listitem">Verified Jun 10, 2026</span></div>
     </header>
 
     <div class="card card-lead">
@@ -650,7 +663,7 @@ p  { margin: 0 0 1em; }
         </span>
         <h3>Free by mail</h3>
       </div>
-      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>NEXT Distro</strong><span class="contact"><a href="https://nextdistro.org" target="_blank" rel="noopener noreferrer">Visit website ↗</a></span></div><span class="cost-tag">Free</span></li></ul>
+      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>NEXT Distro</strong><span class="contact"><a href="https://nextdistro.org" target="_blank" rel="noopener noreferrer">Visit website ↗<span class="sr-only"> (opens in new tab)</span></a></span></div><span class="cost-tag">Free</span></li></ul>
     </div>
 
     
@@ -661,7 +674,7 @@ p  { margin: 0 0 1em; }
         </span>
         <h3>Local programs</h3>
       </div>
-      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>SD Dept of Health</strong><span class="services">Free kits to organizations</span><span class="contact"><a href="https://doh.sd.gov" target="_blank" rel="noopener noreferrer">Visit website ↗</a></span></div></li></ul>
+      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>SD Dept of Health</strong><span class="services">Free kits to organizations</span><span class="contact"><a href="https://doh.sd.gov" target="_blank" rel="noopener noreferrer">Visit website ↗<span class="sr-only"> (opens in new tab)</span></a></span></div></li></ul>
     </div>
 
     <div class="card card-fallback">
@@ -715,7 +728,7 @@ p  { margin: 0 0 1em; }
     
     <details class="sources">
       <summary>Sources &amp; how this was verified</summary>
-      <ul class="source-list"><li><a href="https://nextdistro.org/naloxone" target="_blank" rel="noopener noreferrer">nextdistro.org</a></li><li><a href="https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/" target="_blank" rel="noopener noreferrer">doh.sd.gov</a></li><li><a href="https://www.helplinecenter.org/good-samaritan-law-for-overdose-safety/" target="_blank" rel="noopener noreferrer">helplinecenter.org</a></li></ul>
+      <ul class="source-list"><li><a href="https://nextdistro.org/naloxone" target="_blank" rel="noopener noreferrer">nextdistro.org<span class="sr-only"> (opens in new tab)</span></a></li><li><a href="https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/" target="_blank" rel="noopener noreferrer">doh.sd.gov<span class="sr-only"> (opens in new tab)</span></a></li><li><a href="https://www.helplinecenter.org/good-samaritan-law-for-overdose-safety/" target="_blank" rel="noopener noreferrer">helplinecenter.org<span class="sr-only"> (opens in new tab)</span></a></li></ul>
     </details>
 
     <div class="share">
