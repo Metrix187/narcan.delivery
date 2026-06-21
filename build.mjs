@@ -84,12 +84,12 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g,
   (m) => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])
 );
 
-const formatDate = (iso) => {
+const formatDate = (iso, locale = 'en-US') => {
   if (!iso) return '';
   const d = new Date(iso); if (isNaN(d)) return '';
   // Date-only values (YYYY-MM-DD) parse as UTC midnight; format in UTC too so
   // a "2026-06-10" date never displays as the previous day west of Greenwich.
-  return d.toLocaleDateString('en-US', { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
+  return d.toLocaleDateString(locale, { year:'numeric', month:'short', day:'numeric', timeZone:'UTC' });
 };
 
 const isStale = (iso) => {
@@ -116,7 +116,7 @@ const EN_LABELS = {
   changeStateHref: '/', changeState: '← Change state',
   naloxoneIn: 'Naloxone in',
   gsYes: 'Good Samaritan law: yes', gsLimited: 'Good Samaritan law: limited',
-  verified: 'Verified ', needsReview: 'Needs review · ',
+  verified: 'Verified ', needsReview: 'Needs review · ', dateLocale: 'en-US',
   fastest: 'Your fastest option',
   pharmacy: 'At a pharmacy', howDispensed: "How it's dispensed", medicaid: 'Medicaid',
   typicalCost: 'Typical cost', notListed: 'Not listed',
@@ -166,7 +166,7 @@ function renderStateHTML(s, neighbors = [], L = EN_LABELS) {
     : `<span class="pill pill-gs none" role="listitem">${L.gsLimited}</span>`);
   if (upd) {
     const stale = isStale(upd);
-    pills.push(`<span class="pill pill-updated${stale ? ' stale' : ''}" role="listitem">${stale ? L.needsReview : L.verified}${esc(formatDate(upd))}</span>`);
+    pills.push(`<span class="pill pill-updated${stale ? ' stale' : ''}" role="listitem">${stale ? L.needsReview : L.verified}${esc(formatDate(upd, L.dateLocale))}</span>`);
   }
 
   return `
