@@ -6,3 +6,6 @@ Thumbs.db
 .env.local
 .vscode/
 .idea/
+
+# ESP32 guardian: never commit WiFi creds / hook URLs
+firmware/**/secrets.h

@@ -37,6 +37,24 @@ rebuild bakes them into the pre-rendered HTML; clients also merge them live).
 
 **Permanent:** edit `data.js` and commit. Cloudflare Pages rebuilds on push.
 
+## Sheet backup (durability)
+
+The live site already survives a deleted sheet: `build.mjs` falls back to the
+`data.js` baseline. What that does *not* protect is the **edits** made in the
+sheet since they were last baked into `data.js`. Two layers cover that:
+
+1. **git mirror**: `snapshot-sheet.mjs` (run hourly by
+   `.github/workflows/mirror-sheet.yml`) validates the published CSV and commits
+   it to [`backup/`](backup/) when it's healthy and changed. `build.mjs` reads
+   `backup/sheet-latest.csv` if the live sheet is unreachable. Run it yourself
+   with `npm run snapshot`.
+2. **off-cloud guardian**: an ESP32-C6 with a screen + microSD that runs a port
+   of the same validator as a third copy outside the cloud. See
+   [`firmware/`](firmware/).
+
+The validation rules ("what is a good snapshot") live once in
+[`sheet-csv.mjs`](sheet-csv.mjs), shared by all three.
+
 ## Running locally
 
 ```bash

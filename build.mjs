@@ -18,6 +18,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { parseSheetCSV } from './sheet-csv.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://narcan.delivery';
@@ -319,34 +320,8 @@ function jsonLdForState(s, url, L = EN_LABELS) {
 // dataset BEFORE prerendering. Mirrors the runtime merge in app.js so the
 // HTML served to crawlers matches what users see in the browser.
 // ---------------------------------------------------------------------------
-function parseSheetCSV(csv) {
-  const rows = []; let field = '', row = [], inQ = false;
-  for (let i = 0; i < csv.length; i++) {
-    const ch = csv[i], next = csv[i + 1];
-    if (inQ) {
-      if (ch === '"' && next === '"') { field += '"'; i++; }
-      else if (ch === '"') inQ = false;
-      else field += ch;
-    } else {
-      if (ch === '"') inQ = true;
-      else if (ch === ',') { row.push(field); field = ''; }
-      else if (ch === '\n' || ch === '\r') {
-        if (field.length || row.length) { row.push(field); rows.push(row); row = []; field = ''; }
-        if (ch === '\r' && next === '\n') i++;
-      } else field += ch;
-    }
-  }
-  if (field.length || row.length) { row.push(field); rows.push(row); }
-  if (!rows.length) return {};
-  const headers = rows[0].map(h => h.trim());
-  const out = {};
-  for (let r = 1; r < rows.length; r++) {
-    const obj = {};
-    headers.forEach((h, i) => { obj[h] = (rows[r][i] || '').trim(); });
-    if (obj.abbreviation) out[obj.abbreviation.toUpperCase()] = obj;
-  }
-  return out;
-}
+// parseSheetCSV lives in sheet-csv.mjs (shared with the backup mirror + the
+// ESP32-C6 guardian firmware) so all three agree on how the sheet is read.
 
 // A sheet cell is "absent" if it's empty or the literal sentinel "UNKNOWN".
 // Treating "UNKNOWN" as a real value would let an un-researched sheet row
@@ -383,21 +358,42 @@ function mergeSheet(base, ov) {
   };
 }
 
-async function applySheetOverrides(data) {
-  if (!SHEET_CSV_URL) return data;
-  try {
-    const res = await fetch(SHEET_CSV_URL, { headers: { 'cache-control': 'no-cache' } });
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const csv = await res.text();
-    const map = parseSheetCSV(csv);
-    const hits = Object.keys(map).length;
-    if (!hits) { console.log('  (sheet returned no rows, using embedded only)'); return data; }
-    console.log(`✓ Fetched Google Sheet: ${hits} row(s) merged`);
-    return data.map(s => map[s.abbreviation] ? mergeSheet(s, map[s.abbreviation]) : s);
-  } catch (err) {
-    console.log(`  (sheet fetch skipped: ${err.message}; using embedded only)`);
-    return data;
+// Get the override CSV. Try the live sheet first; if it's unreachable or empty
+// (e.g. deleted/unpublished), fall back to the committed backup mirror written
+// by snapshot-sheet.mjs, so a dead sheet still yields the last known-good data
+// instead of dropping all the way to the embedded baseline. Returns the parsed
+// override map (possibly empty).
+async function loadSheetOverrides() {
+  if (SHEET_CSV_URL) {
+    try {
+      const res = await fetch(SHEET_CSV_URL, { headers: { 'cache-control': 'no-cache' } });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const map = parseSheetCSV(await res.text());
+      if (Object.keys(map).length) {
+        console.log(`✓ Live sheet: ${Object.keys(map).length} row(s) merged`);
+        return map;
+      }
+      console.log('  (sheet returned no rows; trying backup mirror)');
+    } catch (err) {
+      console.log(`  (sheet fetch failed: ${err.message}; trying backup mirror)`);
+    }
   }
+  try {
+    const csv = await fs.readFile(path.join(ROOT, 'backup', 'sheet-latest.csv'), 'utf8');
+    const map = parseSheetCSV(csv);
+    if (Object.keys(map).length) {
+      console.log(`✓ Backup mirror: ${Object.keys(map).length} row(s) merged (live sheet unavailable)`);
+      return map;
+    }
+  } catch { /* no backup yet */ }
+  console.log('  (no live sheet or backup; using embedded baseline only)');
+  return {};
+}
+
+async function applySheetOverrides(data) {
+  const map = await loadSheetOverrides();
+  if (!Object.keys(map).length) return data;
+  return data.map(s => map[s.abbreviation] ? mergeSheet(s, map[s.abbreviation]) : s);
 }
 
 // Refresh the inlined <style> block in index.html from styles.css so the
