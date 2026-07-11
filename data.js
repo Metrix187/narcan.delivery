@@ -9,7 +9,7 @@ window.NALOXONE_DATA = [
       "pharmacies":{"mechanism":"Statewide standing order; any pharmacist can dispense.","medicaid_coverage_notes":"Medicaid covers with a $0-3 copay.","typical_cost":"OTC around $45-65"},
       "community_programs":[
         {"name":"Jefferson County Dept. of Health","services":"Free naloxone kits and fentanyl test strips","website":"https://www.jcdh.org","phone":"205-933-9110"},
-        {"name":"Alabama Dept. of Mental Health","services":"Statewide coordination and referrals","website":"https://mh.alabama.gov"}
+        {"name":"Alabama Dept. of Mental Health","services":"Free naloxone mailed after a short online training; statewide coordination","website":"https://mh.alabama.gov/faq/standing-order-for-naloxone/"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
     },
@@ -19,8 +19,8 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Pharmacist independent prescribing","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects both the caller and the person overdosing if they are seeking medical help in good faith."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists can prescribe naloxone on their own authority.","medicaid_coverage_notes":"Covered by Alaska Medicaid.","typical_cost":"OTC around $45-65"},
-      "community_programs":[{"name":"Project HOPE","services":"Free kits through Overdose Response Programs","website":"https://health.alaska.gov"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "community_programs":[{"name":"Project HOPE","services":"Free kits through Overdose Response Programs","website":"https://health.alaska.gov/en/services/project-hope-get-naloxone/"}],
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"},{"name":"iknowmine (ANTHC)","cost":"Free","website":"https://www.iknowmine.org/narcan"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Ask at any pharmacy, or find a Project HOPE partner in your community.","barriers_and_workarounds":"Many remote villages don't have pharmacies. Mail programs and community distributors are the reliable path."}
   },
@@ -30,9 +30,9 @@ window.NALOXONE_DATA = [
       "pharmacies":{"mechanism":"Any pharmacy can dispense naloxone under the statewide standing order.","medicaid_coverage_notes":"AHCCCS (Arizona Medicaid) covers it with no copay.","typical_cost":"OTC around $45-65"},
       "community_programs":[
         {"name":"Arizona Dept. of Health Services","services":"Provides free naloxone to community organizations","website":"https://www.azdhs.gov/opioid/"},
-        {"name":"The Naloxone Project AZ","services":"Community distribution","website":"https://www.naloxoneproject.com"}
+        {"name":"Sonoran Prevention Works","services":"Free naloxone by mail to any Arizona resident, plus in-person outreach in 7 counties","website":"https://spwaz.org/get-supplies/","phone":"480-442-7086"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/arizona"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Walk into any pharmacy and ask. No prescription needed.","barriers_and_workarounds":"If you're uninsured, use a community program instead of paying OTC."},
   },
@@ -40,7 +40,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide pharmacy protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Callers acting in good faith are protected from prosecution."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists can initiate naloxone therapy under the statewide protocol.","medicaid_coverage_notes":"Covered by Arkansas Medicaid.","typical_cost":"OTC around $45-65"},
-      "community_programs":[{"name":"CJI Narcansas","services":"Information and advocacy","website":"https://narcansas.com"}],
+      "community_programs":[{"name":"ARORP / ReviveAR (formerly Narcansas)","services":"Naloxone locator + overdose response help via the ReviveAR app","website":"https://www.arorp.org/revivear-app/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Ask at a pharmacy under the statewide protocol, or visit your county health department.","barriers_and_workarounds":"Rural areas may have limited pharmacy coverage, so use NEXT Distro for free mail delivery."},
@@ -53,7 +53,7 @@ window.NALOXONE_DATA = [
         {"name":"DHCS Naloxone Distribution Project","services":"Free bulk naloxone for qualifying organizations","website":"https://californiaopioidresponse.org"},
         {"name":"Santa Barbara Opioid Coalition","services":"Local distribution and training","website":"https://opioidsafetysb.org"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/california"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Ask a pharmacist to furnish it, or contact your county health department.","barriers_and_workarounds":"Cost is the main issue for uninsured people, so use free community programs."},
   },

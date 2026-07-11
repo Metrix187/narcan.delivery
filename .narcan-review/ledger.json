@@ -1,0 +1,75 @@
+{
+  "data_file": "D:/narcan.delivery/data.js",
+  "states": {
+    "AK": {
+      "state": "Alaska",
+      "last_reviewed": "2026-07-11",
+      "last_outcome": "changed",
+      "note": "Project HOPE URL fixed + iknowmine (ANTHC) mail added; flat verified; sources added",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "outcome": "changed",
+          "note": "Project HOPE URL fixed + iknowmine (ANTHC) mail added; flat verified; sources added"
+        }
+      ]
+    },
+    "AL": {
+      "state": "Alabama",
+      "last_reviewed": "2026-07-11",
+      "last_outcome": "changed",
+      "note": "ADMH mails free kits after training (services+URL fixed); flat verified; sources added",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "outcome": "changed",
+          "note": "ADMH mails free kits after training (services+URL fixed); flat verified; sources added"
+        }
+      ]
+    },
+    "AR": {
+      "state": "Arkansas",
+      "last_reviewed": "2026-07-11",
+      "last_outcome": "changed",
+      "note": "gs_scope widened to caller+victim (Joshua Ashley-Pauley Act); Narcansas->ARORP/ReviveAR; sources added",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "outcome": "changed",
+          "note": "gs_scope widened to caller+victim (Joshua Ashley-Pauley Act); Narcansas->ARORP/ReviveAR; sources added"
+        }
+      ]
+    },
+    "AZ": {
+      "state": "Arizona",
+      "last_reviewed": "2026-07-11",
+      "last_outcome": "changed",
+      "note": "Naloxone Project AZ (national) -> Sonoran Prevention Works (real AZ mail+outreach); NEXT->/arizona; flat verified; sources added",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "outcome": "changed",
+          "note": "Naloxone Project AZ (national) -> Sonoran Prevention Works (real AZ mail+outreach); NEXT->/arizona; flat verified; sources added"
+        }
+      ]
+    },
+    "CA": {
+      "state": "California",
+      "last_reviewed": "2026-07-11",
+      "last_outcome": "changed",
+      "note": "NEXT->/california; flat + DHCS NDP verified; sources added",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-11",
+          "outcome": "changed",
+          "note": "NEXT->/california; flat + DHCS NDP verified; sources added"
+        }
+      ]
+    }
+  }
+}
