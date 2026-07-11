@@ -354,7 +354,11 @@ function mergeSheet(base, ov) {
     practical_guidance: {
       how_to_get_naloxone_quickly: pickCell(ov.how_to_get_quickly, base.practical_guidance?.how_to_get_naloxone_quickly),
       barriers_and_workarounds:    pickCell(ov.barriers,           base.practical_guidance?.barriers_and_workarounds),
-    }
+    },
+    // sheet can carry the citation links now: pipe-separated urls in a `sources`
+    // column override the data.js array; a blank cell keeps whatever data.js has.
+    sources: isBlankCell(ov.sources) ? base.sources
+           : ov.sources.split('|').map(u => u.trim()).filter(Boolean),
   };
 }
 
