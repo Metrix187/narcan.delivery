@@ -62,10 +62,11 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy can dispense under the standing order.","medicaid_coverage_notes":"Covered with no copay.","typical_cost":"OTC around $45"},
       "community_programs":[
-        {"name":"Denver Public Health","services":"Free distribution","website":"https://denvergov.org"},
-        {"name":"Harm Reduction Action Center","services":"Syringe access and naloxone","phone":"303-572-7800"}
+        {"name":"Denver Dept. of Public Health & Environment","services":"Free naloxone by mail order, at libraries, the Wellness Winnie mobile unit, and syringe access sites","website":"https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Strategies/Overdose-Prevention/Overdose-Prevention-Resources"},
+        {"name":"Harm Reduction Action Center","services":"Syringe access and naloxone","website":"https://www.harmreductionactioncenter.org","phone":"303-572-7800"},
+        {"name":"Denver Health Naloxone Vending Machines","services":"Free 24/7 vending machine, no ID needed; started at Denver Health's main campus, expanding to more sites","website":"https://www.denverhealth.org","phone":"303-436-4949"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/colorado"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Walk into any pharmacy, or visit the Harm Reduction Action Center in Denver.","barriers_and_workarounds":"Rural counties have fewer distribution sites, so mail programs fill the gap."},
   },
@@ -74,7 +75,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Certified pharmacists can prescribe naloxone directly.","medicaid_coverage_notes":"Covered by HUSKY Health.","typical_cost":"OTC around $45"},
       "community_programs":[{"name":"ACT Programs","services":"Syringe services and naloxone","website":"https://act-ct.org","phone":"860-922-3173"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/connecticut"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Ask for a certified pharmacist at a pharmacy, or contact your local health department.","barriers_and_workarounds":"Use the Department of Consumer Protection's map to locate certified pharmacists."}
   },
@@ -82,7 +83,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Standing order and community access","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects laypeople and public-safety officials who respond in good faith."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy can dispense under the standing order.","medicaid_coverage_notes":"Covered with no copay.","typical_cost":"OTC around $45"},
-      "community_programs":[{"name":"Delaware Public Health","services":"Free mail-based kits","website":"https://dhss.delaware.gov"}],
+      "community_programs":[{"name":"Delaware Division of Public Health (Help Is Here DE)","services":"Naloxone at community training events, Bridge Clinics, and statewide distribution days; free mail order via NEXT Distro partnership.","website":"https://www.helpisherede.com/addiction/harm-reduction/naloxone"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/delaware"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Use the state mail program (free) or walk into a pharmacy.","barriers_and_workarounds":"The mail program requires watching a short online training video first."}
@@ -101,7 +102,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy can dispense.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC around $45"},
       "community_programs":[
-        {"name":"Georgia Overdose Prevention","services":"Free kits by request","website":"https://georgiaoverdoseprevention.org"},
+        {"name":"Georgia Overdose Prevention","services":"Free kits by mail, plus a live map of 121+ pickup points statewide with 40+ open 24/7","website":"https://georgiaoverdoseprevention.org"},
         {"name":"Georgia Harm Reduction Coalition","services":"Community outreach","phone":"404-817-9994"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/georgia"}]
@@ -114,8 +115,9 @@ window.NALOXONE_DATA = [
       "pharmacies":{"mechanism":"Pharmacists can prescribe and dispense directly; FDA-approved OTC Narcan also sold without any interaction required.","medicaid_coverage_notes":"Covered by Med-QUEST.","typical_cost":"OTC ~$45 (2-dose box); free via HHHRC and vending machines"},
       "community_programs":[
         {"name":"Hawaii Health & Harm Reduction Center","services":"Free kits","website":"https://www.hhhrc.org","phone":"808-521-2437"},
-        {"name":"Maui AIDS Foundation","services":"Distribution on Maui","phone":"808-242-4900"},
-        {"name":"Kumukahi Health + Wellness","services":"Distribution on Hawaiʻi Island","phone":"808-982-8800"}
+        {"name":"Maui AIDS Foundation","services":"Distribution on Maui","website":"https://mauiaids.org/narcan-overdose-prevention/","phone":"808-242-4900"},
+        {"name":"Kumukahi Health + Wellness","services":"Distribution on Hawaiʻi Island","phone":"808-982-8800"},
+        {"name":"Hawaiʻi Island Fentanyl Task Force","services":"Vending machines, weekly pop-ups & distribution hubs across Hawaiʻi Island (Hilo, Kohala, Kamuela)","website":"https://www.hiftf.org/naloxone"}
       ],
       "mail_based_programs":[{"name":"HHHRC / NEXT Distro","cost":"Free","website":"https://nextdistro.org/hawaii"}]
     },
@@ -126,7 +128,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Narrow. It protects the person administering naloxone from liability, but it does not shield the caller from drug possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists prescribe and dispense directly; OTC Narcan widely sold. Anyone with a Medicaid ID can get naloxone free at a pharmacy without a prescription.","medicaid_coverage_notes":"Idaho Medicaid covers it free at pharmacies, no prescription needed.","typical_cost":"OTC ~$45; free via IHRP mail"},
-      "community_programs":[{"name":"Idaho Harm Reduction Project","services":"Free supplies","website":"https://www.idahoharmreductionproject.org"}],
+      "community_programs":[{"name":"Central District Health","services":"Free naloxone via walk-in \"Barney Box\" locations and free mail order (covers Ada, Boise, Elmore, and Valley counties)","website":"https://cdh.idaho.gov/support-programs/drug-overdose-prevention/","phone":"208-327-8639"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/idaho"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Idaho Harm Reduction Project mails free naloxone after a short training video (idahoharmreductionproject.org); NEXT Distro mail at nextdistro.org/idaho; Idaho DHW lists local Drug Overdose Prevention Program pharmacies.","barriers_and_workarounds":"Weak Good Samaritan protection (no possession immunity) makes anonymous mail order the preferred channel for many."},
@@ -137,7 +139,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy can dispense under the IDPH statewide standing order; OTC Narcan also available.","medicaid_coverage_notes":"Covered by Illinois Medicaid.","typical_cost":"OTC ~$45; free via DOPP/OEND sites and mail"},
       "community_programs":[{"name":"Chicago Recovery Alliance","services":"Free naloxone and outreach","website":"https://anypositivechange.org","phone":"312-953-3797"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/illinois"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/illinois"},{"name":"Live4Lali","cost":"Free","website":"https://live4lali.org/our-programs/harmreductionoutreach/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"IDPH naloxone portal (idph.illinois.gov/Naloxone) explains access; IDHS Drug Overdose Prevention Program (DOPP) \"Access Narcan\" supplies free kits through community organizations; Chicago Recovery Alliance outreach (anypositivechange.org); free mail via nextdistro.org/illinois.","barriers_and_workarounds":"Good Samaritan immunity has quantity limits, and availability varies by county, so mail order covers the gaps."},
     "sources":["https://idph.illinois.gov/Naloxone/","https://www.dhs.state.il.us/page.aspx?item=58142","https://nextdistro.org/illinois","https://anypositivechange.org"]
@@ -146,7 +148,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Aaron's Law / standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Limited. There is immunity from a possession arrest if the person stays, cooperates with responders, and naloxone or EMS is provided. Conditions apply."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense under Aaron's Law standing order; OTC Narcan available.","medicaid_coverage_notes":"Covered by Indiana Medicaid.","typical_cost":"OTC ~$45; free via NaloxBoxes and Overdose Lifeline"},
-      "community_programs":[{"name":"OptIN Registry","services":"Statewide provider locator","website":"https://optin.in.gov"}],
+      "community_programs":[{"name":"OptIN Registry","services":"Statewide provider locator","website":"https://optin.in.gov"},{"name":"Overdose Lifeline","services":"Free naloxone via 24/7 public NaloxBoxes, vending machines, and a mail-request form; partners with IDOH to supply local health departments statewide","website":"https://www.overdoselifeline.org/naloxone-indiana-distribution/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/indiana"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Overdose Lifeline coordinates statewide free distribution including 24/7 public NaloxBoxes (overdoselifeline.org/naloxone-indiana-distribution); optin.in.gov lists registered naloxone providers; IDOH naloxone page lists local health department supplies.","barriers_and_workarounds":"Rural access uneven; NaloxBoxes and vending machines are the 24/7 backup."},
@@ -167,7 +169,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists dispense under statewide protocol; OTC Narcan available.","medicaid_coverage_notes":"Covered ($0-3 copay).","typical_cost":"OTC ~$45; free via DCCCA"},
       "community_programs":[{"name":"DCCCA Naloxone Program","services":"Free kits by mail","website":"https://www.dccca.org/program/kansas-naloxone-program/"}],
-      "mail_based_programs":[{"name":"DCCCA","cost":"Free","website":"https://www.dccca.org/naloxone-kit-request-form/"}]
+      "mail_based_programs":[{"name":"DCCCA","cost":"Free","website":"https://www.dccca.org/naloxone-kit-request-form/"},{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/kansas"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"DCCCA's Kansas Naloxone Program ships free Narcan kits and fentanyl test strips to Kansas residents (dccca.org/naloxone) and stocks free vending machines in eight cities; NEXT Distro mail at nextdistro.org/kansas.","barriers_and_workarounds":"The Good Samaritan law is new (2024) and excludes people under supervision, and awareness is still low. Mail and vending machines remain the low-barrier options."},
     "sources":["https://www.dccca.org/naloxone/","https://nextdistro.org/kansas"]
@@ -206,7 +208,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects the caller and the person overdosing from possession/paraphernalia charges; assisting in good faith also shielded from civil liability."}},
     "access_channels":{
       "pharmacies":{"mechanism":"All Maryland licensed pharmacists can dispense naloxone plus administration supplies to anyone under the statewide standing order.","medicaid_coverage_notes":"Covered by Maryland Medicaid.","typical_cost":"OTC ~$45; free via Overdose Response Programs"},
-      "community_programs":[{"name":"Staying Alive (Baltimore)","services":"Free kits","website":"https://health.baltimorecity.gov/naloxone"}],
+      "community_programs":[{"name":"Staying Alive (Baltimore)","services":"Free kits","website":"https://www.baltimorecity.gov/health/our-work/staying-alive-drug-overdose-response-program"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/maryland"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"MDH-authorized Overdose Response Programs (local health departments and community orgs) hand out free naloxone plus fentanyl and xylazine test strips. Find one at health.maryland.gov/pha/NALOXONE. Several counties offer home mail delivery, statewide guidance is at stopoverdose.maryland.gov, and NEXT Distro mails it at nextdistro.org/maryland.","barriers_and_workarounds":"Mail delivery availability varies by county, so ask your local ORP."},
@@ -217,7 +219,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Every retail pharmacy carries naloxone under the statewide standing order; OTC also available.","medicaid_coverage_notes":"MassHealth covers with $0 copay.","typical_cost":"OTC ~$45; free by mail and via CNP sites"},
       "community_programs":[{"name":"Community Naloxone Program","services":"Free distribution","website":"https://www.mass.gov/info-details/community-naloxone-program-cnp","phone":"617-624-5135"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/massachusetts"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/massachusetts"},{"name":"You Can","cost":"Free","website":"https://store.youcan.info/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Mass.gov \"Where to get Naloxone\" hub covers all routes: free mail-order kits for MA residents (DPH-funded), Community Naloxone Program (CNP) sites distributing free kits statewide, and the harm reduction program locator.","barriers_and_workarounds":"Private-insurance copays at pharmacies; CNP sites and the free mail program avoid all cost."},
     "sources":["https://www.mass.gov/info-details/where-to-get-naloxone-in-massachusetts","https://www.mass.gov/info-details/community-naloxone-program-cnp","https://nextdistro.org/massachusetts"]
@@ -226,8 +228,8 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Limited to personal-use amounts. It protects the caller and victim from possession charges for quantities consistent with personal use."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy dispenses under the statewide standing order; OTC available.","medicaid_coverage_notes":"Covered by Michigan Medicaid.","typical_cost":"OTC ~$45; free at MDHHS offices and by mail"},
-      "community_programs":[{"name":"MDHHS Portal","services":"Free bulk shipping","website":"https://www.michigan.gov/opioids/category-naloxone"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://naloxoneforall.org/michigan"}]
+      "community_programs":[{"name":"MDHHS Portal","services":"Free bulk shipping","website":"https://www.michigan.gov/opioids/find-help/naloxone-page"}],
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/michigan"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Free naloxone kits available at local MDHHS offices statewide during business hours. Michigan's Naloxone Direct Portal (michigan.gov/opioids) has shipped 1.7M+ kits to organizations; individuals can get free mail delivery via nextdistro.org/michigan, plus harm reduction agencies and vending machines.","barriers_and_workarounds":"Rural access uneven; MDHHS office pickup (new in 2026) and mail order are the reliable paths."},
     "sources":["https://www.michigan.gov/opioids","https://nextdistro.org/michigan","https://www.michigan.gov/mdhhs/inside-mdhhs/newsroom/2026/03/05/naloxone"]
@@ -249,7 +251,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Standing order (voluntary pharmacy participation)","good_samaritan_overdose_immunity":{"exists":true,"scope":"Narrow. It covers only very small personal-use amounts, and is one of the weaker protections in the country."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order exists but pharmacy participation is voluntary; OTC Narcan available where stocked.","medicaid_coverage_notes":"Covered by Mississippi Medicaid.","typical_cost":"OTC ~$45; free by mail from MSDH"},
-      "community_programs":[{"name":"MS Harm Reduction","services":"Outreach and education","website":"https://msharmreduction.org"}],
+      "community_programs":[{"name":"MS Harm Reduction","services":"Outreach, education, and free naloxone distribution","website":"https://msharmreduction.org","phone":"601-613-7017"},{"name":"Stand Up Mississippi","services":"Free naloxone locator via 14 regional mental health centers","website":"https://standupms.org/naloxone/","phone":"601-359-1288"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/mississippi"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"The Mississippi State Department of Health mails free naloxone kits statewide. Complete the online form and short training video at msdh.ms.gov (search for naloxone; over 20,000 kits shipped since Dec 2022; email naloxone@msdh.ms.gov). Other options are MS Harm Reduction (msharmreduction.org), NEXT Distro (nextdistro.org/mississippi), and the resources hub at odfree.org.","barriers_and_workarounds":"Pharmacy refusal/non-stocking is common; the MSDH mail program is the most reliable route."},
@@ -259,8 +261,8 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and victim from possession/paraphernalia charges when emergency help is sought in good faith."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Any pharmacy dispenses under the 2026 statewide standing order; OTC available.","medicaid_coverage_notes":"Covered by MO HealthNet.","typical_cost":"OTC ~$45; free via GetMissouriNaloxone"},
-      "community_programs":[{"name":"Missouri Network","services":"Education and access","website":"https://time2actmissouri.com"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/missouri"}]
+      "community_programs":[{"name":"Missouri Network","services":"Harm reduction and statewide naloxone by mail","website":"https://www.monetwork.org","phone":"844-732-3587"}],
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/missouri"},{"name":"Get MO Naloxone","cost":"Free","website":"https://getmissourinaloxone.com/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Getmissourinaloxone.com is a statewide locator for free pickup and free mail-order naloxone. The MO Network fulfills free mail requests through nextdistro.org/missouri in plain packaging, and the University of Missouri MIMH distributes to organizations.","barriers_and_workarounds":"Stigma can be an issue in rural areas, so discreet mail order is a good option. The standing order was refreshed in 2026, so pharmacy refusals should decline."},
     "sources":["https://getmissourinaloxone.com/","https://nextdistro.org/missouri","https://health.mo.gov/data/opioids/pdf/naloxone-standing-order.pdf"]
@@ -289,7 +291,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity from arrest/prosecution for small-amount possession/use for caller and victim."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense under standing order; OTC available.","medicaid_coverage_notes":"Covered by Nevada Medicaid.","typical_cost":"OTC ~$45; free via vending machines, HOPES, and mail"},
-      "community_programs":[{"name":"Trac-B Exchange","services":"Harm reduction vending machines","website":"https://www.tracb.org/","phone":"702-840-6693"}],
+      "community_programs":[{"name":"Trac-B Exchange","services":"Harm reduction vending machines","website":"https://www.tracbexchange.com/","phone":"702-840-6693"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/nevada"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"In Las Vegas, Trac-B/Impact Exchange public-health vending machines dispense free naloxone (southernnevadahealthdistrict.org). In Reno, Northern Nevada HOPES/Change Point offers free walk-in Narcan with no appointment (nnhopes.org). For statewide free mail, use nextdistro.org/nevada, shipped by Trac-B.","barriers_and_workarounds":"For rural counties far from Vegas and Reno services, mail order is the bridge."},
@@ -319,7 +321,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects the caller and the person overdosing from possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense under statewide standing order; OTC available.","medicaid_coverage_notes":"Covered, no copay.","typical_cost":"OTC ~$45; free by state mail order"},
-      "community_programs":[{"name":"CORE Program","services":"Free virtual training and kits","website":"https://iechodp.umn.edu/projects/echo-new-mexico"}],
+      "community_programs":[{"name":"CORE Program","services":"Free virtual training and kits","website":"https://projectecho.unm.edu/new-mexico-opioid-use-disorder-continuing-education/","phone":"505-925-1116"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newmexico"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"The NMDOH Harm Reduction Program ships free naloxone to any New Mexico residence or P.O. Box. Order at nmharmreduction.org/naloxone-saves (launched Sept 2023; help line 505-270-5943). It is also free without a prescription at every public health office, and NEXT Distro is at nextdistro.org/newmexico.","barriers_and_workarounds":"For rural and pueblo access, the state mail program ships statewide and is the intended answer."},
@@ -329,7 +331,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects the caller and the person overdosing from possession charges (does not cover sale offenses or outstanding warrants)."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order at virtually all chain and most independent pharmacies; N-CAP covers up to $40 of copay for insured New Yorkers.","medicaid_coverage_notes":"Covered by NYS Medicaid, $0.","typical_cost":"OTC ~$45; free via OEND programs and NYC mail"},
-      "community_programs":[{"name":"OEND Programs","services":"Free kits and training","website":"https://health.ny.gov"}],
+      "community_programs":[{"name":"OEND Programs","services":"Free kits and training","website":"https://www.nyoverdose.org/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newyork"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"NYC: free naloxone kits by mail at nyc.gov/naloxone (2026 \"Just in Case\" campaign, fulfilled with NEXT Distro) plus free kits at pharmacies, health dept events, and community orgs; rest of NYS: registered OOPP directory at health.ny.gov (overdose@health.ny.gov) and free rural mail via nextdistro.org/newyork.","barriers_and_workarounds":"NYC mail takes three to four weeks, so use a community access point if you need it now."},
@@ -339,7 +341,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects the caller and the person overdosing from possession charges for small amounts; civil immunity for administering naloxone."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Most retail pharmacies dispense without a prescription under the statewide standing order; covered by most insurance.","medicaid_coverage_notes":"Covered by NC Medicaid.","typical_cost":"OTC ~$45; free via NCHRC and SSPs"},
-      "community_programs":[{"name":"NC Harm Reduction Coalition","services":"Free kits","website":"https://www.nchrc.org","phone":"919-523-4303"}],
+      "community_programs":[{"name":"NC Harm Reduction Coalition","services":"Free kits","website":"https://www.nchrc.org","phone":"336-543-8050"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/northcarolina"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Naloxonesaves-nc.org is the statewide access hub (pharmacies, health departments, syringe service programs); NC Harm Reduction Coalition distributes free kits (224,000+ distributed, nchrc.org); free IM naloxone mailed statewide via nextdistro.org/ncgate; NCDHHS syringe/naloxone access page lists SSPs.","barriers_and_workarounds":"Rural east/west gaps; NCHRC network and mail order cover them."},
@@ -353,7 +355,7 @@ window.NALOXONE_DATA = [
         {"name":"ND HHS Opioid Response","services":"Free kits by request","website":"https://www.hhs.nd.gov/opioids","phone":"701-328-8920"},
         {"name":"Bismarck-Burleigh Public Health","services":"Free training","phone":"701-355-1540"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/northdakota"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Order a free two-dose kit from ND HHS at hhs.nd.gov/opioids or call 701-328-8920. Free mail-based naloxone is also available through a NEXT Distro and Grand Forks Public Health partnership (nextdistro.org/northdakota); it requires a training video and quiz, and ships in a plain mailer.","barriers_and_workarounds":"Extremely sparse population; both state and NEXT mail programs ship anywhere in ND."},
     "sources":["https://www.hhs.nd.gov/opioids","https://nextdistro.org/northdakota"]
@@ -362,8 +364,8 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects seeker, helper, and victim from minor possession charges; limited to two uses and requires a treatment referral."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense under standing order; OTC available.","medicaid_coverage_notes":"Covered by Ohio Medicaid.","typical_cost":"OTC ~$45; free via Project DAWN and HRO mail"},
-      "community_programs":[{"name":"Project DAWN","services":"Free statewide distribution","website":"https://odh.ohio.gov/wps/portal/gov/odh/know-our-programs/violence-injury-prevention-program/projectdawn/"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "community_programs":[{"name":"Project DAWN","services":"Free statewide distribution","website":"https://odh.ohio.gov/know-our-programs/project-dawn/"}],
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/ohio"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Project DAWN runs 310+ free distribution programs across 73 of 88 counties (locator and dashboard at odh.ohio.gov). Harm Reduction Ohio mails free Narcan and test strips to all 88 counties; order at harmreductionohio.org. NEXT Distro is at nextdistro.org/ohio.","barriers_and_workarounds":"The 15 counties without Project DAWN sites are fully covered by Harm Reduction Ohio's mail program."},
     "sources":["https://odh.ohio.gov/know-our-programs/project-dawn/","https://www.harmreductionohio.org/order-naloxone-free-from-harm-reduction-ohio/","https://nextdistro.org/ohio"]
@@ -373,10 +375,10 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists dispense without prescription; OTC available.","medicaid_coverage_notes":"Covered by SoonerCare.","typical_cost":"OTC ~$45; free by mail from OK I'M READY"},
       "community_programs":[
-        {"name":"OK I'm Ready","services":"Free online ordering and vending machines","website":"https://okimready.org/overdose/"},
-        {"name":"ODMHSAS Prevention","services":"Statewide prevention services","phone":"405-764-4807"}
+        {"name":"OK I'm Ready","services":"Free mail-order naloxone and test strips, plus a locator map","website":"https://okimready.org/overdose/"},
+        {"name":"ODMHSAS Prevention","services":"Statewide prevention services"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/oklahoma"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"The state's 25 naloxone vending machines were removed at the end of 2024. The replacement is the OK I'M READY mail program (ODMHSAS): order free Narcan and fentanyl test strips shipped to your home at okimready.org. NEXT Distro also mails it free at nextdistro.org/oklahoma, and OSDH naloxone info is at oklahoma.gov.","barriers_and_workarounds":"The victim has no Good Samaritan protection, so plan accordingly. The vending machines are gone, so mail order is now the main free channel."},
     "sources":["https://okimready.org/","https://nextdistro.org/oklahoma","https://oklahoma.gov/health/health-education/injury-prevention-service/drug-overdose/opioid-overdose/naloxone.html"]
@@ -387,9 +389,9 @@ window.NALOXONE_DATA = [
       "pharmacies":{"mechanism":"Pharmacists prescribe/dispense under OHA standing order or OBOP protocol; OTC available.","medicaid_coverage_notes":"Oregon Health Plan covers at $0.","typical_cost":"OTC ~$45; free via SSPs and clearinghouse partners"},
       "community_programs":[
         {"name":"Save Lives Oregon","services":"Free supplies","website":"https://www.savelivesoregon.org"},
-        {"name":"County health departments","services":"Free distribution","email":"kelsi.junge@multco.us"}
+        {"name":"County health departments","services":"Free distribution","website":"https://multco.us/info/overdose-prevention"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/oregon"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"The Save Lives Oregon Harm Reduction Clearinghouse supplies free naloxone to community orgs statewide; find a partner near you at savelivesoregon.org. Syringe service programs give free kits and fentanyl test strips to people who use drugs, the OHA overdose-reversal page lists every route, and county health departments distribute it, some with zero-barrier pickup stations.","barriers_and_workarounds":"Cost if uninsured at retail; clearinghouse partners and county health departments are free."},
     "sources":["https://www.savelivesoregon.org/","https://www.oregon.gov/oha/ph/preventionwellness/substanceuse/opioids/pages/reverseoverdose.aspx"]
@@ -418,7 +420,7 @@ window.NALOXONE_DATA = [
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense without prescription under the joint protocol; OTC available.","medicaid_coverage_notes":"Covered by Healthy Connections Medicaid.","typical_cost":"OTC ~$45; free at DPH clinics and community distributors"},
       "community_programs":[{"name":"DAODAS Community Distributors","services":"Free kits","website":"https://www.daodas.sc.gov/services/prevention/overdose-death-prevention/"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/southcarolina"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Free opioid overdose safety kits (naloxone plus fentanyl and xylazine test strips) are available at every SC DPH health clinic. DPH-designated Community Distributors operate across the state (list at dph.sc.gov, or call the Care Line at 1-855-472-3432), naloxonesavessc.org lists distributors, and free mail is available via nextdistro.org/southcarolina.","barriers_and_workarounds":"First-caller-only immunity is a real risk in groups; community distributors recommended over pharmacy purchase."},
     "sources":["https://dph.sc.gov/diseases-conditions/substance-use-prevention-resources/naloxone-community-distributors","http://naloxonesavessc.org/community-distrubutors/","https://nextdistro.org/southcarolina","https://www.daodas.sc.gov/services/prevention/overdose-death-prevention/"]
@@ -427,8 +429,8 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"South Dakota does have immunity (SDCL 34-20A-111). It protects the caller, and self-reporters, from possession and use charges if they stay and cooperate, but it applies only once per person, ever."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacies dispense under standing order; OTC available.","medicaid_coverage_notes":"Covered by South Dakota Medicaid.","typical_cost":"OTC ~$45; free via mail"},
-      "community_programs":[{"name":"SD Dept of Health","services":"Free kits to organizations","website":"https://doh.sd.gov"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "community_programs":[{"name":"SD Dept of Health","services":"Free kits to organizations","website":"https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/"},{"name":"Emily's Hope PORT","services":"Free naloxone + test strips and peer support for overdose survivors (8 eastern SD counties)","website":"https://emilyshope.charity/our-impact/port/","phone":"605-215-0654"}],
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/southdakota"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"NEXT Distro mails free naloxone statewide (nextdistro.org); SD DOH's Naloxone Project equips first responders (doh.sd.gov); Helpline Center (helplinecenter.org, dial 211) explains the Good Samaritan law and connects to local free kits; Emily's Hope PORT follows up after overdoses.","barriers_and_workarounds":"With one-time-only immunity and thin distribution infrastructure, mail order is the dependable route."},
     "sources":["https://nextdistro.org/naloxone","https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/","https://www.helplinecenter.org/good-samaritan-law-for-overdose-safety/"]

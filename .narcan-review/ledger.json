@@ -70,6 +70,510 @@
           "note": "NEXT->/california; flat + DHCS NDP verified; sources added"
         }
       ]
+    },
+    "CO": {
+      "state": "Colorado",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "Denver Public Health name/link fixed, added Denver Health vending machines + HRAC website, NEXT Distro linked to /colorado.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "Denver Public Health name/link fixed, added Denver Health vending machines + HRAC website, NEXT Distro linked to /colorado."
+        }
+      ]
+    },
+    "CT": {
+      "state": "Connecticut",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "All flat fields fresh; NEXT Distro linked to /connecticut.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "All flat fields fresh; NEXT Distro linked to /connecticut."
+        }
+      ]
+    },
+    "DE": {
+      "state": "Delaware",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "gs_scope was citing the wrong statute (civil-responder immunity, not overdose Good Samaritan) -- fixed with real statute; community program swapped for live DPH page.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "gs_scope was citing the wrong statute (civil-responder immunity, not overdose Good Samaritan) -- fixed with real statute; community program swapped for live DPH page."
+        }
+      ]
+    },
+    "FL": {
+      "state": "Florida",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "gs_scope was citing civil immunity for administering naloxone, not the actual 893.21 Good Samaritan law -- fixed.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "gs_scope was citing civil immunity for administering naloxone, not the actual 893.21 Good Samaritan law -- fixed."
+        }
+      ]
+    },
+    "GA": {
+      "state": "Georgia",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "gs_scope fixed (was administrator-liability only); added GA Overdose Prevention's new 24/7 kiosk map.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "gs_scope fixed (was administrator-liability only); added GA Overdose Prevention's new 24/7 kiosk map."
+        }
+      ]
+    },
+    "HI": {
+      "state": "Hawaii",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "how_to_get_quickly said HHHRC was Oahu-only, it's actually statewide with mail to outer islands -- fixed; added Hawaii Island Fentanyl Task Force, Maui AIDS Foundation website.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "how_to_get_quickly said HHHRC was Oahu-only, it's actually statewide with mail to outer islands -- fixed; added Hawaii Island Fentanyl Task Force, Maui AIDS Foundation website."
+        }
+      ]
+    },
+    "IA": {
+      "state": "Iowa",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "gs_scope Sheet override had regressed to reporter-only, data.js already had reporter+victim -- restored; dropped a dead pharmacy.iowa.gov link.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "gs_scope Sheet override had regressed to reporter-only, data.js already had reporter+victim -- restored; dropped a dead pharmacy.iowa.gov link."
+        }
+      ]
+    },
+    "ID": {
+      "state": "Idaho",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "IHRP (community program) closed in 2024 after a police raid/legislative repeal -- swapped for Central District Health; gs_scope was backwards (said NOT possession, statute says it IS covered).",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "IHRP (community program) closed in 2024 after a police raid/legislative repeal -- swapped for Central District Health; gs_scope was backwards (said NOT possession, statute says it IS covered)."
+        }
+      ]
+    },
+    "IL": {
+      "state": "Illinois",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "gs_scope undersold real arrest immunity as just quantity-limited possession defense -- fixed with 2022 PA 102-0476; added Live4Lali mail option.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "gs_scope undersold real arrest immunity as just quantity-limited possession defense -- fixed with 2022 PA 102-0476; added Live4Lali mail option."
+        }
+      ]
+    },
+    "IN": {
+      "state": "Indiana",
+      "last_reviewed": "2026-07-14",
+      "last_outcome": "changed",
+      "note": "All flat fields fresh; added Overdose Lifeline as its own community program (was only cited as a source before).",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-14",
+          "outcome": "changed",
+          "note": "All flat fields fresh; added Overdose Lifeline as its own community program (was only cited as a source before)."
+        }
+      ]
+    },
+    "KS": {
+      "state": "Kansas",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "SB419 text confirmed (immunity + parole/probation/work-release gap verified via enrolled bill + KCUR); KanCare copay $0 now (Sunflower confirms); added NEXT Distro to mail programs; dropped stale 'NEW' framing. HB 2250 (expired-naloxone-OK, eff 7/1/26) noted for next pass, not yet slotted into a field.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "SB419 text confirmed (immunity + parole/probation/work-release gap verified via enrolled bill + KCUR); KanCare copay $0 now (Sunflower confirms); added NEXT Distro to mail programs; dropped stale 'NEW' framing. HB 2250 (expired-naloxone-OK, eff 7/1/26) noted for next pass, not yet slotted into a field."
+        }
+      ]
+    },
+    "KY": {
+      "state": "Kentucky",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "gs_scope use->paraphernalia + caller-stays; medicaid 2 kits/30d; how_to to canonical findnaloxone.ky.gov (the .org just redirects)",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "gs_scope use->paraphernalia + caller-stays; medicaid 2 kits/30d; how_to to canonical findnaloxone.ky.gov (the .org just redirects)"
+        }
+      ]
+    },
+    "LA": {
+      "state": "Louisiana",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "swapped stale 2018 standing-order PDF for current Jan-2026 one; hub+Trystereo+NEXT all alive; medicaid 'no copay' specific unconfirmed (PDL PDFs would not parse), value kept",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "swapped stale 2018 standing-order PDF for current Jan-2026 one; hub+Trystereo+NEXT all alive; medicaid 'no copay' specific unconfirmed (PDL PDFs would not parse), value kept"
+        }
+      ]
+    },
+    "MA": {
+      "state": "Massachusetts",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "gs_scope adds probation/pretrial; CNP is org-only so how_to/barriers point to You Can + NEXT mail; added You Can mail to data.js; CNP phone unverifiable, kept",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "gs_scope adds probation/pretrial; CNP is org-only so how_to/barriers point to You Can + NEXT mail; added You Can mail to data.js; CNP phone unverifiable, kept"
+        }
+      ]
+    },
+    "MD": {
+      "state": "Maryland",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "gs_scope adds paraphernalia + felony-exclusion; medicaid $1 copay; Baltimore Staying Alive URL had rotted, fixed in data.js",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "gs_scope adds paraphernalia + felony-exclusion; medicaid $1 copay; Baltimore Staying Alive URL had rotted, fixed in data.js"
+        }
+      ]
+    },
+    "ME": {
+      "state": "Maine",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "gs_scope corrected: 17-A 1111-B covers most crimes when seeking help, not just drug crimes; added statute source",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "gs_scope corrected: 17-A 1111-B covers most crimes when seeking help, not just drug crimes; added statute source"
+        }
+      ]
+    },
+    "MI": {
+      "state": "Michigan",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "flat fields all verified vs MCL 333.7403 + MDHHS; both program links dead (category-naloxone 404, naloxoneforall.org DNS-dead) fixed in data.js",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "flat fields all verified vs MCL 333.7403 + MDHHS; both program links dead (category-naloxone 404, naloxoneforall.org DNS-dead) fixed in data.js"
+        }
+      ]
+    },
+    "MN": {
+      "state": "Minnesota",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "verified",
+      "note": "all 8 flat fields hold; Harm Reduction Sisters + Indigenous Peoples Task Force (612-870-1723) both alive w/ active naloxone",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "verified",
+          "note": "all 8 flat fields hold; Harm Reduction Sisters + Indigenous Peoples Task Force (612-870-1723) both alive w/ active naloxone"
+        }
+      ]
+    },
+    "MO": {
+      "state": "Missouri",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "'Missouri Network' pointed at wrong org (time2act = state edu site); real MoNetwork monetwork.org 844-732-3587 confirmed statewide mail; added Get MO Naloxone mail; how_to to GetMissouriNaloxone.com",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "'Missouri Network' pointed at wrong org (time2act = state edu site); real MoNetwork monetwork.org 844-732-3587 confirmed statewide mail; added Get MO Naloxone mail; how_to to GetMissouriNaloxone.com"
+        }
+      ]
+    },
+    "MS": {
+      "state": "Mississippi",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "added Stand Up Mississippi locator (601-359-1288) + MS Harm Reduction phone/naloxone to data.js; how_to adds MSDH free mail; GS confirmed narrow",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "added Stand Up Mississippi locator (601-359-1288) + MS Harm Reduction phone/naloxone to data.js; how_to adds MSDH free mail; GS confirmed narrow"
+        }
+      ]
+    },
+    "MT": {
+      "state": "Montana",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "verified",
+      "note": "All fields verified current against DPHHS naloxone page, standing order PDF, MCA 50-32-609 Good Samaritan law, NEXT Distro MT page, and Open Aid Alliance site. Sources updated to include primary state sources.",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "verified",
+          "note": "All fields verified current against DPHHS naloxone page, standing order PDF, MCA 50-32-609 Good Samaritan law, NEXT Distro MT page, and Open Aid Alliance site. Sources updated to include primary state sources."
+        }
+      ]
+    },
+    "NC": {
+      "state": "North Carolina",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "NCHRC/NEXT alive; corrected NCHRC phone to 336-543-8050 (on their own contact page; old 919 number only on a county page)",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "NCHRC/NEXT alive; corrected NCHRC phone to 336-543-8050 (on their own contact page; old 919 number only on a county page)"
+        }
+      ]
+    },
+    "ND": {
+      "state": "North Dakota",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "all flat verified incl unusual up-to-3-people GS cap; swapped generic nextdistro.org for the now-live nextdistro.org/northdakota",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "all flat verified incl unusual up-to-3-people GS cap; swapped generic nextdistro.org for the now-live nextdistro.org/northdakota"
+        }
+      ]
+    },
+    "NE": {
+      "state": "Nebraska",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "verified statute 28-472 MYSELF: base wrongly said evidentiary-only; it is real (narrow) immunity for caller AND victim. Fixed gs_scope + added statute source",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "verified statute 28-472 MYSELF: base wrongly said evidentiary-only; it is real (narrow) immunity for caller AND victim. Fixed gs_scope + added statute source"
+        }
+      ]
+    },
+    "NH": {
+      "state": "New Hampshire",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "RSA 318-B:28-b: caller-for-another gets immunity but self-reporter gets only a legal defense; tightened gs_scope + added statute",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "RSA 318-B:28-b: caller-for-another gets immunity but self-reporter gets only a legal defense; tightened gs_scope + added statute"
+        }
+      ]
+    },
+    "NJ": {
+      "state": "New Jersey",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "verified",
+      "note": "Naloxone365 still free/anonymous/14+ at 650+ pharmacies; NJHRC 1-877-4NARCAN confirmed; nothing changed",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "verified",
+          "note": "Naloxone365 still free/anonymous/14+ at 650+ pharmacies; NJHRC 1-877-4NARCAN confirmed; nothing changed"
+        }
+      ]
+    },
+    "NM": {
+      "state": "New Mexico",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "CORE data.js link was a dead University-of-Minnesota domain; replaced with real UNM projectecho CORE page + confirmed phone 505-925-1116",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "CORE data.js link was a dead University-of-Minnesota domain; replaced with real UNM projectecho CORE page + confirmed phone 505-925-1116"
+        }
+      ]
+    },
+    "NV": {
+      "state": "Nevada",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "Trac-B domain tracb.org is dead (DNS); fixed to tracbexchange.com (same phone); swapped two fragile/stale citation sources for NRS 453C + org site",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "Trac-B domain tracb.org is dead (DNS); fixed to tracbexchange.com (same phone); swapped two fragile/stale citation sources for NRS 453C + org site"
+        }
+      ]
+    },
+    "NY": {
+      "state": "New York",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "N-CAP (up to 40 off pharmacy copay, no enrollment) added to medicaid_notes; OEND community link upgraded from bare health.ny.gov to nyoverdose.org locator",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "N-CAP (up to 40 off pharmacy copay, no enrollment) added to medicaid_notes; OEND community link upgraded from bare health.ny.gov to nyoverdose.org locator"
+        }
+      ]
+    },
+    "OH": {
+      "state": "Ohio",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "Project DAWN + NEXT data.js URLs were stale (legacy wps/portal + generic), fixed. Flagged: OH mechanism is per-pharmacy protocol (ORC 3715.502), not one unified standing order - kept label, needs a human call",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "Project DAWN + NEXT data.js URLs were stale (legacy wps/portal + generic), fixed. Flagged: OH mechanism is per-pharmacy protocol (ORC 3715.502), not one unified standing order - kept label, needs a human call"
+        }
+      ]
+    },
+    "OK": {
+      "state": "Oklahoma",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "okimready no longer lists vending machines (state machines pulled 2024) - fixed services; dropped unverifiable ODMHSAS phone 405-764-4807; NEXT to /oklahoma",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "okimready no longer lists vending machines (state machines pulled 2024) - fixed services; dropped unverifiable ODMHSAS phone 405-764-4807; NEXT to /oklahoma"
+        }
+      ]
+    },
+    "OR": {
+      "state": "Oregon",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "swapped a personal staff email (kelsi.junge@multco.us) for durable multco.us/info/overdose-prevention; NEXT to /oregon; flat all verified vs oregon.gov",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "swapped a personal staff email (kelsi.junge@multco.us) for durable multco.us/info/overdose-prevention; NEXT to /oregon; flat all verified vs oregon.gov"
+        }
+      ]
+    },
+    "PA": {
+      "state": "Pennsylvania",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "verbose copy holds fact-for-fact vs pa.gov; only rot was the citation: health.pa.gov/naloxone now redirects to a generic page, swapped for pa.gov/agencies/health/programs/opioids/naloxone",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "verbose copy holds fact-for-fact vs pa.gov; only rot was the citation: health.pa.gov/naloxone now redirects to a generic page, swapped for pa.gov/agencies/health/programs/opioids/naloxone"
+        }
+      ]
+    },
+    "RI": {
+      "state": "Rhode Island",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "verified",
+      "note": "best-in-class access; RIGL 21-28.9-4 caller+victim true immunity no caps; Prevent Overdose RI + URI mail both alive",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "verified",
+          "note": "best-in-class access; RIGL 21-28.9-4 caller+victim true immunity no caps; Prevent Overdose RI + URI mail both alive"
+        }
+      ]
+    },
+    "SC": {
+      "state": "South Carolina",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "gs_scope was misleading: caller is first-caller-only but the victim has separate immunity (44-53-1930); dropped an empty-placeholder + expired-cert source; NEXT to /southcarolina",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "gs_scope was misleading: caller is first-caller-only but the victim has separate immunity (44-53-1930); dropped an empty-placeholder + expired-cert source; NEXT to /southcarolina"
+        }
+      ]
+    },
+    "SD": {
+      "state": "South Dakota",
+      "last_reviewed": "2026-07-18",
+      "last_outcome": "changed",
+      "note": "one-time GS cap is SDCL 34-20A-113 not -111 (fixed cite); deep-linked SD DOH naloxone page + added Emily's Hope PORT (605-215-0654); NEXT to /southdakota",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-18",
+          "outcome": "changed",
+          "note": "one-time GS cap is SDCL 34-20A-113 not -111 (fixed cite); deep-linked SD DOH naloxone page + added Emily's Hope PORT (605-215-0654); NEXT to /southdakota"
+        }
+      ]
     }
   }
 }
