@@ -132,6 +132,29 @@
     return `<li class="org-item"><div style="flex:1;min-width:0;">${parts.join('')}</div>${cost}</li>`;
   }
 
+  // Wire up the interactive bits inside a state view. Works on both
+  // client-rendered nodes and build-prerendered HTML.
+  function hydrateView(view) {
+    const changeLink = view.querySelector('.change-state');
+    if (changeLink) changeLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      clearState();
+      $('#state').focus();
+    });
+
+    const btn = view.querySelector('#share-btn');
+    const lbl = view.querySelector('#share-label');
+    if (btn && lbl) btn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(location.href);
+        const prev = lbl.textContent;
+        lbl.textContent = 'Link copied ✓';
+        announce('Link copied');
+        setTimeout(() => lbl.textContent = prev, 2000);
+      } catch { /* no-op */ }
+    });
+  }
+
   function renderState(abbr, { focus = false } = {}) {
     const view = $('#state-view');
     const tpl  = $('#tpl-state');
@@ -225,31 +248,14 @@
       ).join('');
     } else nbrWrap.remove();
 
-    // Mount
+    // Mount. Once we render client-side, the prerendered marker no longer
+    // describes what's in the DOM, so drop it (popstate back to the original
+    // state must re-render, not skip).
     view.innerHTML = '';
     view.appendChild(node);
     view.hidden = false;
-
-    // Back/change state handler
-    const changeLink = view.querySelector('.change-state');
-    if (changeLink) changeLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      clearState();
-      $('#state').focus();
-    });
-
-    // Share button
-    const btn = view.querySelector('#share-btn');
-    const lbl = view.querySelector('#share-label');
-    if (btn && lbl) btn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(location.href);
-        const prev = lbl.textContent;
-        lbl.textContent = 'Link copied ✓';
-        announce('Link copied');
-        setTimeout(() => lbl.textContent = prev, 2000);
-      } catch { /* no-op */ }
-    });
+    delete view.dataset.prerendered;
+    hydrateView(view);
 
     // SEO metadata
     updateDocMeta(s);
@@ -338,11 +344,18 @@
       } else clearState();
     });
 
-    // Initial render if the URL already points at a state.
+    // Initial view. If the build already prerendered this exact state, keep
+    // the server HTML (it can be fresher than a cached data.js) and just wire
+    // up the buttons. Otherwise render client-side (e.g. /?state=XX).
     const initial = abbrFromLocation();
     if (initial) {
       select.value = initial;
-      renderState(initial);
+      const view = $('#state-view');
+      if (view && view.dataset.prerendered === initial && view.children.length) {
+        hydrateView(view);
+      } else {
+        renderState(initial);
+      }
     }
   }
 

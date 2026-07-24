@@ -17,10 +17,33 @@
 
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://narcan.delivery';
+
+// ---------------------------------------------------------------------------
+// Content-hashed ?v= stamps on script URLs. _headers marks *.js as immutable
+// for a year, and these files never change name, so without a version in the
+// URL a repeat visitor could run year-old code against year-old data. The
+// stamp changes only when the file's bytes do.
+// ---------------------------------------------------------------------------
+async function assetVersions() {
+  const hash = async (rel) => createHash('sha256')
+    .update(await fs.readFile(path.join(ROOT, rel)))
+    .digest('hex').slice(0, 10);
+  return {
+    '/data.js': await hash('data.js'),
+    '/app.js': await hash('app.js'),
+    '/card/card.js': await hash('card/card.js'),
+  };
+}
+
+const stampAssets = (html, ver) => html.replace(
+  /src="(\/data\.js|\/app\.js|\/card\/card\.js)(?:\?v=[a-z0-9]+)?"/g,
+  (m, p) => `src="${p}?v=${ver[p]}"`
+);
 
 // ---------------------------------------------------------------------------
 // Load dataset by evaluating data.js in a minimal shim (Node has no `window`).
@@ -308,10 +331,11 @@ function jsonLdForState(s, url, L = EN_LABELS) {
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
-// Refresh the inlined <style> block in index.html from styles.css so the
-// stylesheet has a single source of truth. The block is delimited by
-// <!-- BUILD:INLINE-CSS --> ... <!-- /BUILD:INLINE-CSS --> sentinels.
-async function syncInlinedCSS() {
+// Refresh the inlined <style> block in index.html from styles.css (single
+// source of truth for the stylesheet) and stamp asset versions, writing the
+// file back if anything changed. Returns the final homepage HTML, which also
+// serves as the per-state page template.
+async function prepareTemplate(ver) {
   const htmlPath = path.join(ROOT, 'index.html');
   const [html, css] = await Promise.all([
     fs.readFile(htmlPath, 'utf8'),
@@ -321,13 +345,14 @@ async function syncInlinedCSS() {
   if (!re.test(html)) {
     throw new Error('index.html is missing the BUILD:INLINE-CSS sentinels');
   }
-  const next = html.replace(
+  let next = html.replace(
     re,
     `<!-- BUILD:INLINE-CSS (regenerated from styles.css by build.mjs; edit styles.css, not here) -->\n<style>\n${css}</style>\n<!-- /BUILD:INLINE-CSS -->`
   );
+  next = stampAssets(next, ver);
   if (next !== html) {
     await fs.writeFile(htmlPath, next, 'utf8');
-    console.log('✓ Inlined styles.css into index.html');
+    console.log('✓ Refreshed index.html (inline CSS + asset versions)');
   }
   return next;
 }
@@ -338,7 +363,19 @@ async function main() {
   const neighborsFor = (s) => (adjacency[s.abbreviation] || [])
     .map(a => byAbbr[a]).filter(Boolean)
     .map(n => ({ name: n.state, url: `/states/${slugify(n.state)}/` }));
-  const tpl  = await syncInlinedCSS();
+  const ver = await assetVersions();
+  const tpl  = await prepareTemplate(ver);
+
+  // The card page references its own script; keep it versioned too.
+  {
+    const cardPath = path.join(ROOT, 'card', 'index.html');
+    const cardHtml = await fs.readFile(cardPath, 'utf8');
+    const stamped = stampAssets(cardHtml, ver);
+    if (stamped !== cardHtml) {
+      await fs.writeFile(cardPath, stamped, 'utf8');
+      console.log('✓ Stamped card/index.html asset versions');
+    }
+  }
 
   const es = await loadES();
   const hasES = (abbr) => !!(es.states[abbr] && byAbbr[abbr]);
@@ -385,14 +422,15 @@ async function main() {
         /<meta property="og:url"[^>]*>/,
         `<meta property="og:url" content="${url}" />`
       )
-      // Inline the state view so crawlers see real content (remove `hidden`)
+      // Inline the state view so crawlers see real content (remove `hidden`).
+      // data-prerendered tells app.js this HTML is already correct for the
+      // state, so it hydrates the buttons instead of re-rendering (a client
+      // re-render could swap fresh server HTML for a stale cached data.js).
+      // The <template> stays: picking a different state renders client-side.
       .replace(
         /<section id="state-view"[^>]*hidden><\/section>/,
-        `<section id="state-view" class="state-view">${renderStateHTML(s, neighborsFor(s))}</section>`
-      )
-      // Prerendered pages don't need the client-side <template> (the content
-      // is already inlined). Strip it to save bytes.
-      .replace(/<template id="tpl-state">[\s\S]*?<\/template>\s*/, '');
+        `<section id="state-view" class="state-view" data-prerendered="${s.abbreviation}">${renderStateHTML(s, neighborsFor(s))}</section>`
+      );
 
     // If a Spanish translation exists, link it with reciprocal hreflang.
     if (hasES(s.abbreviation)) {
