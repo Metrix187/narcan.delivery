@@ -19,6 +19,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { validateData } from './validate-data.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://narcan.delivery';
@@ -446,6 +447,19 @@ async function prepareTemplate(ver) {
 
 async function main() {
   const { data, adjacency } = await loadData();
+
+  // Refuse to ship a dataset that fails validation. Commits are the only
+  // path to production now, so this is the gate.
+  {
+    const es = await loadES();
+    const { errors, warnings } = validateData(data, adjacency, { esStates: es.states });
+    warnings.forEach(m => console.warn('  warn:', m));
+    if (errors.length) {
+      errors.forEach(m => console.error(' ERROR:', m));
+      throw new Error(`data.js failed validation with ${errors.length} error(s)`);
+    }
+  }
+
   const byAbbr = Object.fromEntries(data.map(s => [s.abbreviation, s]));
   const neighborsFor = (s) => (adjacency[s.abbreviation] || [])
     .map(a => byAbbr[a]).filter(Boolean)

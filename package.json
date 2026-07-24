@@ -6,6 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "node build.mjs",
+    "test": "node --test \"tests/*.test.mjs\"",
+    "validate": "node validate-data.mjs",
     "serve": "python -m http.server 8080",
     "clean": "node -e \"import('node:fs/promises').then(fs=>fs.rm('states',{recursive:true,force:true}))\""
   },

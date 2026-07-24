@@ -319,7 +319,7 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Standing order / Naloxone365","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity for use/simple possession."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order / Naloxone365.","medicaid_coverage_notes":"Covered.","typical_cost":"Free (Naloxone365)"},
-      "community_programs":[{"name":"NJ Harm Reduction Coalition","services":"Hotline and mail-based supply","website":"https://njharmreduction.org/","phone":"1-877-4NARCAN"}],
+      "community_programs":[{"name":"NJ Harm Reduction Coalition","services":"Hotline and mail-based supply","website":"https://njharmreduction.org/","phone":"1-877-462-7226"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newjersey"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Naloxone365 Pharmacy (Free) or NJHRC.","barriers_and_workarounds":"Excellent access via Naloxone365."},
