@@ -454,14 +454,15 @@ async function main() {
   const tpl  = await prepareTemplate(ver);
   await emitServiceWorker(ver);
 
-  // The card page references its own script; keep it versioned too.
-  {
-    const cardPath = path.join(ROOT, 'card', 'index.html');
-    const cardHtml = await fs.readFile(cardPath, 'utf8');
-    const stamped = stampAssets(cardHtml, ver);
-    if (stamped !== cardHtml) {
-      await fs.writeFile(cardPath, stamped, 'utf8');
-      console.log('✓ Stamped card/index.html asset versions');
+  // The card pages reference their own script; keep them versioned too.
+  for (const rel of ['card/index.html', 'es/card/index.html']) {
+    const p = path.join(ROOT, rel);
+    let html;
+    try { html = await fs.readFile(p, 'utf8'); } catch { continue; }
+    const stamped = stampAssets(html, ver);
+    if (stamped !== html) {
+      await fs.writeFile(p, stamped, 'utf8');
+      console.log(`✓ Stamped ${rel} asset versions`);
     }
   }
 
@@ -609,6 +610,7 @@ async function main() {
     { loc: `${SITE}/`, lastmod: BUILD_DATE, freq: 'weekly', pri: '1.0' },
     { loc: `${SITE}/es/`, lastmod: BUILD_DATE, freq: 'monthly', pri: '0.7' },
     { loc: `${SITE}/card/`, lastmod: BUILD_DATE, freq: 'monthly', pri: '0.6' },
+    { loc: `${SITE}/es/card/`, lastmod: BUILD_DATE, freq: 'monthly', pri: '0.6' },
     ...data.map(s => ({
       loc: `${SITE}/states/${slugify(s.state)}/`,
       lastmod: safeLastmod(s.last_updated),
