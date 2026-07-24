@@ -388,21 +388,20 @@ function renderStateHTML(s, neighbors = [], L = EN_LABELS) {
 }
 
 // ---------------------------------------------------------------------------
-// Per-state structured data (JSON-LD): GovernmentService + BreadcrumbList
+// Per-state structured data (JSON-LD): WebPage + BreadcrumbList. (This used
+// to claim GovernmentService, which we aren't; validators side-eye that.)
 // ---------------------------------------------------------------------------
 function jsonLdForState(s, url, L = EN_LABELS) {
-  const gs = s.legal_framework?.good_samaritan_overdose_immunity;
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "GovernmentService",
+        "@type": "WebPage",
         "name": `${L.jsonLdName} ${s.state}`,
-        "serviceType": "Opioid overdose reversal medication access",
-        "areaServed": { "@type": "State", "name": s.state },
-        "audience": { "@type": "Audience", "audienceType": "General public" },
+        "about": { "@type": "Thing", "name": "Naloxone (Narcan) access" },
+        "spatialCoverage": { "@type": "State", "name": s.state },
         "inLanguage": L.lang,
-        "termsOfService": gs?.scope || '',
+        ...(/^\d{4}-\d{2}-\d{2}$/.test(s.last_updated || '') ? { "dateModified": s.last_updated } : {}),
         "url": url
       },
       {

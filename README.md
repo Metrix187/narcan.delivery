@@ -8,26 +8,37 @@ United States. Static site. No tracking of user identity. No ads.
 ## How it works
 
 - `index.html` is the homepage; picking a state navigates to
-  `/states/<slug>/`, which is pre-rendered at build time.
+  `/states/<slug>/`, which is pre-rendered at build time (and hydrated, not
+  re-rendered, by `app.js`).
 - `data.js` is the dataset for all 50 states and the single source of truth.
   Edits land as commits; there is no external data layer.
-- `build.mjs` emits pre-rendered HTML for every state, plus `data.json` and
-  `sitemap.xml`. Runs in Node 18+ with zero dependencies.
+- `build.mjs` validates the dataset (refusing to ship if it fails), emits
+  pre-rendered HTML for every state, stamps content-hashed `?v=` on script
+  urls, and writes `data.json`, `sitemap.xml`, and the service worker.
+  Runs in Node 18+ with zero dependencies.
+- The service worker precaches the shell + dataset, so the rescue steps and
+  all 50 states keep working offline after the first visit.
 
 ```
 .
 ├── index.html            homepage + SPA shell
 ├── styles.css            design system
-├── app.js                client-side state switcher
+├── app.js                client-side state switcher + hydration
 ├── data.js               the 50-state dataset (source of truth)
 ├── data.es.js            Spanish overlay for the per-state pages
 ├── build.mjs             prerender script
+├── validate-data.mjs     data quality gate (build fails on errors)
+├── tests/                node:test suite for the gate
+├── scripts/              link-rot checker (weekly action)
 ├── states/<slug>/        generated per-state pages
-├── es/                   Spanish landing + generated state pages
-├── data.json             generated public JSON mirror
+├── es/                   Spanish landing, state pages, rescue card
+├── card/                 printable rescue card (en; es at /es/card/)
+├── 404.html              helpful dead-end (picker + national lines)
+├── sw.js, manifest.json  offline support + installability
+├── data.json             generated public JSON mirror (CORS open)
 ├── sitemap.xml           generated sitemap
 ├── .htaccess             Apache config (if ever hosted on cPanel)
-└── .github/workflows/    CI + nightly rebuild
+└── .github/workflows/    CI, nightly rebuild, weekly link check
 ```
 
 ## Editing state data
@@ -45,9 +56,16 @@ was baked into `data.js` before it was retired.
 ## Running locally
 
 ```bash
-npm run build     # prerender + emit data.json + sitemap.xml
+npm run build     # validate + prerender + emit data.json/sitemap/sw
+npm test          # data-gate test suite (also runs in CI before builds)
+npm run validate  # just the dataset checks
 npm run serve     # serves on http://localhost:8080
 ```
+
+A weekly Action (`.github/workflows/link-check.yml`) probes every org
+website and source citation in the dataset and keeps a single "link rot"
+issue updated with anything dead, so refreshes chase real breakage instead
+of just age.
 
 ## Deploying
 

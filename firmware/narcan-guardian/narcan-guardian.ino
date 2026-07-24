@@ -1,23 +1,25 @@
-/* narcan.delivery sheet guardian -- Waveshare ESP32-C6-LCD-1.47
+/* narcan.delivery data guardian -- Waveshare ESP32-C6-LCD-1.47
  * ------------------------------------------------------------------------
- * An always-on, off-cloud backup of the published Google Sheet.
+ * An always-on, off-cloud backup of the published dataset (data.json).
+ * The google sheet is gone; git is the source of truth and the live site
+ * publishes /data.json. This device keeps a copy outside the cloud.
  *
- * Loop: fetch the CSV -> validate it with the SAME rules as snapshot-sheet.mjs
- * (reject HTML error pages / empty bodies / header-less payloads / sudden row
- * collapses) -> if good and changed, save a timestamped snapshot to the onboard
- * microSD and update /latest.csv. A bad fetch never overwrites the last
- * known-good copy; it just trips the status to STALE, then DEAD.
+ * Loop: fetch DATA_JSON_URL -> validate (reject HTML error pages, empty
+ * bodies, and payloads that lost half their states) -> if good and changed,
+ * save a timestamped snapshot to the onboard microSD and update
+ * /latest.json. A bad fetch never overwrites the last known-good copy; it
+ * just trips the status to STALE, then DEAD.
  *
  * The LCD is the status panel; the RGB LED is a health light
- * (green OK / amber STALE / red DEAD). The device also serves its last
- * known-good CSV at  http://<device-ip>/latest.csv  so the pipeline can be
- * re-seeded from it, and -- if the sheet is declared DEAD -- it POSTs an
- * optional Cloudflare deploy hook to rebuild the live site from the git mirror.
+ * (green OK / amber STALE / red DEAD). The device serves its last known-good
+ * copy at  http://<device-ip>/latest.json , and -- if the site is declared
+ * DEAD -- it POSTs an optional Cloudflare deploy hook, which rebuilds the
+ * site from git and can clear a bad deploy.
  *
- * This is the third copy in a defense-in-depth chain:
- *   1. data.js baseline (in git)         -- site survives a deleted sheet
- *   2. backup/ mirror (snapshot-sheet.mjs, hourly CI)  -- survives lost edits
- *   3. THIS device                       -- survives losing the cloud itself
+ * Defense-in-depth chain, post-sheet:
+ *   1. git (github + every clone)   -- the dataset's real home
+ *   2. cloudflare's deployed copy   -- serves it even if github is down
+ *   3. THIS device                  -- survives losing the cloud itself
  *
  * Libraries (Library Manager):
  *   - Arduino_GFX_Library   (moononournation)   ST7789 LCD
@@ -93,35 +95,24 @@ uint64_t fnv1a(const String &s) {
   return h;
 }
 
-String firstLine(const String &s) {
-  int nl = s.indexOf('\n');
-  return nl < 0 ? s : s.substring(0, nl);
-}
+// Validate a data.json payload without a JSON library: it must look like the
+// real file and hold a sane number of states. Returns the state count, or -1
+// if the payload is not a usable snapshot (reason written to `reason`).
+int validateSnapshot(const String &body, int prevRows, String &reason) {
+  String t = body; t.trim();
+  if (t.length() == 0)              { reason = "blank response"; return -1; }
+  if (t.startsWith("<"))            { reason = "HTML/error page"; return -1; }
+  if (!t.startsWith("{"))           { reason = "not json"; return -1; }
+  if (t.indexOf("\"states\"") < 0)  { reason = "no states key"; return -1; }
 
-// Port of validateSheet() from sheet-csv.mjs. Returns row count, or -1 if the
-// payload is not a usable snapshot (reason written to `reason`).
-int validateSheet(const String &csv, int prevRows, String &reason) {
-  String t = csv; t.trim();
-  if (t.length() == 0)            { reason = "blank response"; return -1; }
-  if (t.startsWith("<"))          { reason = "HTML/error page"; return -1; }
-  String hdr = firstLine(csv); hdr.toLowerCase();
-  if (hdr.indexOf("abbreviation") < 0) { reason = "missing header"; return -1; }
+  // Count states by their abbreviation keys. build.mjs pretty-prints, so each
+  // state contributes exactly one "abbreviation": marker.
+  int rows = 0, at = 0;
+  while ((at = t.indexOf("\"abbreviation\":", at)) >= 0) { rows++; at += 15; }
 
-  // Count data rows whose first field is a 2-letter abbreviation. The
-  // abbreviation column is first and precedes all free-text columns, so a naive
-  // split is safe here even though later cells may contain commas/quotes.
-  int rows = 0, start = csv.indexOf('\n');           // skip header
-  while (start >= 0 && start < (int)csv.length()) {
-    int end = csv.indexOf('\n', start + 1);
-    String line = csv.substring(start + 1, end < 0 ? csv.length() : end);
-    int comma = line.indexOf(',');
-    String ab = (comma < 0 ? line : line.substring(0, comma)); ab.trim();
-    if (ab.length() == 2 && isAlpha(ab[0]) && isAlpha(ab[1])) rows++;
-    start = end;
-  }
-  if (rows < 1) { reason = "no data rows"; return -1; }
+  if (rows < 1) { reason = "no states"; return -1; }
   if (prevRows > 1 && rows < (int)ceil(prevRows * COLLAPSE_RATIO)) {
-    reason = "row collapse " + String(prevRows) + " -> " + String(rows);
+    reason = "state collapse " + String(prevRows) + " -> " + String(rows);
     return -1;
   }
   return rows;
@@ -145,13 +136,13 @@ String relAge(time_t t) {
 }
 
 // ---- SD persistence -----------------------------------------------------
-void saveSnapshot(const String &csv, int rows, uint64_t hash) {
+void saveSnapshot(const String &body, int rows, uint64_t hash) {
   if (!SD.exists("/snapshots")) SD.mkdir("/snapshots");
-  String path = "/snapshots/" + stampNow() + ".csv";
+  String path = "/snapshots/" + stampNow() + ".json";
   File f = SD.open(path, FILE_WRITE);
-  if (f) { f.print(csv); f.close(); }
-  File l = SD.open("/latest.csv", FILE_WRITE);
-  if (l) { l.print(csv); l.close(); }
+  if (f) { f.print(body); f.close(); }
+  File l = SD.open("/latest.json", FILE_WRITE);
+  if (l) { l.print(body); l.close(); }
 
   File m = SD.open("/manifest.json", FILE_WRITE);
   if (m) {
@@ -177,11 +168,11 @@ void loadManifest() {
 }
 
 // ---- Network ------------------------------------------------------------
-bool fetchCSV(String &out) {
+bool fetchSnapshot(String &out) {
   WiFiClientSecure client;
-  client.setInsecure();                      // TODO: pin Google's CA for strictness
+  client.setInsecure();                      // TODO: pin the site's CA for strictness
   HTTPClient http;
-  if (!http.begin(client, SHEET_CSV_URL)) return false;
+  if (!http.begin(client, DATA_JSON_URL)) return false;
   http.addHeader("cache-control", "no-cache");
   int code = http.GET();
   if (code != HTTP_CODE_OK) { lastError = "HTTP " + String(code); http.end(); return false; }
@@ -203,20 +194,20 @@ void firePostHook(const char *url) {
 void runCheck() {
   checkCount++;
   lastCheckTime = time(nullptr);
-  String csv;
-  if (!fetchCSV(csv)) { onFail(); return; }
+  String body;
+  if (!fetchSnapshot(body)) { onFail(); return; }
 
   String reason;
-  int rows = validateSheet(csv, lastRows, reason);
+  int rows = validateSnapshot(body, lastRows, reason);
   if (rows < 0) { lastError = reason; onFail(); return; }
 
   // Good snapshot.
   consecFails = 0; deployTriggered = false; lastError = "";
-  uint64_t hash = fnv1a(csv);
+  uint64_t hash = fnv1a(body);
   if (hash != lastHash) {
     lastHash = hash; lastRows = rows; snapCount++;
     lastGoodTime = time(nullptr);
-    saveSnapshot(csv, rows, hash);
+    saveSnapshot(body, rows, hash);
   }
   status = ST_OK;
 }
@@ -225,8 +216,8 @@ void onFail() {
   consecFails++;
   status = (consecFails >= DEAD_AFTER_FAILS) ? ST_DEAD : ST_STALE;
   if (status == ST_DEAD && !deployTriggered) {
-    // Sheet looks gone. Kick a rebuild of the live site (it will fall back to
-    // the git backup mirror). The device keeps serving /latest.csv either way.
+    // Site looks gone or is serving garbage. Kick a rebuild from git; that
+    // can clear a bad deploy. The device keeps serving /latest.json either way.
     firePostHook(DEPLOY_HOOK_URL);
     deployTriggered = true;
   }
@@ -243,11 +234,11 @@ void serveFile(const char *path, const char *type) {
 void setupServer() {
   server.on("/", []() {
     server.send(200, "text/html",
-      "<h2>narcan.delivery sheet guardian</h2>"
-      "<p><a href='/latest.csv'>latest.csv</a> &middot; "
+      "<h2>narcan.delivery data guardian</h2>"
+      "<p><a href='/latest.json'>latest.json</a> &middot; "
       "<a href='/manifest.json'>manifest.json</a></p>");
   });
-  server.on("/latest.csv",    []() { serveFile("/latest.csv", "text/csv"); });
+  server.on("/latest.json",   []() { serveFile("/latest.json", "application/json"); });
   server.on("/manifest.json", []() { serveFile("/manifest.json", "application/json"); });
   server.begin();
 }
@@ -284,7 +275,7 @@ void drawScreen() {
   gfx->setCursor(8, 8);  gfx->print("narcan.delivery");
   gfx->setTextSize(1);
   gfx->setTextColor(0x8410);                          // grey
-  gfx->setCursor(8, 30); gfx->print("sheet guardian");
+  gfx->setCursor(8, 30); gfx->print("data guardian");
 
   gfx->fillRect(0, 46, 172, 30, statusColor());
   gfx->setTextColor(RGB565_BLACK); gfx->setTextSize(3);
@@ -293,7 +284,7 @@ void drawScreen() {
   gfx->setTextSize(1); gfx->setTextColor(RGB565_WHITE);
   int y = 92; const int dy = 16;
   auto row = [&](const String &s) { gfx->setCursor(8, y); gfx->print(s); y += dy; };
-  row("rows:      " + String(lastRows));
+  row("states:    " + String(lastRows));
   row("snapshots: " + String(snapCount));
   row("last good: " + relAge(lastGoodTime));
   row("checked:   " + relAge(lastCheckTime));

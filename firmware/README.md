@@ -1,31 +1,37 @@
-# narcan.delivery sheet guardian (ESP32-C6)
+# narcan.delivery data guardian (ESP32-C6)
 
-An always-on, off-cloud backup of the published Google Sheet, on a
-**Waveshare ESP32-C6-LCD-1.47**. It is the third copy in a defense-in-depth chain:
+An always-on, off-cloud backup of the published dataset, on a
+**Waveshare ESP32-C6-LCD-1.47**. The google sheet is retired; git is the
+source of truth and the live site publishes it at
+`https://narcan.delivery/data.json`. This device keeps a copy of that file
+outside the cloud entirely:
 
 | Copy | Where | Survives |
 |------|-------|----------|
-| 1. `data.js` baseline | git | a deleted sheet (site rebuilds from baseline) |
-| 2. `backup/` mirror | git, hourly via `snapshot-sheet.mjs` | lost *edits* (the un-backed-up delta) |
-| 3. **this device** | your desk | losing the cloud itself (GitHub/Cloudflare down or locked) |
-
-It runs a hand-port of the same `validateSheet()` rules as
-[`snapshot-sheet.mjs`](../snapshot-sheet.mjs), so all three copies agree on what
-a healthy snapshot looks like and none of them ever overwrites good data with an
-error page.
+| 1. git (GitHub + every clone) | the cloud | the dataset's real home |
+| 2. Cloudflare's deployed copy | the cloud | GitHub being down or locked |
+| 3. **this device** | your desk | losing the cloud itself |
 
 ## What it does
 
-- Every 30 min: fetch the CSV → validate → if good **and changed**, write a
-  timestamped snapshot to microSD and update `/latest.csv`.
-- A bad fetch (HTML error page, empty body, header-less, or a sudden row
-  collapse) **never overwrites** the last known-good copy. It trips the status
-  to `STALE`, then `DEAD` after ~3h of failures.
-- **LCD** shows status, rows, snapshot count, last-good age, fail count, IP, free SD.
+- Every 30 min: fetch `data.json` → validate → if good **and changed**, write
+  a timestamped snapshot to microSD and update `/latest.json`.
+- A bad fetch (HTML error page, empty body, not-JSON, or a payload that lost
+  half its states) **never overwrites** the last known-good copy. It trips the
+  status to `STALE`, then `DEAD` after ~3h of failures.
+- **LCD** shows status, state count, snapshot count, last-good age, fail
+  count, IP, free SD.
 - **RGB LED**: green `OK` / amber `STALE` / red `DEAD`.
-- Serves the backup on the LAN: `http://<device-ip>/latest.csv` and `/manifest.json`.
-- On `DEAD`, optionally POSTs your Cloudflare deploy hook to rebuild the live
-  site (which falls back to the git `backup/` mirror).
+- Serves the backup on the LAN: `http://<device-ip>/latest.json` and
+  `/manifest.json`.
+- On `DEAD`, optionally POSTs your Cloudflare deploy hook, which rebuilds the
+  site from git and can clear a bad deploy.
+
+> **Reflash needed:** this firmware was rewritten for the post-sheet world
+> (JSON validation, `DATA_JSON_URL`, `/latest.json`). A device still running
+> the sheet-era build will go STALE once the sheet is unpublished, which is
+> harmless but red. It has not been compiled/flashed since the rewrite; build
+> it once in the IDE before flashing day.
 
 ## Build & flash
 
@@ -35,7 +41,7 @@ error page.
    **Adafruit NeoPixel**.
 3. `cp secrets.h.example secrets.h` and fill in WiFi + (optional) deploy hook.
    `secrets.h` is gitignored.
-4. Insert a FAT32 microSD. Flash. First boot fetches and seeds `/latest.csv`.
+4. Insert a FAT32 microSD. Flash. First boot fetches and seeds `/latest.json`.
 
 ## Pinout (verified)
 
@@ -54,11 +60,11 @@ display initialises, that shared bus is the thing to debug, not the pin numbers.
 
 ## Re-seeding from the device
 
-If the sheet is ever lost, grab the device's copy and either re-create the sheet
-from it or feed it straight to the build:
+If the cloud copies are ever gone, the device's `latest.json` holds the full
+dataset (all 50 states, every field). Rebuilding `data.js` from it is a
+mechanical transform of `states[]`; the repo history also has every prior
+version.
 
 ```bash
-curl http://<device-ip>/latest.csv -o backup/sheet-latest.csv   # then commit
-# or point a one-off build straight at the device:
-SHEET_CSV_URL="http://<device-ip>/latest.csv" npm run build
+curl http://<device-ip>/latest.json -o data-recovered.json
 ```
