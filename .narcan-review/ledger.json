@@ -574,6 +574,132 @@
           "note": "one-time GS cap is SDCL 34-20A-113 not -111 (fixed cite); deep-linked SD DOH naloxone page + added Emily's Hope PORT (605-215-0654); NEXT to /southdakota"
         }
       ]
+    },
+    "TN": {
+      "state": "Tennessee",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "GS scope was wrong (said training required; it is not, and caller/victim get possession immunity); community URL to ROPS page; flagged NEXT Distro TN mail paused until 7/31/26; added Tennessee Harm Reduction",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "GS scope was wrong (said training required; it is not, and caller/victim get possession immunity); community URL to ROPS page; flagged NEXT Distro TN mail paused until 7/31/26; added Tennessee Harm Reduction"
+        }
+      ]
+    },
+    "TX": {
+      "state": "Texas",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "fixed shutdown date (More Narcan Please closed Feb 2024 not 2026, per Texas Tribune); GS was mislabeled - it is a weak first-caller defense not admin-only; added Naloxone Texas program; NEXT to /texas",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "fixed shutdown date (More Narcan Please closed Feb 2024 not 2026, per Texas Tribune); GS was mislabeled - it is a weak first-caller defense not admin-only; added Naloxone Texas program; NEXT to /texas"
+        }
+      ]
+    },
+    "UT": {
+      "state": "Utah",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "verified",
+      "note": "verbose copy holds fact-for-fact; opidemic.utah.gov + utahnaloxone.org + nextdistro/utah all live; populated the empty sources cell. Next pass: read UT SB 87 (2026) naloxone amendments",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "verified",
+          "note": "verbose copy holds fact-for-fact; opidemic.utah.gov + utahnaloxone.org + nextdistro/utah all live; populated the empty sources cell. Next pass: read UT SB 87 (2026) naloxone amendments"
+        }
+      ]
+    },
+    "VA": {
+      "state": "Virginia",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "HB 2117 confirmed vs statute; dropped stale EXPANDED marker, added probation/parole detail; LENOWISCO phone verified on VDH page; NEXT to /virginia",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "HB 2117 confirmed vs statute; dropped stale EXPANDED marker, added probation/parole detail; LENOWISCO phone verified on VDH page; NEXT to /virginia"
+        }
+      ]
+    },
+    "VT": {
+      "state": "Vermont",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "mail program was mislabeled - nextdistro/vermont disclaims affiliation, real free mailer is UVM Community First Responder; gs_scope given real statute detail (18 VSA 4254); community URL narrowed",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "mail program was mislabeled - nextdistro/vermont disclaims affiliation, real free mailer is UVM Community First Responder; gs_scope given real statute detail (18 VSA 4254); community URL narrowed"
+        }
+      ]
+    },
+    "WA": {
+      "state": "Washington",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "verified RCW 69.50.315 myself (caller+victim, possession only); real WA mailer is Peoples Harm Reduction Alliance not NEXT; how_to + gs_scope sharpened",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "verified RCW 69.50.315 myself (caller+victim, possession only); real WA mailer is Peoples Harm Reduction Alliance not NEXT; how_to + gs_scope sharpened"
+        }
+      ]
+    },
+    "WI": {
+      "state": "Wisconsin",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "community was a pharmacy directory - swapped to NARCAN Direct + added Nalox-ZONE (confirmed real brand, not a typo); dead contracts source URL swapped for /opioids/narcan-direct.htm; NEXT to /wisconsin",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "community was a pharmacy directory - swapped to NARCAN Direct + added Nalox-ZONE (confirmed real brand, not a typo); dead contracts source URL swapped for /opioids/narcan-direct.htm; NEXT to /wisconsin"
+        }
+      ]
+    },
+    "WV": {
+      "state": "West Virginia",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "verified GS myself: treatment requirement is on the VICTIM not the caller (fixed); community oeps.wv.gov/harm_reduction is 404 -> SOAR WV; dead helpandhope source dropped; left medicaid as Covered (SOAR-only 3-dollar figure unconfirmed)",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "verified GS myself: treatment requirement is on the VICTIM not the caller (fixed); community oeps.wv.gov/harm_reduction is 404 -> SOAR WV; dead helpandhope source dropped; left medicaid as Covered (SOAR-only 3-dollar figure unconfirmed)"
+        }
+      ]
+    },
+    "WY": {
+      "state": "Wyoming",
+      "last_reviewed": "2026-07-19",
+      "last_outcome": "changed",
+      "note": "SF0074 + WDH resource map confirmed; dropped stale NEW marker on the year-old law; community + mail URLs to WY-specific pages",
+      "reviews": 1,
+      "history": [
+        {
+          "date": "2026-07-19",
+          "outcome": "changed",
+          "note": "SF0074 + WDH resource map confirmed; dropped stale NEW marker on the year-old law; community + mail URLs to WY-specific pages"
+        }
+      ]
     }
   }
 }
