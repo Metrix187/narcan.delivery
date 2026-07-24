@@ -7,7 +7,7 @@
 <meta name="color-scheme" content="light" />
 
 <title>Naloxone in Massachusetts. How to get it fast | narcan.delivery</title>
-<meta name="description" content="Pharmacy (MassHealth covers) or CNP site. Pharmacy, mail, and local options for naloxone in Massachusetts. Good Samaritan law explained." />
+<meta name="description" content="Pharmacy (no Rx) or free by mail (You Can / NEXT Distro). Pharmacy, mail, and local options for naloxone in Massachusetts. Good Samaritan law explained." />
 <link rel="canonical" href="https://narcan.delivery/states/massachusetts/" />
 <link rel="alternate" hreflang="en" href="https://narcan.delivery/states/massachusetts/" />
 <link rel="alternate" hreflang="es" href="https://narcan.delivery/es/states/massachusetts/" />
@@ -16,9 +16,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="narcan.delivery" />
 <meta property="og:title" content="Naloxone in Massachusetts. How to get it fast" />
-<meta property="og:description" content="Pharmacy (MassHealth covers) or CNP site. Pharmacy, mail, and local options for naloxone in Massachusetts. Good Samaritan law explained." />
+<meta property="og:description" content="Pharmacy (no Rx) or free by mail (You Can / NEXT Distro). Pharmacy, mail, and local options for naloxone in Massachusetts. Good Samaritan law explained." />
 <meta property="og:url" content="https://narcan.delivery/states/massachusetts/" />
 <meta property="og:image" content="https://narcan.delivery/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="narcan.delivery: Naloxone, near you. Free or low-cost, in every state." />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23A8D8C6'/%3E%3Cpath d='M28 52l14 14 30-30' stroke='%231F2933' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
@@ -189,8 +192,24 @@ p  { margin: 0 0 1em; }
 .header-inner nav { display: flex; gap: 22px; }
 .header-inner nav a { color: var(--ink-muted); font-size: .95rem; }
 .header-inner nav a:hover { color: var(--ink); }
+
+/* On phones the nav collapses away, which used to leave no path to the
+   overdose steps without scrolling. This pill stays visible instead. */
+.nav-emergency {
+  display: none;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: .85rem; font-weight: 600;
+  background: var(--peach); color: var(--peach-ink);
+  border: 1px solid var(--peach-bd);
+  white-space: nowrap;
+}
+.nav-emergency:hover { text-decoration: none; background: #F0DFCC; }
+.nav-emergency:focus-visible { outline: none; box-shadow: var(--focus); }
 @media (max-width: 640px) {
   .header-inner nav { display: none; }
+  .nav-emergency { display: inline-flex; }
 }
 
 /* ===== Hero ============================================================== */
@@ -578,7 +597,7 @@ p  { margin: 0 0 1em; }
 }
 </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"GovernmentService","name":"How to get naloxone in Massachusetts","serviceType":"Opioid overdose reversal medication access","areaServed":{"@type":"State","name":"Massachusetts"},"audience":{"@type":"Audience","audienceType":"General public"},"inLanguage":"en","termsOfService":"Protects from possession/parole violations.","url":"https://narcan.delivery/states/massachusetts/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://narcan.delivery/"},{"@type":"ListItem","position":2,"name":"Massachusetts","item":"https://narcan.delivery/states/massachusetts/"}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"GovernmentService","name":"How to get naloxone in Massachusetts","serviceType":"Opioid overdose reversal medication access","areaServed":{"@type":"State","name":"Massachusetts"},"audience":{"@type":"Audience","audienceType":"General public"},"inLanguage":"en","termsOfService":"Protects from possession charges plus probation, pretrial, and parole violations.","url":"https://narcan.delivery/states/massachusetts/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://narcan.delivery/"},{"@type":"ListItem","position":2,"name":"Massachusetts","item":"https://narcan.delivery/states/massachusetts/"}]}]}</script>
 </head>
 <body>
 
@@ -598,6 +617,7 @@ p  { margin: 0 0 1em; }
       <a href="#faq">FAQ</a>
       <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
+    <a class="nav-emergency" href="#how-to-use">Overdose? 4 steps</a>
   </div>
 </header>
 
@@ -631,17 +651,17 @@ p  { margin: 0 0 1em; }
   </section>
 
   <!-- STATE VIEW (populated by JS) -->
-  <section id="state-view" class="state-view">
+  <section id="state-view" class="state-view" data-prerendered="MA">
   <article class="wrap narrow state-article">
     <header class="state-header">
       <p class="eyebrow"><a href="/" class="change-state">← Change state</a></p>
       <h2 class="state-title" tabindex="-1">Naloxone in Massachusetts</h2>
-      <div class="pills" role="list"><span class="pill pill-legal" role="listitem">Statewide standing order</span><span class="pill pill-gs ok" role="listitem">Good Samaritan law: yes</span><span class="pill pill-updated" role="listitem">Verified Jun 10, 2026</span></div>
+      <div class="pills" role="list"><span class="pill pill-legal" role="listitem">Statewide standing order</span><span class="pill pill-gs ok" role="listitem">Good Samaritan law: yes</span><span class="pill pill-updated" role="listitem">Verified Jul 18, 2026</span></div>
     </header>
 
     <div class="card card-lead">
       <p class="card-kicker">Your fastest option</p>
-      <p class="lead-text">Pharmacy (MassHealth covers) or CNP site.</p>
+      <p class="lead-text">Pharmacy (no Rx) or free by mail (You Can / NEXT Distro).</p>
     </div>
 
     <div class="card">
@@ -666,7 +686,7 @@ p  { margin: 0 0 1em; }
         </span>
         <h3>Free by mail</h3>
       </div>
-      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>NEXT Distro</strong><span class="contact"><a href="https://nextdistro.org/massachusetts" target="_blank" rel="noopener noreferrer">Visit website ↗<span class="sr-only"> (opens in new tab)</span></a></span></div><span class="cost-tag">Free</span></li></ul>
+      <ul class="org-list"><li class="org-item"><div style="flex:1;min-width:0;"><strong>NEXT Distro</strong><span class="contact"><a href="https://nextdistro.org/massachusetts" target="_blank" rel="noopener noreferrer">Visit website ↗<span class="sr-only"> (opens in new tab)</span></a></span></div><span class="cost-tag">Free</span></li><li class="org-item"><div style="flex:1;min-width:0;"><strong>You Can</strong><span class="contact"><a href="https://store.youcan.info/" target="_blank" rel="noopener noreferrer">Visit website ↗<span class="sr-only"> (opens in new tab)</span></a></span></div><span class="cost-tag">Free</span></li></ul>
     </div>
 
     
@@ -702,7 +722,7 @@ p  { margin: 0 0 1em; }
         </span>
         <h3>What the Good Samaritan law actually covers</h3>
       </div>
-      <p class="card-body">Protects from possession/parole violations.</p>
+      <p class="card-body">Protects from possession charges plus probation, pretrial, and parole violations.</p>
     </div>
 
     
@@ -713,7 +733,7 @@ p  { margin: 0 0 1em; }
         </span>
         <h3>Known barriers &amp; workarounds</h3>
       </div>
-      <p class="card-body">Copays for private insurance; use CNP.</p>
+      <p class="card-body">Private-insurance copays; free mail (You Can / NEXT Distro) sidesteps it.</p>
     </div>
 
     
@@ -851,7 +871,7 @@ p  { margin: 0 0 1em; }
     </div>
     <div class="footer-meta">
       <p><strong>Data last reviewed:</strong> <time id="last-reviewed" datetime="">…</time></p>
-      <p><strong>Data source:</strong> <span id="data-source-label">Embedded reference</span></p>
+      <p><strong>Data source:</strong> <a href="https://github.com/Metrix187/narcan.delivery" target="_blank" rel="noopener noreferrer">open dataset on GitHub</a></p>
       <p><a href="/es/" lang="es" hreflang="es">En español</a> · <a href="/card/">Print a rescue card</a></p>
       <p><a href="mailto:corrections@narcan.delivery?subject=Data%20correction">Submit a correction</a> · <a href="/data.json">Public JSON</a> · <a href="/sitemap.xml">Sitemap</a></p>
     </div>
@@ -862,8 +882,120 @@ p  { margin: 0 0 1em; }
   </div>
 </footer>
 
-<script src="/data.js" defer></script>
-<script src="/app.js" defer></script>
+<template id="tpl-state">
+  <article class="wrap narrow state-article">
+    <header class="state-header">
+      <p class="eyebrow"><a href="#" class="change-state">← Change state</a></p>
+      <h2 class="state-title" tabindex="-1"></h2>
+      <div class="pills" role="list">
+        <span class="pill pill-legal" role="listitem" data-k="legal"></span>
+        <span class="pill pill-gs" role="listitem" data-k="gs"></span>
+        <span class="pill pill-updated" role="listitem" data-k="updated"></span>
+      </div>
+    </header>
+
+    <div class="card card-lead">
+      <p class="card-kicker">Your fastest option</p>
+      <p class="lead-text" data-k="fastest"></p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M7 8h10M7 12h10M7 16h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" fill="none"/><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        </span>
+        <h3>At a pharmacy</h3>
+      </div>
+      <dl class="kv">
+        <dt>How it's dispensed</dt><dd data-k="mechanism"></dd>
+        <dt>Medicaid</dt><dd data-k="medicaid"></dd>
+        <dt>Typical cost</dt><dd data-k="cost"></dd>
+      </dl>
+    </div>
+
+    <div class="card" data-k="mail-wrap">
+      <div class="card-head">
+        <span class="card-badge badge-mint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><rect x="3" y="7" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 9l9 6 9-6" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Free by mail</h3>
+      </div>
+      <ul class="org-list" data-k="mail"></ul>
+    </div>
+
+    <div class="card" data-k="community-wrap">
+      <div class="card-head">
+        <span class="card-badge badge-peach" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 21s-7-7.58-7-12a7 7 0 1114 0c0 4.42-7 12-7 12z" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        </span>
+        <h3>Local programs</h3>
+      </div>
+      <ul class="org-list" data-k="community"></ul>
+    </div>
+
+    <div class="card card-fallback">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M5 4h3l2 5-2.2 1.1a11 11 0 005.1 5.1L14 14l5 2v3a1 1 0 01-1 1A14 14 0 014 5a1 1 0 011-1z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>If a link here stops working</h3>
+      </div>
+      <p class="card-body">Programs and websites change. These free phone lines work nationwide and can point you to naloxone near you, no internet needed.</p>
+      <ul class="org-list fallback-list">
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>SAMHSA National Helpline</strong><span class="services">Free, confidential, 24/7, in English &amp; Spanish. Finds naloxone and treatment in any state.</span><span class="contact"><a href="tel:18006624357">1-800-662-4357</a></span></div></li>
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>988 Suicide &amp; Crisis Lifeline</strong><span class="services">Call or text, 24/7.</span><span class="contact"><a href="tel:988">988</a></span></div></li>
+        <li class="org-item"><div style="flex:1;min-width:0;"><strong>If someone is overdosing right now</strong><span class="services">Emergency services.</span><span class="contact"><a href="tel:911">911</a></span></div></li>
+      </ul>
+    </div>
+
+    <div class="card card-legal">
+      <div class="card-head">
+        <span class="card-badge badge-lavender" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3l8 4v5c0 4.5-3.2 8.3-8 9-4.8-.7-8-4.5-8-9V7l8-4z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+        </span>
+        <h3>What the Good Samaritan law actually covers</h3>
+      </div>
+      <p data-k="gs-scope" class="card-body"></p>
+    </div>
+
+    <div class="card" data-k="barriers-wrap">
+      <div class="card-head">
+        <span class="card-badge badge-peach" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 3l10 18H2L12 3z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M12 10v5M12 18v.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <h3>Known barriers &amp; workarounds</h3>
+      </div>
+      <p data-k="barriers" class="card-body"></p>
+    </div>
+
+    <div class="card card-neighbors" data-k="neighbors-wrap">
+      <div class="card-head">
+        <span class="card-badge badge-sky" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="20" height="20"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3V7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/><path d="M9 4v13M15 7v13" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+        </span>
+        <h3>Near a border?</h3>
+      </div>
+      <p class="card-body">Access and laws change at the state line. If you live near one of these, check there too.</p>
+      <div class="neighbor-chips" data-k="neighbors"></div>
+    </div>
+
+    <details class="sources" data-k="sources-wrap">
+      <summary>Sources &amp; how this was verified</summary>
+      <ul class="source-list" data-k="sources"></ul>
+    </details>
+
+    <div class="share">
+      <button class="btn btn-ghost" id="share-btn" type="button">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 14a3.5 3.5 0 004.9 0l4-4a3.5 3.5 0 00-5-5l-1 1M14 10a3.5 3.5 0 00-4.9 0l-4 4a3.5 3.5 0 005 5l1-1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg>
+        <span id="share-label">Copy link to this state</span>
+      </button>
+      <a class="btn btn-ghost" href="#how-to-use">How to use it →</a>
+    </div>
+  </article>
+</template>
+
+<script src="/data.js?v=56bb40b7f9" defer></script>
+<script src="/app.js?v=d9c763d9f4" defer></script>
 
 <!-- Cloudflare Web Analytics (cookieless, no per-visitor tracking) -->
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "56ac51c3bd9d4b7db955463beed5c9a8"}'></script>

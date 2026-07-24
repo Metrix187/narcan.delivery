@@ -192,8 +192,24 @@ p  { margin: 0 0 1em; }
 .header-inner nav { display: flex; gap: 22px; }
 .header-inner nav a { color: var(--ink-muted); font-size: .95rem; }
 .header-inner nav a:hover { color: var(--ink); }
+
+/* On phones the nav collapses away, which used to leave no path to the
+   overdose steps without scrolling. This pill stays visible instead. */
+.nav-emergency {
+  display: none;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  font-size: .85rem; font-weight: 600;
+  background: var(--peach); color: var(--peach-ink);
+  border: 1px solid var(--peach-bd);
+  white-space: nowrap;
+}
+.nav-emergency:hover { text-decoration: none; background: #F0DFCC; }
+.nav-emergency:focus-visible { outline: none; box-shadow: var(--focus); }
 @media (max-width: 640px) {
   .header-inner nav { display: none; }
+  .nav-emergency { display: inline-flex; }
 }
 
 /* ===== Hero ============================================================== */
@@ -599,6 +615,7 @@ p  { margin: 0 0 1em; }
       <a href="#faq">FAQ</a>
       <a href="/es/" lang="es" hreflang="es">Español</a>
     </nav>
+    <a class="nav-emergency" href="#how-to-use">Overdose? 4 steps</a>
   </div>
 </header>
 
