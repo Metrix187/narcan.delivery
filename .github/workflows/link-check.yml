@@ -1,0 +1,48 @@
+name: Weekly link check
+
+# Every org website and source citation in data.js gets probed once a week.
+# Dead links (404/410/dns/timeout) open or update a single "link rot" issue
+# so the next data refresh knows exactly where to look. Suspect results
+# (403/429/5xx bot-walls) are listed in the report but never page anyone.
+
+on:
+  schedule:
+    - cron: '13 8 * * 1'   # mondays 08:13 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: Probe links
+        id: probe
+        continue-on-error: true
+        run: node scripts/check-links.mjs --report link-report.md
+
+      - name: File or update the link-rot issue
+        if: steps.probe.outcome == 'failure'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create link-rot --color D93F0B --description "dead links in the dataset" --repo "$GITHUB_REPOSITORY" 2>/dev/null || true
+          existing=$(gh issue list --label link-rot --state open --json number --jq '.[0].number' --repo "$GITHUB_REPOSITORY")
+          if [ -n "$existing" ]; then
+            gh issue comment "$existing" --body-file link-report.md --repo "$GITHUB_REPOSITORY"
+            echo "updated issue #$existing"
+          else
+            gh issue create --title "Link rot: dead links in data.js" \
+              --body-file link-report.md --label link-rot --repo "$GITHUB_REPOSITORY"
+            echo "opened new issue"
+          fi
+
+      - name: Summary
+        if: always()
+        run: cat link-report.md >> "$GITHUB_STEP_SUMMARY" || echo "no report generated"

@@ -1,0 +1,128 @@
+// Link-rot sweep over every url the dataset points people at: org websites
+// and source citations. The whole reason the site has a "if a link here stops
+// working" fallback card is that these rot constantly; this makes the rot
+// visible instead of waiting for someone in a bad moment to find it.
+//
+//   node scripts/check-links.mjs            human output
+//   node scripts/check-links.mjs --report report.md
+//
+// Exit 1 if anything is dead (404/410/dns/timeout). "Suspect" results
+// (403/429/5xx: usually bot-walls, not rot) never fail the run.
+
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const ROOT = path.join(path.dirname(fileURLToPath(import.meta.url)), '..');
+// browser-shaped headers, because several state .gov WAFs serve 404/403 to
+// anything that smells like a script (ohio.gov literally 404s plain curl and
+// 200s a browser). we're probing our own outbound links, so this is fair.
+const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36';
+const CONCURRENCY = 8;
+const TIMEOUT_MS = 15000;
+
+const reportPath = process.argv.includes('--report')
+  ? process.argv[process.argv.indexOf('--report') + 1]
+  : null;
+
+// gather urls -> the states that reference them
+const w = {};
+new Function('window', await fs.readFile(path.join(ROOT, 'data.js'), 'utf8'))(w);
+const refs = new Map();
+const add = (url, state, label) => {
+  if (!url) return;
+  if (!refs.has(url)) refs.set(url, []);
+  refs.get(url).push(`${state} (${label})`);
+};
+for (const s of w.NALOXONE_DATA) {
+  (s.sources || []).forEach(u => add(u, s.abbreviation, 'source'));
+  (s.access_channels?.community_programs || []).forEach(o => add(o.website, s.abbreviation, o.name));
+  (s.access_channels?.mail_based_programs || []).forEach(o => add(o.website, s.abbreviation, o.name));
+}
+
+const urls = [...refs.keys()];
+console.log(`checking ${urls.length} unique urls...`);
+
+async function probe(url, method) {
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), TIMEOUT_MS);
+  try {
+    const res = await fetch(url, {
+      method,
+      redirect: 'follow',
+      signal: ctl.signal,
+      headers: {
+        'user-agent': UA,
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'accept-language': 'en-US,en;q=0.9',
+      },
+    });
+    return { status: res.status };
+  } catch (e) {
+    return { error: e.cause?.code || e.name || String(e) };
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+async function check(url) {
+  let r = await probe(url, 'HEAD');
+  // plenty of servers 405/403 a HEAD or just hang up; give GET a shot
+  if (r.error || (r.status >= 400 && r.status !== 404 && r.status !== 410)) {
+    const g = await probe(url, 'GET');
+    if (!g.error && g.status < (r.status || 600)) r = g;
+    else if (r.error && !g.error) r = g;
+  }
+  if (r.error) {
+    // one retry for network flakes
+    const again = await probe(url, 'GET');
+    if (!again.error) r = again;
+  }
+  if (!r.error && r.status < 400) return { url, state: 'ok', detail: String(r.status) };
+  if (r.error) {
+    // incomplete-chain TLS setups load fine in real browsers (they fetch the
+    // intermediate); node doesn't. that's server sloppiness, not link rot.
+    const browserOk = ['UNABLE_TO_VERIFY_LEAF_SIGNATURE', 'UNABLE_TO_GET_ISSUER_CERT_LOCALLY', 'UNABLE_TO_GET_ISSUER_CERT'];
+    if (browserOk.includes(r.error)) return { url, state: 'suspect', detail: r.error };
+    return { url, state: 'dead', detail: r.error };
+  }
+  if (r.status === 404 || r.status === 410) return { url, state: 'dead', detail: String(r.status) };
+  return { url, state: 'suspect', detail: String(r.status) };
+}
+
+const results = [];
+let cursor = 0;
+await Promise.all(Array.from({ length: CONCURRENCY }, async () => {
+  while (cursor < urls.length) {
+    const url = urls[cursor++];
+    const res = await check(url);
+    results.push(res);
+    if (res.state !== 'ok') console.log(`  ${res.state.toUpperCase()} ${res.detail} ${url}`);
+  }
+}));
+
+const dead = results.filter(r => r.state === 'dead');
+const suspect = results.filter(r => r.state === 'suspect');
+console.log(`\nok: ${results.length - dead.length - suspect.length}, suspect: ${suspect.length}, dead: ${dead.length}`);
+
+if (reportPath) {
+  const fmt = (list) => list.map(r =>
+    `- \`${r.detail}\` ${r.url}\n  - referenced by: ${refs.get(r.url).join(', ')}`
+  ).join('\n');
+  const body = [
+    `# Link check, ${new Date().toISOString().slice(0, 10)}`,
+    '',
+    `Checked ${results.length} unique urls from data.js. ` +
+    `${dead.length} dead, ${suspect.length} suspect (likely bot-walls), rest fine.`,
+    '',
+    dead.length ? `## Dead (fix these)\n\n${fmt(dead)}` : '## Dead\n\nNone. Nice.',
+    '',
+    suspect.length ? `## Suspect (403/429/5xx, usually fine in a real browser)\n\n${fmt(suspect)}` : '',
+    '',
+    '_Generated by scripts/check-links.mjs (weekly action). Dead links here should feed the next data refresh._',
+  ].join('\n');
+  await fs.writeFile(reportPath, body, 'utf8');
+  console.log(`report written to ${reportPath}`);
+}
+
+process.exit(dead.length ? 1 : 0);

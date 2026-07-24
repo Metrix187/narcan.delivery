@@ -273,7 +273,7 @@ window.NALOXONE_DATA = [
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/missouri"},{"name":"Get MO Naloxone","cost":"Free","website":"https://getmissourinaloxone.com/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"GetMissouriNaloxone.com (free mail) or any pharmacy.","barriers_and_workarounds":"Rural stigma; mail order recommended."},
-    "sources":["https://getmissourinaloxone.com/","https://nextdistro.org/missouri","https://health.mo.gov/data/opioids/pdf/naloxone-standing-order.pdf"]
+    "sources":["https://getmissourinaloxone.com/","https://nextdistro.org/missouri","https://time2actmissouri.com/naloxone","https://pr.mo.gov/pharmacists-naloxone.asp"]
   },
   { "state":"Montana","abbreviation":"MT","last_updated":"2026-06-10",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects against possession charges."}},
