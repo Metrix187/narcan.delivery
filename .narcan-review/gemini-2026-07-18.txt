@@ -1,0 +1,105 @@
+Update the narcan.delivery Google Sheet using the blocks below. Match each block to its existing row by the `abbreviation` column — every state listed already has a row, so never add a new row or duplicate. Only touch the columns named in that state's block; leave every other column (and every other row) untouched exactly as-is. Treat `sources` as a single cell of pipe-separated URLs ( | ) — do not split it across cells or rows.
+
+=== KS ===
+last_updated: 2026-07-18
+gs_scope: SB 419 (2024) — immunity from prosecution for possession/use for the caller and the person overdosing. Excludes people on parole, probation, or work release.
+medicaid_notes: Covered (no copay).
+barriers: The 2024 immunity law has low awareness and excludes people under supervision.
+sources: https://www.dccca.org/naloxone/ | https://nextdistro.org/kansas | https://www.kslegislature.gov/li_2024/b2023_24/measures/documents/sb419_enrolled.pdf | https://www.sunflowerhealthplan.com/members/medicaid/benefits-services/co-pays.html
+
+=== KY ===
+last_updated: 2026-07-18
+gs_scope: Protects caller/victim from possession/paraphernalia charges if the caller stays.
+medicaid_notes: Covered; 2 kits per 30 days.
+how_to_get_quickly: findnaloxone.ky.gov locator or Pharmacy.
+
+=== LA ===
+last_updated: 2026-07-18
+sources: https://trystereo.org/overdose-prevention/ | https://nextdistro.org/louisiana | https://ldh.la.gov/assets/HealthyLa/Pharmacy/NaloxoneStandingOrder.pdf
+
+=== MA ===
+last_updated: 2026-07-18
+gs_scope: Protects from possession charges plus probation, pretrial, and parole violations.
+how_to_get_quickly: Pharmacy (no Rx) or free by mail (You Can / NEXT Distro).
+barriers: Private-insurance copays; free mail (You Can / NEXT Distro) sidesteps it.
+
+=== MD ===
+last_updated: 2026-07-18
+gs_scope: Protects caller/victim from possession/paraphernalia charges; felonies excluded.
+medicaid_notes: Covered, $1 copay.
+
+=== ME ===
+last_updated: 2026-07-18
+gs_scope: Broad: covers most crimes when you seek help, not just drug charges (excludes violent crimes, OUI).
+sources: https://www.maineaccesspoints.org/naloxone | https://getmainenaloxone.org/end-user/ | https://nextdistro.org/maine | https://legislature.maine.gov/statutes/17-a/title17-Asec1111-B.html
+
+=== MI ===
+last_updated: 2026-07-18
+
+=== MN ===
+last_updated: 2026-07-18
+
+=== MO ===
+last_updated: 2026-07-18
+how_to_get_quickly: GetMissouriNaloxone.com (free mail) or any pharmacy.
+
+=== MS ===
+last_updated: 2026-07-18
+how_to_get_quickly: MSDH free mail (form + short video), NEXT Distro, or MS Harm Reduction.
+
+=== NC ===
+last_updated: 2026-07-18
+
+=== ND ===
+last_updated: 2026-07-18
+
+=== NE ===
+last_updated: 2026-07-18
+gs_scope: Immunity for caller and victim from drug-possession charges (narrow: only those offenses, not homicide or others).
+sources: https://stopodne.com/ | https://www.npharm.org/ne-narcanprogram | https://dhhs.ne.gov/Pages/State-Opioid-Response.aspx | https://nebraskalegislature.gov/laws/statutes.php?statute=28-472
+
+=== NH ===
+last_updated: 2026-07-18
+gs_scope: Caller reporting for another is immune; self-reporter gets only a legal defense.
+sources: https://www.thedoorway.nh.gov/ | https://www.nhhrc.org/nhssps | https://nextdistro.org/newhampshire | https://gc.nh.gov/rsa/html/xxx/318-b/318-B-28-b.htm
+
+=== NJ ===
+last_updated: 2026-07-18
+
+=== NM ===
+last_updated: 2026-07-18
+
+=== NV ===
+last_updated: 2026-07-18
+sources: https://nextdistro.org/nevada | https://www.leg.state.nv.us/nrs/NRS-453C.html | https://www.tracbexchange.com/
+
+=== NY ===
+last_updated: 2026-07-18
+medicaid_notes: Covered; N-CAP knocks up to $40 off a pharmacy copay (no enrollment).
+
+=== OH ===
+last_updated: 2026-07-18
+
+=== OK ===
+last_updated: 2026-07-18
+
+=== OR ===
+last_updated: 2026-07-18
+
+=== PA ===
+last_updated: 2026-07-18
+sources: https://www.pa.gov/agencies/health/programs/opioids/naloxone | https://www.pa.gov/services/ddap/get-overdose-prevention-supplies-for-individuals | https://nextdistro.org/pachoice
+
+=== RI ===
+last_updated: 2026-07-18
+
+=== SC ===
+last_updated: 2026-07-18
+gs_scope: Caller protected only if reasonably first (give name, stay); victim separately immune.
+sources: https://dph.sc.gov/diseases-conditions/substance-use-prevention-resources/naloxone-distribution-and-opioid-overdose | https://www.daodas.sc.gov/services/prevention/overdose-death-prevention/ | https://nextdistro.org/southcarolina
+
+=== SD ===
+last_updated: 2026-07-18
+gs_scope: Protects caller and self-reporters from possession/use charges if they stay and cooperate, but only once per person, ever (SDCL 34-20A-113).
+sources: https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/ | https://doh.sd.gov/licensing-and-records/boards/pharmacy/naloxone-standing-order/ | https://nextdistro.org/southdakota | https://sdlegislature.gov/api/Statutes/34-20A.html
+

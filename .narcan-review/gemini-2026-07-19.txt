@@ -1,0 +1,49 @@
+Update the narcan.delivery Google Sheet using the blocks below. Match each block to its existing row by the `abbreviation` column — every state listed already has a row, so never add a new row or duplicate. Only touch the columns named in that state's block; leave every other column (and every other row) untouched exactly as-is. Treat `sources` as a single cell of pipe-separated URLs ( | ) — do not split it across cells or rows.
+
+
+=== TN ===
+last_updated: 2026-07-19
+gs_scope: Caller and person overdosing are immune from simple-possession charges; civil immunity for administering naloxone. No training required.
+how_to_get_quickly: Pharmacy (no Rx) or a Regional Overdose Prevention Specialist (ROPS).
+barriers: Rural access; NEXT Distro mail is paused until 7/31/26. Use ROPS or a pharmacy.
+sources: https://www.tn.gov/behavioral-health/substance-abuse-services/prevention/rops.html | https://nextdistro.org/tennessee | https://tennesseeharmreduction.com/how-do-i-get-free-narcan-in-tennessee/ | https://law.justia.com/codes/tennessee/title-63/chapter-1/part-1/section-63-1-156/
+
+=== TX ===
+last_updated: 2026-07-19
+gs_scope: Weak: a defense (not immunity) for the first caller on small possession, and it cannot be reused within 18 months. Administering naloxone is separately shielded.
+how_to_get_quickly: More Narcan Please shut down Feb 2024. Free mail + 10 regional hubs now at Naloxone Texas (naloxonetexas.com), or pharmacy standing order.
+sources: https://naloxonetexas.com/ | https://nextdistro.org/texas | https://bewelltexas.org | https://www.texastribune.org/2024/05/30/texas-hhsc-narcan-distribution/
+
+=== UT ===
+last_updated: 2026-07-19
+sources: https://opidemic.utah.gov/ | https://www.utahnaloxone.org/ | https://nextdistro.org/utah
+
+=== VA ===
+last_updated: 2026-07-19
+gs_scope: HB 2117 (2025): good-faith callers and helpers cannot be arrested or prosecuted for personal-use possession, or jailed for a related probation/parole violation. Excludes distribution, felon-in-possession, outstanding warrants.
+
+=== VT ===
+last_updated: 2026-07-19
+gs_scope: 18 V.S.A. 4254: caller and victim protected from arrest and prosecution for drug possession and related violations.
+how_to_get_quickly: Free naloxone via UVM Community First Responder program (short online training), a pharmacy, or a district health office.
+sources: https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention | https://www.uvm.edu/extension/community-first-responder-program | https://legislature.vermont.gov/statutes/section/18/084/04254
+
+=== WA ===
+last_updated: 2026-07-19
+gs_scope: RCW 69.50.315: caller and victim protected from simple-possession prosecution; not distribution, and evidence stays usable for other charges.
+how_to_get_quickly: Free naloxone by mail from People's Harm Reduction Alliance (phra.org/naloxone), a pharmacy (no Rx), or find a site at stopoverdose.org.
+sources: https://doh.wa.gov/you-and-your-family/drug-user-health/overdose-education-naloxone-distribution | https://stopoverdose.org/find-naloxone-near-me-washington-state/ | https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.315
+
+=== WI ===
+last_updated: 2026-07-19
+sources: https://www.dhs.wisconsin.gov/aoda/naloxone.htm | https://www.dhs.wisconsin.gov/opioids/narcan-direct.htm | https://wisconsinvoicesforrecovery.org/naloxzone/ | https://nextdistro.org/wisconsin
+
+=== WV ===
+last_updated: 2026-07-19
+gs_scope: Caller who stays and IDs themselves is immune from minor possession, underage-drinking, and public-intox charges. The overdose victim gets the same but must complete a court-approved treatment program.
+sources: https://soarwv.org/resources/naloxone-narcan/ | https://nextdistro.org/westvirginia | https://oeps.wv.gov/
+
+=== WY ===
+last_updated: 2026-07-19
+gs_scope: SF0074 (2025): last state to adopt immunity. Good-faith callers who stay are protected, up to 2 incidents per 12 months (2nd requires agreeing to treatment).
+sources: https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid-information-wyoming/opioid-overdose-response/ | https://nextdistro.org/wyoming

@@ -1,0 +1,18 @@
+Fix for the 5 sources cells that got "[link removed]" pasted in.
+Open THIS file (not chat) and copy each sources value into the matching state row, sources column.
+These are the real URLs.
+
+=== KS (sources) ===
+https://www.dccca.org/naloxone/ | https://nextdistro.org/kansas | https://www.kslegislature.gov/li_2024/b2023_24/measures/documents/sb419_enrolled.pdf | https://www.sunflowerhealthplan.com/members/medicaid/benefits-services/co-pays.html
+
+=== LA (sources) ===
+https://trystereo.org/overdose-prevention/ | https://nextdistro.org/louisiana | https://ldh.la.gov/assets/HealthyLa/Pharmacy/NaloxoneStandingOrder.pdf
+
+=== ME (sources) ===
+https://www.maineaccesspoints.org/naloxone | https://getmainenaloxone.org/end-user/ | https://nextdistro.org/maine | https://legislature.maine.gov/statutes/17-a/title17-Asec1111-B.html
+
+=== NH (sources) ===
+https://www.thedoorway.nh.gov/ | https://www.nhhrc.org/nhssps | https://nextdistro.org/newhampshire | https://gc.nh.gov/rsa/html/xxx/318-b/318-B-28-b.htm
+
+=== SD (sources) ===
+https://doh.sd.gov/healthcare-professionals/ems-trauma-program/sd-naloxone-project/ | https://doh.sd.gov/licensing-and-records/boards/pharmacy/naloxone-standing-order/ | https://nextdistro.org/southdakota | https://sdlegislature.gov/api/Statutes/34-20A.html
