@@ -3,26 +3,14 @@
  *
  * Responsibilities:
  *   - Populate the state picker.
- *   - Read / write ?state=XX in the URL.
- *   - Render the state view from the embedded dataset.
- *   - If a published Google Sheet CSV is available, fetch it and override
- *     matching fields at runtime (automation-friendly, no redeploy needed).
+ *   - Read / write the state from the URL (clean /states/<slug>/ or ?state=XX).
+ *   - Render the state view from the embedded dataset (data.js, the single
+ *     source of truth; edits land via git and redeploy).
  *   - Update <title>, <meta description>, and canonical on state change.
  */
 
 (() => {
   'use strict';
-
-  // =========================================================================
-  // CONFIG
-  // Paste your published Google Sheet CSV export URL here to enable live data.
-  // Sheet columns (row 1 = headers, exact names):
-  //   abbreviation, last_updated, naloxone_legal_status,
-  //   gs_exists, gs_scope, pharmacy_mechanism, medicaid_notes,
-  //   typical_cost, how_to_get_quickly, barriers
-  // Publish: File → Share → Publish to web → CSV
-  // =========================================================================
-  const SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vQo7lo4oD6rLjt4NWISOR3AJy1AtPOA3com6ntoo6LX_lSV8dmylHDjLcj3KIklR44peURjksWPo86R/pub?gid=0&single=true&output=csv";
 
   const DATA = (window.NALOXONE_DATA || []).slice().sort((a, b) =>
     a.state.localeCompare(b.state)
@@ -93,99 +81,6 @@
   };
 
   // =========================================================================
-  // CSV merge pipeline (Google Sheet → live overrides)
-  // =========================================================================
-  function parseSheetCSV(csv) {
-    const rows = [];
-    let field = '', row = [], inQ = false;
-    for (let i = 0; i < csv.length; i++) {
-      const ch = csv[i], next = csv[i + 1];
-      if (inQ) {
-        if (ch === '"' && next === '"') { field += '"'; i++; }
-        else if (ch === '"') { inQ = false; }
-        else { field += ch; }
-      } else {
-        if (ch === '"') inQ = true;
-        else if (ch === ',') { row.push(field); field = ''; }
-        else if (ch === '\n' || ch === '\r') {
-          if (field.length || row.length) { row.push(field); rows.push(row); row = []; field = ''; }
-          if (ch === '\r' && next === '\n') i++;
-        } else field += ch;
-      }
-    }
-    if (field.length || row.length) { row.push(field); rows.push(row); }
-    if (!rows.length) return {};
-    const headers = rows[0].map(h => h.trim());
-    const out = {};
-    for (let r = 1; r < rows.length; r++) {
-      const obj = {};
-      headers.forEach((h, i) => { obj[h] = (rows[r][i] || '').trim(); });
-      if (obj.abbreviation) out[obj.abbreviation.toUpperCase()] = obj;
-    }
-    return out;
-  }
-
-  // A sheet cell is "absent" if it's empty or the literal sentinel "UNKNOWN".
-  // Treating "UNKNOWN" as a real value would let an un-researched sheet row
-  // clobber good embedded data, so it must always fall through to the base.
-  const isBlankCell = (v) => v == null || String(v).trim() === '' || String(v).trim().toUpperCase() === 'UNKNOWN';
-  const pickCell = (ov, base) => (isBlankCell(ov) ? base : String(ov).trim());
-
-  function mergeSheet(base, ov) {
-    if (!ov || !base) return base;
-    const gsCell = String(ov.gs_exists ?? '').trim().toLowerCase();
-    const gsExists = gsCell === 'true' ? true
-                   : gsCell === 'false' ? false
-                   : base.legal_framework?.good_samaritan_overdose_immunity?.exists;
-    return {
-      ...base,
-      last_updated: pickCell(ov.last_updated, base.last_updated),
-      legal_framework: {
-        ...base.legal_framework,
-        naloxone_legal_status: pickCell(ov.naloxone_legal_status, base.legal_framework?.naloxone_legal_status),
-        good_samaritan_overdose_immunity: {
-          exists: gsExists,
-          scope:  pickCell(ov.gs_scope, base.legal_framework?.good_samaritan_overdose_immunity?.scope),
-        }
-      },
-      access_channels: {
-        ...base.access_channels,
-        pharmacies: {
-          ...base.access_channels.pharmacies,
-          mechanism:               pickCell(ov.pharmacy_mechanism, base.access_channels.pharmacies.mechanism),
-          medicaid_coverage_notes: pickCell(ov.medicaid_notes,     base.access_channels.pharmacies.medicaid_coverage_notes),
-          typical_cost:            pickCell(ov.typical_cost,        base.access_channels.pharmacies.typical_cost),
-        }
-      },
-      practical_guidance: {
-        how_to_get_naloxone_quickly: pickCell(ov.how_to_get_quickly, base.practical_guidance.how_to_get_naloxone_quickly),
-        barriers_and_workarounds:    pickCell(ov.barriers,           base.practical_guidance.barriers_and_workarounds),
-      },
-      // sheet can carry the citation links now: pipe-separated urls in a `sources`
-      // column override the data.js array; a blank cell keeps whatever data.js has.
-      sources: isBlankCell(ov.sources) ? base.sources
-             : ov.sources.split('|').map(u => u.trim()).filter(Boolean),
-    };
-  }
-
-  let liveOverrides = null;
-
-  async function loadLiveData() {
-    if (!SHEET_CSV_URL) return;
-    try {
-      const r = await fetch(SHEET_CSV_URL, { cache: 'no-store' });
-      if (!r.ok) throw new Error('sheet fetch failed');
-      const csv = await r.text();
-      liveOverrides = parseSheetCSV(csv);
-      const label = $('#data-source-label');
-      if (label) label.textContent = 'Live (Google Sheet)';
-      // If we're already rendering a state, re-render with overrides applied.
-      const abbr = new URLSearchParams(location.search).get('state');
-      if (abbr) renderState(abbr.toUpperCase());
-    } catch { /* silent; embedded data is fine */ }
-  }
-
-  // =========================================================================
   // Populate state picker
   // =========================================================================
   function fillPicker() {
@@ -222,11 +117,7 @@
   // =========================================================================
   // Render state view
   // =========================================================================
-  function getMergedState(abbr) {
-    const base = DATA.find(s => s.abbreviation === abbr);
-    if (!base) return null;
-    return liveOverrides && liveOverrides[abbr] ? mergeSheet(base, liveOverrides[abbr]) : base;
-  }
+  const getState = (abbr) => DATA.find(s => s.abbreviation === abbr) || null;
 
   function orgItemHTML(org) {
     const parts = [];
@@ -244,7 +135,7 @@
   function renderState(abbr, { focus = false } = {}) {
     const view = $('#state-view');
     const tpl  = $('#tpl-state');
-    const s = getMergedState(abbr);
+    const s = getState(abbr);
 
     if (!s) {
       view.hidden = true; view.innerHTML = '';
@@ -453,10 +344,6 @@
       select.value = initial;
       renderState(initial);
     }
-
-    // Pull live overrides after first paint so the page is never blocked.
-    if ('requestIdleCallback' in window) requestIdleCallback(loadLiveData, { timeout: 2000 });
-    else setTimeout(loadLiveData, 600);
   }
 
   if (document.readyState === 'loading') {

@@ -18,16 +18,9 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { parseSheetCSV } from './sheet-csv.mjs';
 
 const ROOT = path.dirname(fileURLToPath(import.meta.url));
 const SITE = 'https://narcan.delivery';
-
-// Same Google Sheet URL used by the client. If this URL is reachable at build
-// time, its values are merged INTO the prerendered HTML, so crawlers see the
-// same data humans see. Override via SHEET_CSV_URL env var.
-const SHEET_CSV_URL = process.env.SHEET_CSV_URL ||
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vQo7lo4oD6rLjt4NWISOR3AJy1AtPOA3com6ntoo6LX_lSV8dmylHDjLcj3KIklR44peURjksWPo86R/pub?gid=0&single=true&output=csv';
 
 // ---------------------------------------------------------------------------
 // Load dataset by evaluating data.js in a minimal shim (Node has no `window`).
@@ -315,91 +308,6 @@ function jsonLdForState(s, url, L = EN_LABELS) {
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
-// Optional: fetch Google Sheet at build time and merge overrides into the
-// dataset BEFORE prerendering. Mirrors the runtime merge in app.js so the
-// HTML served to crawlers matches what users see in the browser.
-// ---------------------------------------------------------------------------
-// parseSheetCSV lives in sheet-csv.mjs (shared with the backup mirror + the
-// ESP32-C6 guardian firmware) so all three agree on how the sheet is read.
-
-// A sheet cell is "absent" if it's empty or the literal sentinel "UNKNOWN".
-// Treating "UNKNOWN" as a real value would let an un-researched sheet row
-// clobber good embedded data, so it must always fall through to the base.
-const isBlankCell = (v) => v == null || String(v).trim() === '' || String(v).trim().toUpperCase() === 'UNKNOWN';
-const pickCell = (ov, base) => (isBlankCell(ov) ? base : String(ov).trim());
-
-function mergeSheet(base, ov) {
-  if (!ov) return base;
-  const gs = base.legal_framework?.good_samaritan_overdose_immunity || {};
-  const gsCell = String(ov.gs_exists ?? '').trim().toLowerCase();
-  const gsExists = gsCell === 'true' ? true : gsCell === 'false' ? false : gs.exists;
-  return {
-    ...base,
-    last_updated: pickCell(ov.last_updated, base.last_updated),
-    legal_framework: {
-      ...base.legal_framework,
-      naloxone_legal_status: pickCell(ov.naloxone_legal_status, base.legal_framework?.naloxone_legal_status),
-      good_samaritan_overdose_immunity: { exists: gsExists, scope: pickCell(ov.gs_scope, gs.scope) }
-    },
-    access_channels: {
-      ...base.access_channels,
-      pharmacies: {
-        ...base.access_channels.pharmacies,
-        mechanism:               pickCell(ov.pharmacy_mechanism, base.access_channels.pharmacies?.mechanism),
-        medicaid_coverage_notes: pickCell(ov.medicaid_notes,     base.access_channels.pharmacies?.medicaid_coverage_notes),
-        typical_cost:            pickCell(ov.typical_cost,        base.access_channels.pharmacies?.typical_cost),
-      }
-    },
-    practical_guidance: {
-      how_to_get_naloxone_quickly: pickCell(ov.how_to_get_quickly, base.practical_guidance?.how_to_get_naloxone_quickly),
-      barriers_and_workarounds:    pickCell(ov.barriers,           base.practical_guidance?.barriers_and_workarounds),
-    },
-    // sheet can carry the citation links now: pipe-separated urls in a `sources`
-    // column override the data.js array; a blank cell keeps whatever data.js has.
-    sources: isBlankCell(ov.sources) ? base.sources
-           : ov.sources.split('|').map(u => u.trim()).filter(Boolean),
-  };
-}
-
-// Get the override CSV. Try the live sheet first; if it's unreachable or empty
-// (e.g. deleted/unpublished), fall back to the committed backup mirror written
-// by snapshot-sheet.mjs, so a dead sheet still yields the last known-good data
-// instead of dropping all the way to the embedded baseline. Returns the parsed
-// override map (possibly empty).
-async function loadSheetOverrides() {
-  if (SHEET_CSV_URL) {
-    try {
-      const res = await fetch(SHEET_CSV_URL, { headers: { 'cache-control': 'no-cache' } });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const map = parseSheetCSV(await res.text());
-      if (Object.keys(map).length) {
-        console.log(`✓ Live sheet: ${Object.keys(map).length} row(s) merged`);
-        return map;
-      }
-      console.log('  (sheet returned no rows; trying backup mirror)');
-    } catch (err) {
-      console.log(`  (sheet fetch failed: ${err.message}; trying backup mirror)`);
-    }
-  }
-  try {
-    const csv = await fs.readFile(path.join(ROOT, 'backup', 'sheet-latest.csv'), 'utf8');
-    const map = parseSheetCSV(csv);
-    if (Object.keys(map).length) {
-      console.log(`✓ Backup mirror: ${Object.keys(map).length} row(s) merged (live sheet unavailable)`);
-      return map;
-    }
-  } catch { /* no backup yet */ }
-  console.log('  (no live sheet or backup; using embedded baseline only)');
-  return {};
-}
-
-async function applySheetOverrides(data) {
-  const map = await loadSheetOverrides();
-  if (!Object.keys(map).length) return data;
-  return data.map(s => map[s.abbreviation] ? mergeSheet(s, map[s.abbreviation]) : s);
-}
-
 // Refresh the inlined <style> block in index.html from styles.css so the
 // stylesheet has a single source of truth. The block is delimited by
 // <!-- BUILD:INLINE-CSS --> ... <!-- /BUILD:INLINE-CSS --> sentinels.
@@ -425,8 +333,7 @@ async function syncInlinedCSS() {
 }
 
 async function main() {
-  let { data, adjacency } = await loadData();
-  data = await applySheetOverrides(data);
+  const { data, adjacency } = await loadData();
   const byAbbr = Object.fromEntries(data.map(s => [s.abbreviation, s]));
   const neighborsFor = (s) => (adjacency[s.abbreviation] || [])
     .map(a => byAbbr[a]).filter(Boolean)

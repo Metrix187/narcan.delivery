@@ -1,6 +1,6 @@
 // narcan.delivery state reference data
-// Embedded baseline. Can be overridden at runtime by a published Google Sheet CSV
-// (see SHEET_CSV_URL in app.js). Keep this file sorted alphabetically by state name.
+// The single source of truth: edit here, commit, and the site rebuilds.
+// Keep this file sorted alphabetically by state name.
 
 window.NALOXONE_DATA = [
   { "state":"Alabama","abbreviation":"AL","last_updated":"2026-07-11",

@@ -9,9 +9,8 @@ United States. Static site. No tracking of user identity. No ads.
 
 - `index.html` is the homepage; picking a state navigates to
   `/states/<slug>/`, which is pre-rendered at build time.
-- `data.js` holds the baseline dataset for all 50 states.
-- A published Google Sheet can override any field at build time *and* at
-  runtime — editors don't need to touch code to fix a number.
+- `data.js` is the dataset for all 50 states and the single source of truth.
+  Edits land as commits; there is no external data layer.
 - `build.mjs` emits pre-rendered HTML for every state, plus `data.json` and
   `sitemap.xml`. Runs in Node 18+ with zero dependencies.
 
@@ -19,10 +18,12 @@ United States. Static site. No tracking of user identity. No ads.
 .
 ├── index.html            homepage + SPA shell
 ├── styles.css            design system
-├── app.js                client-side state switcher + sheet merge
-├── data.js               embedded 50-state dataset
+├── app.js                client-side state switcher
+├── data.js               the 50-state dataset (source of truth)
+├── data.es.js            Spanish overlay for the per-state pages
 ├── build.mjs             prerender script
 ├── states/<slug>/        generated per-state pages
+├── es/                   Spanish landing + generated state pages
 ├── data.json             generated public JSON mirror
 ├── sitemap.xml           generated sitemap
 ├── .htaccess             Apache config (if ever hosted on cPanel)
@@ -31,29 +32,15 @@ United States. Static site. No tracking of user identity. No ads.
 
 ## Editing state data
 
-**Fast, no redeploy needed:** edit the Google Sheet at the URL hard-coded in
-`app.js` / `build.mjs`. Users see changes within an hour (next nightly
-rebuild bakes them into the pre-rendered HTML; clients also merge them live).
+Edit `data.js`, commit, push. Cloudflare Pages rebuilds on every push to
+`main`, so a data fix is live in a couple of minutes. Every change gets git
+history, review, and CI for free — which is the whole durability story too:
+the dataset lives in this repo, mirrored on every clone and on Cloudflare's
+deploy. (An optional off-cloud copy, an ESP32-C6 that watches the published
+`data.json`, lives in [`firmware/`](firmware/).)
 
-**Permanent:** edit `data.js` and commit. Cloudflare Pages rebuilds on push.
-
-## Sheet backup (durability)
-
-The live site already survives a deleted sheet: `build.mjs` falls back to the
-`data.js` baseline. What that does *not* protect is the **edits** made in the
-sheet since they were last baked into `data.js`. Two layers cover that:
-
-1. **git mirror**: `snapshot-sheet.mjs` (run hourly by
-   `.github/workflows/mirror-sheet.yml`) validates the published CSV and commits
-   it to [`backup/`](backup/) when it's healthy and changed. `build.mjs` reads
-   `backup/sheet-latest.csv` if the live sheet is unreachable. Run it yourself
-   with `npm run snapshot`.
-2. **off-cloud guardian**: an ESP32-C6 with a screen + microSD that runs a port
-   of the same validator as a third copy outside the cloud. See
-   [`firmware/`](firmware/).
-
-The validation rules ("what is a good snapshot") live once in
-[`sheet-csv.mjs`](sheet-csv.mjs), shared by all three.
+This replaced an earlier Google Sheet override layer; the sheet's final state
+was baked into `data.js` before it was retired.
 
 ## Running locally
 
@@ -72,8 +59,8 @@ Hosted on **Cloudflare Pages**, connected to this GitHub repo.
 
 Cloudflare builds on every push to `main`. A nightly GitHub Action
 (`.github/workflows/nightly-rebuild.yml`) pings the Cloudflare deploy hook
-once a day so Google Sheet edits flow into pre-rendered HTML even when
-there's no commit.
+once a day so time-derived output (the "Needs review" staleness pills,
+sitemap dates) stays honest even when nothing is committed.
 
 ### Secrets
 

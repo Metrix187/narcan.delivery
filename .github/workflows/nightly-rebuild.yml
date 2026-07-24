@@ -1,8 +1,10 @@
-name: Nightly rebuild (Google Sheet pickup)
+name: Nightly rebuild (freshness labels)
 
-# Rebuilds the site once a day so changes made in the Google Sheet flow into
-# the prerendered HTML. Cloudflare Pages builds on every push, so this just
-# triggers a fresh build via its deploy hook.
+# Rebuilds the site once a day so time-derived output stays honest even when
+# nothing is committed: the "Needs review" pills (data older than 6 months),
+# sitemap dates, and the copyright year are all computed at build time.
+# Cloudflare Pages builds on every push, so this just triggers a fresh build
+# via its deploy hook.
 #
 # Setup:
 #   1. In Cloudflare Pages → the project → Settings → Builds & deployments,
