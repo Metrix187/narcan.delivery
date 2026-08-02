@@ -179,7 +179,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"State TeleNaloxone mail program ENDED Sept 2024. Find free kits at participating pharmacies, community orgs, and vending machines via https://www.naloxoneiowa.org","barriers_and_workarounds":"No state mail program anymore; Good Samaritan immunity is one-time-only."},
     "sources":["https://www.naloxoneiowa.org/","https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone","https://www.legis.iowa.gov/docs/code/124.418.pdf","https://www.iarx.org/naloxone"]
   },
-  { "state":"Kansas","abbreviation":"KS","last_updated":"2026-07-18",
+  { "state":"Kansas","abbreviation":"KS","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide pharmacy protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"SB 419 (2024): immunity from prosecution for possession/use for the caller and the person overdosing. Excludes people on parole, probation, or work release."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide protocol.","medicaid_coverage_notes":"Covered (no copay).","typical_cost":"OTC ~$45"},
@@ -189,27 +189,27 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Free kits and test strips mailed by DCCCA (dccca.org/naloxone), or any pharmacy. DCCCA also stocks free vending machines in 8 cities.","barriers_and_workarounds":"The 2024 immunity law has low awareness and excludes people under supervision."},
     "sources":["https://www.dccca.org/naloxone/","https://nextdistro.org/kansas","https://www.kslegislature.gov/li_2024/b2023_24/measures/documents/sb419_enrolled.pdf","https://www.sunflowerhealthplan.com/members/medicaid/benefits-services/co-pays.html"]
   },
-  { "state":"Kentucky","abbreviation":"KY","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Pharmacy protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from possession/paraphernalia charges if the caller stays."}},
+  { "state":"Kentucky","abbreviation":"KY","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Pharmacy protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and person overdosing from possession/paraphernalia charges, and since 2024 from drug-death manslaughter and reckless homicide charges, if the caller stays until help arrives. Calling during a warrant or lawful search does not count as good faith."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacy protocol.","medicaid_coverage_notes":"Covered; 2 kits per 30 days.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Find Naloxone Now KY","services":"Statewide locator","website":"https://findnaloxone.ky.gov"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/kentucky"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"findnaloxone.ky.gov locator or Pharmacy.","barriers_and_workarounds":"Rural access; use NEXT Distro."},
-    "sources":["https://findnaloxone.ky.gov","https://nextdistro.org/kentucky"]
+    "sources":["https://findnaloxone.ky.gov","https://nextdistro.org/kentucky","https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=55441"]
   },
-  { "state":"Louisiana","abbreviation":"LA","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from possession charges."}},
+  { "state":"Louisiana","abbreviation":"LA","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and person overdosing from possession/paraphernalia charges, pretrial, probation, and parole violations, and civil forfeiture tied to the incident. Does not cover other offenses."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered (no copay).","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Louisiana Health Hub","services":"Statewide opioid response hub","website":"https://louisianahealthhub.org/oprh/"}],
       "mail_based_programs":[{"name":"NEXT Distro / Trystereo","cost":"Free","website":"https://nextdistro.org/louisiana"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or NEXT Distro/Trystereo.","barriers_and_workarounds":"Cost minimized by Medicaid/Free programs."},
-    "sources":["https://trystereo.org/overdose-prevention/","https://nextdistro.org/louisiana","https://ldh.la.gov/assets/HealthyLa/Pharmacy/NaloxoneStandingOrder.pdf"]
+    "sources":["https://trystereo.org/overdose-prevention/","https://nextdistro.org/louisiana","https://ldh.la.gov/assets/HealthyLa/Pharmacy/NaloxoneStandingOrder.pdf","https://legis.la.gov/Legis/Law.aspx?d=919601"]
   },
-  { "state":"Maine","abbreviation":"ME","last_updated":"2026-07-18",
+  { "state":"Maine","abbreviation":"ME","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Broad: covers most crimes when you seek help, not just drug charges (excludes violent crimes, OUI)."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
@@ -219,7 +219,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Maine Access Points or Pharmacy.","barriers_and_workarounds":"Rural geography; use MAP tiered network."},
     "sources":["https://www.maineaccesspoints.org/naloxone","https://getmainenaloxone.org/end-user/","https://nextdistro.org/maine","https://legislature.maine.gov/statutes/17-a/title17-Asec1111-B.html"]
   },
-  { "state":"Maryland","abbreviation":"MD","last_updated":"2026-07-18",
+  { "state":"Maryland","abbreviation":"MD","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from possession/paraphernalia charges; felonies excluded."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered, $1 copay.","typical_cost":"OTC ~$45"},
@@ -229,7 +229,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or NEXT Distro.","barriers_and_workarounds":"Urban/Rural divide; mail order available."},
     "sources":["https://health.maryland.gov/pha/NALOXONE/Pages/Home.aspx","https://stopoverdose.maryland.gov/naloxone/","https://nextdistro.org/maryland"]
   },
-  { "state":"Massachusetts","abbreviation":"MA","last_updated":"2026-07-18",
+  { "state":"Massachusetts","abbreviation":"MA","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects from possession charges plus probation, pretrial, and parole violations."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"MassHealth: $0 copay.","typical_cost":"OTC ~$45"},
@@ -239,67 +239,67 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy (no Rx) or free by mail (You Can / NEXT Distro).","barriers_and_workarounds":"Private-insurance copays; free mail (You Can / NEXT Distro) sidesteps it."},
     "sources":["https://www.mass.gov/info-details/where-to-get-naloxone-in-massachusetts","https://www.mass.gov/info-details/community-naloxone-program-cnp","https://nextdistro.org/massachusetts"]
   },
-  { "state":"Michigan","abbreviation":"MI","last_updated":"2026-07-18",
+  { "state":"Michigan","abbreviation":"MI","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Limited to personal use amounts."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"MDHHS Portal","services":"Free bulk shipping","website":"https://www.michigan.gov/opioids/find-help/naloxone-page"}],
+      "community_programs":[{"name":"Naloxone Direct Portal","services":"Free bulk shipping","website":"https://www.michigan.gov/opioids/find-help/naloxone-page"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/michigan"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or NEXT Distro.","barriers_and_workarounds":"Rural access; mail order is key."},
     "sources":["https://www.michigan.gov/opioids","https://nextdistro.org/michigan","https://www.michigan.gov/mdhhs/inside-mdhhs/newsroom/2026/03/05/naloxone"]
   },
-  { "state":"Minnesota","abbreviation":"MN","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Statewide protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Steve's Law: Immunity for possession/sharing."}},
+  { "state":"Minnesota","abbreviation":"MN","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Statewide protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Steve's Law: protects caller and person overdosing from possession/sharing charges. Caller must give their name, stay at the scene, and cooperate with responders to qualify."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Protocol.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[
         {"name":"Harm Reduction Sisters","services":"Free kits in Duluth","website":"https://www.harmreductionsisters.org/"},
-        {"name":"Indigenous Peoples Task Force","services":"Culturally specific outreach","phone":"612-870-1723"}
+        {"name":"Indigenous Peoples Task Force","services":"Culturally specific outreach","website":"https://indigenouspeoplestf.org/programs/narcan/","phone":"612-870-1723"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/minnesota"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Naloxone Finder Tool or Pharmacy.","barriers_and_workarounds":"Rural north; use mail order."},
-    "sources":["https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/","https://www.health.state.mn.us/communities/opioids/basics/naloxone.html","https://nextdistro.org/minnesota"]
+    "sources":["https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/","https://www.health.state.mn.us/communities/opioids/basics/naloxone.html","https://nextdistro.org/minnesota","https://www.revisor.mn.gov/statutes/cite/604A.05"]
   },
-  { "state":"Mississippi","abbreviation":"MS","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Standing order (voluntary pharmacy participation)","good_samaritan_overdose_immunity":{"exists":true,"scope":"Narrow: very small amounts only."}},
+  { "state":"Mississippi","abbreviation":"MS","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Standing order (voluntary pharmacy participation)","good_samaritan_overdose_immunity":{"exists":true,"scope":"Narrow: covers caller and person overdosing for small-amount possession and paraphernalia only. Larger amounts, distribution, and trafficking are not covered."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order (voluntary participation).","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"MS Harm Reduction","services":"Outreach, education, and free naloxone distribution","website":"https://msharmreduction.org","phone":"601-613-7017"},{"name":"Stand Up Mississippi","services":"Free naloxone locator via 14 regional mental health centers","website":"https://standupms.org/naloxone/","phone":"601-359-1288"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/mississippi"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"MSDH free mail (form + short video), NEXT Distro, or MS Harm Reduction.","barriers_and_workarounds":"Pharmacy refusal common; mail order reliable."},
-    "sources":["https://msdh.ms.gov/page/44,0,382,61.html","https://msharmreduction.org/","https://nextdistro.org/mississippi","https://odfree.org/prevention/"]
+    "sources":["https://msdh.ms.gov/page/44,0,382,61.html","https://msharmreduction.org/","https://nextdistro.org/mississippi","https://odfree.org/prevention/","https://codes.findlaw.com/ms/title-41-public-health/ms-code-sect-41-29-149-1/"]
   },
-  { "state":"Missouri","abbreviation":"MO","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Possession/paraphernalia immunity."}},
+  { "state":"Missouri","abbreviation":"MO","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and person overdosing from possession and paraphernalia charges when they seek help. Does not cover distribution or outstanding warrants."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Missouri Network","services":"Harm reduction and statewide naloxone by mail","website":"https://www.monetwork.org","phone":"844-732-3587"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/missouri"},{"name":"Get MO Naloxone","cost":"Free","website":"https://getmissourinaloxone.com/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"GetMissouriNaloxone.com (free mail) or any pharmacy.","barriers_and_workarounds":"Rural stigma; mail order recommended."},
-    "sources":["https://getmissourinaloxone.com/","https://nextdistro.org/missouri","https://time2actmissouri.com/naloxone","https://pr.mo.gov/pharmacists-naloxone.asp"]
+    "sources":["https://getmissourinaloxone.com/","https://nextdistro.org/missouri","https://time2actmissouri.com/naloxone","https://pr.mo.gov/pharmacists-naloxone.asp","https://revisor.mo.gov/main/OneSection.aspx?section=195.205"]
   },
-  { "state":"Montana","abbreviation":"MT","last_updated":"2026-06-10",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects against possession charges."}},
+  { "state":"Montana","abbreviation":"MT","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects both the caller and the person overdosing from arrest or prosecution for drug offenses found only because they sought medical help."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"Open Aid Alliance","services":"Harm reduction services","website":"https://www.openaidalliance.org/","phone":"406-543-6691"}],
+      "community_programs":[{"name":"Open Aid Alliance","services":"Harm reduction services","website":"https://www.openaidalliance.org/","phone":"406-543-4770"}],
       "mail_based_programs":[{"name":"Open Aid Alliance / NEXT Distro","cost":"Free","website":"https://www.openaidalliance.org/savealife/"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Open Aid Alliance (mail or in-person).","barriers_and_workarounds":"Geography; mail order essential."},
-    "sources":["https://www.openaidalliance.org/savealife/","https://nextdistro.org/montana"]
+    "sources":["https://www.openaidalliance.org/savealife/","https://nextdistro.org/montana","https://mca.legmt.gov/bills/mca/title_0500/chapter_0320/part_0060/section_0090/0500-0320-0060-0090.html","https://npin.cdc.gov/organization/open-aid-alliance"]
   },
-  { "state":"Nebraska","abbreviation":"NE","last_updated":"2026-07-18",
+  { "state":"Nebraska","abbreviation":"NE","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity for caller and victim from drug-possession charges (narrow: only those offenses, not homicide or others)."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
+      "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"Free at participating pharmacies (StopODNE); OTC ~$45 elsewhere"},
       "community_programs":[{"name":"Stop Overdose Nebraska","services":"Free pharmacy locator","website":"https://stopodne.com/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/nebraska"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"StopODNE.com pharmacy locator.","barriers_and_workarounds":"Rural awareness; use StopODNE map."},
+    "practical_guidance":{"how_to_get_naloxone_quickly":"StopODNE.com locator for free NARCAN at participating pharmacies.","barriers_and_workarounds":"Rural awareness; use StopODNE map."},
     "sources":["https://stopodne.com/","https://www.npharm.org/ne-narcanprogram","https://dhhs.ne.gov/Pages/State-Opioid-Response.aspx","https://nebraskalegislature.gov/laws/statutes.php?statute=28-472"]
   },
   { "state":"Nevada","abbreviation":"NV","last_updated":"2026-07-18",
@@ -312,7 +312,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Trac-B vending machines (Vegas) or Pharmacy.","barriers_and_workarounds":"Rural isolation; mail order needed."},
     "sources":["https://nextdistro.org/nevada","https://www.leg.state.nv.us/nrs/NRS-453C.html","https://www.tracbexchange.com/"]
   },
-  { "state":"New Hampshire","abbreviation":"NH","last_updated":"2026-07-18",
+  { "state":"New Hampshire","abbreviation":"NH","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Caller reporting for another is immune; self-reporter gets only a legal defense."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
@@ -352,17 +352,17 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or Registered OEND Program.","barriers_and_workarounds":"Cost; use OEND or Medicaid."},
     "sources":["https://www.nyc.gov/site/doh/health/health-topics/naloxone.page","https://www.health.ny.gov/diseases/aids/general/opioid_overdose_prevention/","https://nextdistro.org/newyork"]
   },
-  { "state":"North Carolina","abbreviation":"NC","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from possession charges."}},
+  { "state":"North Carolina","abbreviation":"NC","last_updated":"2026-08-02",
+    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and person overdosing, but only if they call 911, give their name, and stay on scene. Miss any one condition and protection is lost. Does not apply during an active warrant search."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"NC Harm Reduction Coalition","services":"Free kits","website":"https://www.nchrc.org","phone":"336-543-8050"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/northcarolina"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"NCHRC or Pharmacy.","barriers_and_workarounds":"Rural access; NCHRC has wide reach."},
-    "sources":["https://naloxonesaves-nc.org/","https://www.nchrc.org","https://nextdistro.org/ncgate","https://www.ncdhhs.gov/about/department-initiatives/overdose-epidemic/syringe-and-naloxone-access"]
+    "sources":["https://naloxonesaves-nc.org/","https://www.nchrc.org","https://nextdistro.org/ncgate","https://www.ncdhhs.gov/about/department-initiatives/overdose-epidemic/syringe-and-naloxone-access","https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_90/GS_90-96.2.pdf"]
   },
-  { "state":"North Dakota","abbreviation":"ND","last_updated":"2026-07-18",
+  { "state":"North Dakota","abbreviation":"ND","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects up to 3 people/incident."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacist authority.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
