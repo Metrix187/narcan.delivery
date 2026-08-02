@@ -3,43 +3,47 @@
 // Keep this file sorted alphabetically by state name.
 
 window.NALOXONE_DATA = [
-  { "state":"Alabama","abbreviation":"AL","last_updated":"2026-07-11",
-    "legal_framework":{"naloxone_legal_status":"Prescription/Standing Order/OTC","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller (using real name/staying at scene) from misdemeanor possession charges."}},
+  { "state":"Alabama","abbreviation":"AL","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Prescription/Standing Order/OTC","good_samaritan_overdose_immunity":{"exists":true,"scope":"Caller only, not the person overdosing: immunity from misdemeanor drug charges (DUI excluded) if you call in good faith believing you are first, give your real name, and stay until help arrives."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Medicaid covers with $0-3 copay.","typical_cost":"OTC ~$45-65"},
+      "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Medicaid covers it; copay is $0.65-$3.90, $0 if under 18, pregnant, or in a nursing home.","typical_cost":"OTC ~$45-65"},
       "community_programs":[
         {"name":"Jefferson County Dept. of Health","services":"Free naloxone kits and fentanyl test strips","website":"https://www.jcdh.org","phone":"205-933-9110"},
-        {"name":"Alabama Dept. of Mental Health","services":"Free naloxone mailed after a short online training; statewide coordination","website":"https://mh.alabama.gov/faq/standing-order-for-naloxone/"}
+        {"name":"Alabama Dept. of Mental Health","services":"Free naloxone mailed after a short online training; statewide coordination","website":"https://mh.alabama.gov/faq/standing-order-for-naloxone/"},
+        {"name":"Elmore & Montgomery County Health Departments","services":"Free naloxone kits at a walk-in kiosk, no ID or prescription needed","website":"https://www.alabamapublichealth.gov/pharmacy/opioid-reversal.html","phone":"334-293-6400"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"Narcan by Mail (Jefferson County Dept. of Health)","cost":"Free","website":"https://www.jcdh.org/SitePages/Programs-Services/CommunityHealth/SubstanceUseandAddiction/NaloxoneFentanylTraining.aspx"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Fastest: Pharmacy (Standing Order/OTC) or Jefferson County Health Dept.","barriers_and_workarounds":"Rural access limited; cost for uninsured. Use mail programs."},
-    "sources":["https://www.alabamapublichealth.gov/pharmacy/opioid-reversal.html","https://mh.alabama.gov/faq/standing-order-for-naloxone/","https://www.jcdh.org","https://nextdistro.org/alabama"]
+    "sources":["https://www.alabamapublichealth.gov/pharmacy/opioid-reversal.html","https://www.alabamapublichealth.gov/pharmacy/assets/hb208.pdf","https://mh.alabama.gov/faq/standing-order-for-naloxone/","https://www.jcdh.org/SitePages/Programs-Services/CommunityHealth/SubstanceUseandAddiction/NaloxoneFentanylTraining.aspx","https://nextdistro.org/alnarcan"]
   },
-  { "state":"Alaska","abbreviation":"AK","last_updated":"2026-07-11",
-    "legal_framework":{"naloxone_legal_status":"Pharmacist Independent Prescribing","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and victim if seeking medical help."}},
+  { "state":"Alaska","abbreviation":"AK","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Pharmacist Independent Prescribing","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects the caller and the overdosing person from prosecution for simple drug possession, but only if the caller stays at the scene and cooperates, including giving ID. Does not cover other charges."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Pharmacists prescribe independently.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45-65"},
-      "community_programs":[{"name":"Project HOPE","services":"Free kits through Overdose Response Programs","website":"https://health.alaska.gov/en/services/project-hope-get-naloxone/"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"},{"name":"iknowmine (ANTHC)","cost":"Free","website":"https://www.iknowmine.org/narcan"}]
+      "pharmacies":{"mechanism":"Pharmacists prescribe independently.","medicaid_coverage_notes":"Covered. Adult copay is $0.50 if the drug costs $50 or less, $3.50 if more; kids exempt.","typical_cost":"OTC ~$45-65"},
+      "community_programs":[
+        {"name":"Project HOPE","services":"Free kits through Overdose Response Programs","website":"https://health.alaska.gov/en/services/project-hope-get-naloxone/"},
+        {"name":"ANTHC Community Health Vending Machines","services":"Free Narcan plus fentanyl and xylazine test strips, no ID or paperwork needed; machines in Seward, Juneau, and other Alaska communities","website":"https://anthc.org/chvm/"}
+      ],
+      "mail_based_programs":[{"name":"iknowmine (ANTHC)","cost":"Free","website":"https://www.iknowmine.org/narcan"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or Project HOPE partner.","barriers_and_workarounds":"Remote villages lack pharmacies; rely on mail/community programs."},
-    "sources":["https://health.alaska.gov/en/services/project-hope-get-naloxone/","https://www.iknowmine.org/narcan","https://nextdistro.org/alaska","https://nastad.org/resources/pharmacists-authority-initiate-harm-reduction-services"]
+    "sources":["https://health.alaska.gov/en/services/project-hope-get-naloxone/","https://www.iknowmine.org/narcan","https://anthc.org/chvm/","https://codes.findlaw.com/ak/title-11-criminal-law/ak-st-sect-11-71-311.html","https://nastad.org/resources/pharmacists-authority-initiate-harm-reduction-services","https://health.alaska.gov/media/ux4ds44w/ada-compliant-2025-medicaid-recipient-handbook.pdf"]
   },
-  { "state":"Arizona","abbreviation":"AZ","last_updated":"2026-07-11",
-    "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from possession charges."}},
+  { "state":"Arizona","abbreviation":"AZ","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects both the caller and the overdose victim from possession, use, and drug paraphernalia charges (A.R.S. 13-3423); does not cover sale or other offenses."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Dispense under standing order.","medicaid_coverage_notes":"AHCCCS covers (no copay).","typical_cost":"OTC ~$45-65"},
       "community_programs":[
         {"name":"Arizona Dept. of Health Services","services":"Provides free naloxone to community organizations","website":"https://www.azdhs.gov/opioid/"},
-        {"name":"Sonoran Prevention Works","services":"Free naloxone by mail to any Arizona resident, plus in-person outreach in 7 counties","website":"https://spwaz.org/get-supplies/","phone":"480-442-7086"}
+        {"name":"Sonoran Prevention Works","services":"Free naloxone by mail for Arizona residents who do not live near an SPW outreach site, plus in-person outreach in 7 counties","website":"https://spwaz.org/get-supplies/","phone":"480-442-7086"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/arizona"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Walk into any pharmacy; no Rx needed.","barriers_and_workarounds":"Cost for uninsured; use community programs."},
-    "sources":["https://www.azdhs.gov/opioid/","https://www.stopodaz.org","https://spwaz.org/get-supplies/","https://nextdistro.org/arizona"]
+    "sources":["https://www.azdhs.gov/opioid/naloxone/index.php","https://www.azdhs.gov/documents/prevention/womens-childrens-health/injury-prevention/opioid-prevention/naloxone-standing-order.pdf","https://www.azleg.gov/ars/13/03423.htm","https://azahcccs.gov/Members/BehavioralHealthServices/OpioidUseDisorderAndTreatment/Responsiding_To_An_Opioid_Overdose.html","https://spwaz.org/get-supplies/","https://www.stopodaz.org","https://nextdistro.org/arizona"]
   },
-  { "state":"Arkansas","abbreviation":"AR","last_updated":"2026-07-11",
+  { "state":"Arkansas","abbreviation":"AR","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Statewide Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects both the caller and the overdosing person who seek help in good faith; immunity from arrest and simple-possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists initiate therapy under protocol.","medicaid_coverage_notes":"Medicaid covers.","typical_cost":"OTC ~$45-65"},
@@ -49,42 +53,45 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy protocol or County Health Dept.","barriers_and_workarounds":"Rural access; use NEXT Distro."},
     "sources":["https://healthy.arkansas.gov/wp-content/uploads/Naloxone_Standing_Order_Dr_Bala.pdf","https://www.arorp.org/revivear-app/","https://nextdistro.org/arkansas","https://nastad.org/resources/pharmacists-authority-initiate-harm-reduction-services"]
   },
-  { "state":"California","abbreviation":"CA","last_updated":"2026-07-11",
-    "legal_framework":{"naloxone_legal_status":"Pharmacist Furnishing Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Broad protection for caller/victim."}},
+  { "state":"California","abbreviation":"CA","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Pharmacist Furnishing Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"HSC 11376.5: caller and victim are immune from under-the-influence and personal-use possession/paraphernalia charges. Not sales, not DUI. Giving naloxone is separately protected (Civil Code 1714.22)."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Pharmacists furnish under protocol.","medicaid_coverage_notes":"Medi-Cal covers ($0 copay).","typical_cost":"OTC ~$45-65"},
+      "pharmacies":{"mechanism":"Pharmacists furnish under protocol.","medicaid_coverage_notes":"Medi-Cal covers ($0 copay).","typical_cost":"CalRx $19/twin-pack direct; retail OTC ~$45-65"},
       "community_programs":[
         {"name":"DHCS Naloxone Distribution Project","services":"Free bulk naloxone for qualifying organizations","website":"https://californiaopioidresponse.org"},
-        {"name":"Santa Barbara Opioid Coalition","services":"Local distribution and training","website":"https://opioidsafetysb.org"}
+        {"name":"Santa Barbara County Opioid Safety Coalition","services":"Local distribution and training","website":"https://opioidsafetysb.org"}
       ],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/california"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/california"},{"name":"CalRx Naloxone","cost":"$19 per twin-pack","website":"https://calrxnaloxone.com"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy (ask for furnishing) or County Health Dept.","barriers_and_workarounds":"Cost is main barrier; use free programs."},
-    "sources":["https://www.dhcs.ca.gov/individuals/naloxone-distribution-project/","https://californiaopioidresponse.org/matproject/naloxone-distribution-project/","https://nextdistro.org/california"]
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy (ask for furnishing) or County Health Dept.","barriers_and_workarounds":"Cost is rarely the blocker here: CalRx ships a twin-pack for $19. NEXT Distro does not mail inside San Francisco."},
+    "sources":["https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=HSC&sectionNum=11376.5","https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1714.22","https://www.dhcs.ca.gov/individuals/naloxone-distribution-project/","https://californiaopioidresponse.org/matproject/naloxone-distribution-project/","https://calrx.ca.gov/get-naloxone/","https://nextdistro.org/california"]
   },
-  { "state":"Colorado","abbreviation":"CO","last_updated":"2026-07-14",
-    "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim; includes expired naloxone."}},
+  { "state":"Colorado","abbreviation":"CO","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and victim from drug/paraphernalia possession if they stay at the scene and cooperate; also shields anyone who gives naloxone, even if expired, in good faith."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Dispense under standing order.","medicaid_coverage_notes":"Covered, no copay.","typical_cost":"OTC ~$45"},
       "community_programs":[
         {"name":"Denver Dept. of Public Health & Environment","services":"Free naloxone by mail order, at libraries, the Wellness Winnie mobile unit, and syringe access sites","website":"https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Strategies/Overdose-Prevention/Overdose-Prevention-Resources"},
         {"name":"Harm Reduction Action Center","services":"Syringe access and naloxone","website":"https://www.harmreductionactioncenter.org","phone":"303-572-7800"},
-        {"name":"Denver Health Naloxone Vending Machines","services":"Free 24/7 vending machine, no ID needed; started at Denver Health's main campus, expanding to more sites","website":"https://www.denverhealth.org","phone":"303-436-4949"}
+        {"name":"Denver Health Naloxone Vending Machines","services":"Free 24/7 vending machine, no ID needed; started at Denver Health's main campus, expanding to more sites","website":"https://www.denverhealth.org","phone":"303-436-4949"},
+        {"name":"The Naloxone Project","services":"Free 24/7 vending machines outside 3 Denver police stations, no ID needed","website":"https://naloxoneproject.com"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/colorado"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy standing order or Harm Reduction Action Center.","barriers_and_workarounds":"Rural access limited; use mail programs."},
+    "sources":["https://colorado.public.law/statutes/crs_18-1-711","https://colorado.public.law/statutes/crs_18-1-712","https://cdphe.colorado.gov/overdose-prevention/naloxone-standing-orders","https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Strategies/Overdose-Prevention/Overdose-Prevention-Resources","https://www.harmreductionactioncenter.org","https://www.denverhealth.org/news/2025/01/denver-health-introduces-naloxone-vending-machine","https://naloxoneproject.com","https://nextdistro.org/colorado"]
   },
-  { "state":"Connecticut","abbreviation":"CT","last_updated":"2026-07-14",
-    "legal_framework":{"naloxone_legal_status":"Pharmacist Prescribing Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from prosecution."}},
+  { "state":"Connecticut","abbreviation":"CT","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Pharmacist Prescribing Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller, victim, and self-reporter from drug/paraphernalia arrest when seeking help in good faith; doesn't cover unrelated charges or an active warrant/search."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Certified pharmacists prescribe.","medicaid_coverage_notes":"Covered (HUSKY).","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"ACT Programs","services":"Syringe services and naloxone","website":"https://act-ct.org","phone":"860-922-3173"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/connecticut"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy with certified pharmacist or local health dept.","barriers_and_workarounds":"Use DCP map to find certified pharmacists."}
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy with certified pharmacist or local health dept.","barriers_and_workarounds":"Use DCP map to find certified pharmacists."},
+    "sources":["https://codes.findlaw.com/ct/title-21a-consumer-protection/ct-gen-st-sect-21a-279.html","https://codes.findlaw.com/ct/title-21a-consumer-protection/ct-gen-st-sect-21a-267/","https://portal.ct.gov/dph/health-education-management--surveillance/the-office-of-injury-prevention/current-laws-related-to-opioids-overdose-prevention","https://portal.ct.gov/DCP/Drug-Control-Division/Drug-Control/Naloxone-Prescribing-Pharmacists-in-Connecticut","https://act-ct.org","https://nextdistro.org/connecticut"]
   },
-  { "state":"Delaware","abbreviation":"DE","last_updated":"2026-07-14",
+  { "state":"Delaware","abbreviation":"DE","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Standing Order / Community Access","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller + victim from arrest/prosecution for drug possession (felonies excluded)."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Dispense under standing order.","medicaid_coverage_notes":"Covered, no copay.","typical_cost":"OTC ~$45"},
@@ -92,9 +99,9 @@ window.NALOXONE_DATA = [
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/delaware"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"State mail program (free) or pharmacy.","barriers_and_workarounds":"Training requirement (online video) for mail program."},
-    "sources":["https://delcode.delaware.gov/title16/c047/sc04/","https://whyy.org/articles/delaware-law-grants-criminal-immunity-for-those-who-report-drug-overdoses/"]
+    "sources":["https://delcode.delaware.gov/title16/c047/sc04/","https://whyy.org/articles/delaware-law-grants-criminal-immunity-for-those-who-report-drug-overdoses/","https://www.helpisherede.com/addiction/harm-reduction/good-samaritan-law"]
   },
-  { "state":"Florida","abbreviation":"FL","last_updated":"2026-07-14",
+  { "state":"Florida","abbreviation":"FL","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller & victim from possession/paraphernalia arrest; not distribution or overdose-death charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists dispense to anyone.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45-50"},
@@ -104,7 +111,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy standing order or iSaveFL locator.","barriers_and_workarounds":"Cost if uninsured; use state program."},
     "sources":["https://www.leg.state.fl.us/Statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899%2F0893%2FSections%2F0893.21.html","https://www.flsenate.gov/Laws/Statutes/2025/893.21","https://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0800-0899/0893/Sections/0893.13.html"]
   },
-  { "state":"Georgia","abbreviation":"GA","last_updated":"2026-07-14",
+  { "state":"Georgia","abbreviation":"GA","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Statewide Standing Order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and victim from small-amount possession and paraphernalia charges, not trafficking."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists dispense to anyone.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
@@ -115,54 +122,54 @@ window.NALOXONE_DATA = [
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/georgia"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy, GA Overdose Prevention's naloxone map (24/7 kiosks), or their request form.","barriers_and_workarounds":"Rural access; use mail programs."},
-    "sources":["https://stoprxabuseinga.org/good-samaritan-911-fatal-overdose-prevention-law/","https://legalclarity.org/understanding-georgias-good-samaritan-law-and-its-protections/","https://www.atlantanewsfirst.com/2026/06/10/free-naloxone-map-across-state-unveiled-new-247-narcan-kiosk-opens-atlanta/","https://georgiaoverdoseprevention.org/request-naloxone-kit/","https://ganaloxone.com"]
+    "sources":["https://dph.georgia.gov/stopopioidaddiction/what-you-need-know-about-opioids/naloxone","https://stoprxabuseinga.org/good-samaritan-911-fatal-overdose-prevention-law/","https://legalclarity.org/understanding-georgias-good-samaritan-law-and-its-protections/","https://www.atlantanewsfirst.com/2026/06/10/free-naloxone-map-across-state-unveiled-new-247-narcan-kiosk-opens-atlanta/","https://georgiaoverdoseprevention.org/request-naloxone-kit/","https://ganaloxone.com"]
   },
-  { "state":"Hawaii","abbreviation":"HI","last_updated":"2026-07-14",
+  { "state":"Hawaii","abbreviation":"HI","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller/victim from drug/paraphernalia charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacist prescriptive authority.","medicaid_coverage_notes":"Covered (QUEST).","typical_cost":"OTC ~$45-50"},
       "community_programs":[
         {"name":"Hawaii Health & Harm Reduction Center","services":"Free kits","website":"https://www.hhhrc.org","phone":"808-521-2437"},
         {"name":"Maui AIDS Foundation","services":"Distribution on Maui","website":"https://mauiaids.org/narcan-overdose-prevention/","phone":"808-242-4900"},
-        {"name":"Kumukahi Health + Wellness","services":"Distribution on Hawaiʻi Island","phone":"808-982-8800"},
+        {"name":"Kumukahi Health + Wellness","services":"Distribution on Hawaiʻi Island","website":"https://www.kumukahihealth.org/","phone":"808-982-8800"},
         {"name":"Hawaiʻi Island Fentanyl Task Force","services":"Vending machines, weekly pop-ups & distribution hubs across Hawaiʻi Island (Hilo, Kohala, Kamuela)","website":"https://www.hiftf.org/naloxone"}
       ],
       "mail_based_programs":[{"name":"HHHRC / NEXT Distro","cost":"Free","website":"https://nextdistro.org/hawaii"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy, ~30 vending machines statewide, or HHHRC (pickup Oahu/Maui/Hawaii Island, mail to Kauai/Lanai/Molokai).","barriers_and_workarounds":"Neighbor islands isolation; use mail order."},
-    "sources":["https://www.hhhrc.org/naloxone","https://nextdistro.org/hawaii","https://health.hawaii.gov/harmreduction/for-providers/overdose-prevention-and-naloxone/"]
+    "sources":["https://www.hhhrc.org/naloxone","https://nextdistro.org/hawaii","https://health.hawaii.gov/harmreduction/for-providers/overdose-prevention-and-naloxone/","https://law.onecle.com/hawaii/title-19/329-43.6.html","https://www.kumukahihealth.org/"]
   },
-  { "state":"Idaho","abbreviation":"ID","last_updated":"2026-07-14",
+  { "state":"Idaho","abbreviation":"ID","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Real immunity (not just a defense) for caller and victim -- covers possession, use, and paraphernalia, not just administration."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacist prescriptive authority.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"Central District Health","services":"Free naloxone via walk-in \"Barney Box\" locations and free mail order (covers Ada, Boise, Elmore, and Valley counties)","website":"https://cdh.idaho.gov/support-programs/drug-overdose-prevention/","phone":"208-327-8639"}],
+      "community_programs":[{"name":"Central District Health","services":"Free naloxone via walk-in \"Barney Box\" locations and free mail order (covers Ada, Boise, Elmore, and Valley counties)","website":"https://cdh.idaho.gov/support-programs/drug-overdose-prevention/","phone":"208-401-5104"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/idaho"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy, NEXT Distro mail, or Central District Health (walk-in/mail, SW Idaho only).","barriers_and_workarounds":"IHRP closed in 2024; NEXT Distro mail or CDH (SW Idaho only) fill the gap."},
     "sources":["https://legislature.idaho.gov/statutesrules/idstat/Title37/T37CH27/SECT37-2739C/","https://codes.findlaw.com/id/title-37-food-drugs-and-oil/id-st-sect-37-2739c/","https://blog.idahoreports.idahoptv.org/2024/06/04/jfac-hears-update-on-harm-reduction-project-investigation/","https://www.boisestatepublicradio.org/politics-government/2024-06-05/jfac-idaho-needle-exchange-investigation","https://cdh.idaho.gov/news/cdh-and-health-care-partners-providing-free-naloxone-distribution/","https://cdh.idaho.gov/support-programs/drug-overdose-prevention/","https://nextdistro.org/idaho","https://healthandwelfare.idaho.gov/services-programs/behavioral-health/naloxone-information"]
   },
-  { "state":"Illinois","abbreviation":"IL","last_updated":"2026-07-14",
+  { "state":"Illinois","abbreviation":"IL","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Real arrest immunity, not just a trial defense -- protects caller & victim for possession, paraphernalia, and small-quantity delivery."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide Standing Order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Chicago Recovery Alliance","services":"Free naloxone and outreach","website":"https://anypositivechange.org","phone":"312-953-3797"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/illinois"},{"name":"Live4Lali","cost":"Free","website":"https://live4lali.org/our-programs/harmreductionoutreach/"}]
+      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/illinois"},{"name":"Live4Lali","cost":"Free","website":"https://live4lali.org/our-programs/harmreductionoutreach/","phone":"224-297-4393"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or CRA vans (Chicago).","barriers_and_workarounds":"Quantity limits in immunity law."},
-    "sources":["https://idph.illinois.gov/Naloxone/","https://www.dhs.state.il.us/page.aspx?item=58142","https://nextdistro.org/illinois","https://anypositivechange.org","https://www.ilga.gov/Legislation/publicacts/view/102-0476","https://codes.findlaw.com/il/chapter-720-criminal-offenses/il-st-sect-720-570-414/","https://www.illinoisharmreduction.org/end-criminalization"]
+    "sources":["https://dph.illinois.gov/topics-services/opioids/overdose-reversal/standardized-procedure.html","https://www.dhs.state.il.us/page.aspx?item=58142","https://nextdistro.org/illinois","https://anypositivechange.org","https://www.illinoisharmreduction.org/end-criminalization","https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=072005700K414"]
   },
-  { "state":"Indiana","abbreviation":"IN","last_updated":"2026-07-14",
-    "legal_framework":{"naloxone_legal_status":"Aaron's Law / standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity for possession if naloxone administered."}},
+  { "state":"Indiana","abbreviation":"IN","last_updated":"2026-08-01",
+    "legal_framework":{"naloxone_legal_status":"Aaron's Law / standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects only the person who gives the naloxone, not the overdose victim -- must have gotten it legally, call 911, give your name, stay on scene, and cooperate with police."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Aaron's Law / Standing Order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"OptIN Registry","services":"Statewide provider locator","website":"https://optin.in.gov"},{"name":"Overdose Lifeline","services":"Free naloxone via 24/7 public NaloxBoxes, vending machines, and a mail-request form; partners with IDOH to supply local health departments statewide","website":"https://www.overdoselifeline.org/naloxone-indiana-distribution/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/indiana"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"OptIN.in.gov locator or NaloxBoxes.","barriers_and_workarounds":"Rural access; check NaloxBox locations."},
-    "sources":["https://www.overdoselifeline.org/naloxone-indiana-distribution/","https://optin.in.gov","https://www.in.gov/health/overdose-prevention/naloxone/"]
+    "sources":["https://www.overdoselifeline.org/naloxone-indiana-distribution/","https://optin.in.gov","https://www.in.gov/health/overdose-prevention/naloxone/","https://codes.findlaw.com/in/title-16-health/in-code-sect-16-42-27-2/","https://www.in.gov/health/overdose-prevention/files/Aarons-Law-Primer.pdf"]
   },
-  { "state":"Iowa","abbreviation":"IA","last_updated":"2026-07-14",
+  { "state":"Iowa","abbreviation":"IA","last_updated":"2026-08-01",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"One-time immunity for reporter AND the overdose victim; must call first, give your name, and stay on scene."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},

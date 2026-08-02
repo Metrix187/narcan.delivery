@@ -3,211 +3,286 @@
   "states": {
     "AK": {
       "state": "Alaska",
-      "last_reviewed": "2026-07-11",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "Project HOPE URL fixed + iknowmine (ANTHC) mail added; flat verified; sources added",
-      "reviews": 1,
+      "note": "NEXT Distro doesn't actually mail to AK (routes to iknowmine) - dropped it; gs_scope tightened to stay-and-cooperate conditions; added ANTHC vending machines (Seward/Juneau, new since last review)",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-11",
           "outcome": "changed",
           "note": "Project HOPE URL fixed + iknowmine (ANTHC) mail added; flat verified; sources added"
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "NEXT Distro doesn't actually mail to AK (routes to iknowmine) - dropped it; gs_scope tightened to stay-and-cooperate conditions; added ANTHC vending machines (Seward/Juneau, new since last review)"
         }
       ]
     },
     "AL": {
       "state": "Alabama",
-      "last_reviewed": "2026-07-11",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "ADMH mails free kits after training (services+URL fixed); flat verified; sources added",
-      "reviews": 1,
+      "note": "NEXT Distro doesn't mail to AL either (routes to JCDH) - swapped mail program; gs_scope and Medicaid copay tightened to statute/FAQ text; added Elmore/Montgomery walk-in kiosk",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-11",
           "outcome": "changed",
           "note": "ADMH mails free kits after training (services+URL fixed); flat verified; sources added"
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "NEXT Distro doesn't mail to AL either (routes to JCDH) - swapped mail program; gs_scope and Medicaid copay tightened to statute/FAQ text; added Elmore/Montgomery walk-in kiosk"
         }
       ]
     },
     "AR": {
       "state": "Arkansas",
-      "last_reviewed": "2026-07-11",
-      "last_outcome": "changed",
-      "note": "gs_scope widened to caller+victim (Joshua Ashley-Pauley Act); Narcansas->ARORP/ReviveAR; sources added",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "403 on standing-order PDF confirmed as bot-wall not dead, content reverified (now covers nalmefene too). All fields hold, no changes.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-11",
           "outcome": "changed",
           "note": "gs_scope widened to caller+victim (Joshua Ashley-Pauley Act); Narcansas->ARORP/ReviveAR; sources added"
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "403 on standing-order PDF confirmed as bot-wall not dead, content reverified (now covers nalmefene too). All fields hold, no changes."
         }
       ]
     },
     "AZ": {
       "state": "Arizona",
-      "last_reviewed": "2026-07-11",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "Naloxone Project AZ (national) -> Sonoran Prevention Works (real AZ mail+outreach); NEXT->/arizona; flat verified; sources added",
-      "reviews": 1,
+      "note": "gs_scope now covers paraphernalia per actual A.R.S. 13-3423 text (sunsets 7/1/28, flag for a future pass); SPW mail program corrected to its outreach-area limit",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-11",
           "outcome": "changed",
           "note": "Naloxone Project AZ (national) -> Sonoran Prevention Works (real AZ mail+outreach); NEXT->/arizona; flat verified; sources added"
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "gs_scope now covers paraphernalia per actual A.R.S. 13-3423 text (sunsets 7/1/28, flag for a future pass); SPW mail program corrected to its outreach-area limit"
         }
       ]
     },
     "CA": {
       "state": "California",
-      "last_reviewed": "2026-07-11",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "NEXT->/california; flat + DHCS NDP verified; sources added",
-      "reviews": 1,
+      "note": "gs_scope tightened to actual HSC 11376.5 text (no sales/DUI, no invocation cap); added CalRx $19 mail program and NEXT Distro's San Francisco mail exclusion",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-11",
           "outcome": "changed",
           "note": "NEXT->/california; flat + DHCS NDP verified; sources added"
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "gs_scope tightened to actual HSC 11376.5 text (no sales/DUI, no invocation cap); added CalRx $19 mail program and NEXT Distro's San Francisco mail exclusion"
         }
       ]
     },
     "CO": {
       "state": "Colorado",
-      "last_reviewed": "2026-07-14",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "Denver Public Health name/link fixed, added Denver Health vending machines + HRAC website, NEXT Distro linked to /colorado.",
-      "reviews": 1,
+      "note": "added missing sources array (was empty); gs_scope split into its two real statutes (18-1-711 caller/victim immunity + 18-1-712 good-faith naloxone administration); added The Naloxone Project's 3 PD-station vending machines",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "Denver Public Health name/link fixed, added Denver Health vending machines + HRAC website, NEXT Distro linked to /colorado."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "added missing sources array (was empty); gs_scope split into its two real statutes (18-1-711 caller/victim immunity + 18-1-712 good-faith naloxone administration); added The Naloxone Project's 3 PD-station vending machines"
         }
       ]
     },
     "CT": {
       "state": "Connecticut",
-      "last_reviewed": "2026-07-14",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "All flat fields fresh; NEXT Distro linked to /connecticut.",
-      "reviews": 1,
+      "note": "added missing sources array (was empty); gs_scope tightened from vague 'prosecution' to possession/paraphernalia specifics plus the warrant/search carve-out (CGS 21a-279 + 21a-267)",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "All flat fields fresh; NEXT Distro linked to /connecticut."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "added missing sources array (was empty); gs_scope tightened from vague 'prosecution' to possession/paraphernalia specifics plus the warrant/search carve-out (CGS 21a-279 + 21a-267)"
         }
       ]
     },
     "DE": {
       "state": "Delaware",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "gs_scope was citing the wrong statute (civil-responder immunity, not overdose Good Samaritan) -- fixed with real statute; community program swapped for live DPH page.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "reverified the 07-14 gs_scope fix directly against 16 Del. C. 4769 today, still holds. Added state's own good-samaritan-law page to sources.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "gs_scope was citing the wrong statute (civil-responder immunity, not overdose Good Samaritan) -- fixed with real statute; community program swapped for live DPH page."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "reverified the 07-14 gs_scope fix directly against 16 Del. C. 4769 today, still holds. Added state's own good-samaritan-law page to sources."
         }
       ]
     },
     "FL": {
       "state": "Florida",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "gs_scope was citing civil immunity for administering naloxone, not the actual 893.21 Good Samaritan law -- fixed.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "reverified the 07-14 gs_scope fix against flsenate.gov 893.21 today, including the death/distribution carve-out - still accurate. Nothing changed this pass.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "gs_scope was citing civil immunity for administering naloxone, not the actual 893.21 Good Samaritan law -- fixed."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "reverified the 07-14 gs_scope fix against flsenate.gov 893.21 today, including the death/distribution carve-out - still accurate. Nothing changed this pass."
         }
       ]
     },
     "GA": {
       "state": "Georgia",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "gs_scope fixed (was administrator-liability only); added GA Overdose Prevention's new 24/7 kiosk map.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "reverified the 07-14 gs_scope fix against Georgia DPH's own naloxone page today (added as a stronger primary source than legalclarity.org). GA Overdose Prevention's 121+/40+ pickup-point figures unconfirmed this pass (interactive map didn't render in fetch) - worth a manual spot-check next time.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "gs_scope fixed (was administrator-liability only); added GA Overdose Prevention's new 24/7 kiosk map."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "reverified the 07-14 gs_scope fix against Georgia DPH's own naloxone page today (added as a stronger primary source than legalclarity.org). GA Overdose Prevention's 121+/40+ pickup-point figures unconfirmed this pass (interactive map didn't render in fetch) - worth a manual spot-check next time."
         }
       ]
     },
     "HI": {
       "state": "Hawaii",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "how_to_get_quickly said HHHRC was Oahu-only, it's actually statewide with mail to outer islands -- fixed; added Hawaii Island Fentanyl Task Force, Maui AIDS Foundation website.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "gs_scope reconfirmed via full HRS 329-43.6 text (a stray web snippet claimed a naloxone-administration requirement exists; it doesn't, discarded). Added Kumukahi's real website (was phone-only) and the statute itself, since HI had zero legal citation for its own gs claim before.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "how_to_get_quickly said HHHRC was Oahu-only, it's actually statewide with mail to outer islands -- fixed; added Hawaii Island Fentanyl Task Force, Maui AIDS Foundation website."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "gs_scope reconfirmed via full HRS 329-43.6 text (a stray web snippet claimed a naloxone-administration requirement exists; it doesn't, discarded). Added Kumukahi's real website (was phone-only) and the statute itself, since HI had zero legal citation for its own gs claim before."
         }
       ]
     },
     "IA": {
       "state": "Iowa",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "gs_scope Sheet override had regressed to reporter-only, data.js already had reporter+victim -- restored; dropped a dead pharmacy.iowa.gov link.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "gs_scope reconfirmed against the current Iowa Code 124.418 text, 'one-time' framing exact. TeleNaloxone-ended framing still accurate; state's pharmacy backend quietly rebranded to 'Narcan Direct' (Jun 2026), nothing user-facing changed. IHRC now also ships mail statewide on its own - possible future line item.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "gs_scope Sheet override had regressed to reporter-only, data.js already had reporter+victim -- restored; dropped a dead pharmacy.iowa.gov link."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "gs_scope reconfirmed against the current Iowa Code 124.418 text, 'one-time' framing exact. TeleNaloxone-ended framing still accurate; state's pharmacy backend quietly rebranded to 'Narcan Direct' (Jun 2026), nothing user-facing changed. IHRC now also ships mail statewide on its own - possible future line item."
         }
       ]
     },
     "ID": {
       "state": "Idaho",
-      "last_reviewed": "2026-07-14",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "IHRP (community program) closed in 2024 after a police raid/legislative repeal -- swapped for Central District Health; gs_scope was backwards (said NOT possession, statute says it IS covered).",
-      "reviews": 1,
+      "note": "gs_scope reconfirmed via two independent statute fetches, still solid. CDH's listed phone was actually their press/media contact, not the program line -- swapped to the real public number (208-401-5104).",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "IHRP (community program) closed in 2024 after a police raid/legislative repeal -- swapped for Central District Health; gs_scope was backwards (said NOT possession, statute says it IS covered)."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "gs_scope reconfirmed via two independent statute fetches, still solid. CDH's listed phone was actually their press/media contact, not the program line -- swapped to the real public number (208-401-5104)."
         }
       ]
     },
     "IL": {
       "state": "Illinois",
-      "last_reviewed": "2026-07-14",
-      "last_outcome": "changed",
-      "note": "gs_scope undersold real arrest immunity as just quantity-limited possession defense -- fixed with 2022 PA 102-0476; added Live4Lali mail option.",
-      "reviews": 1,
+      "last_reviewed": "2026-08-01",
+      "last_outcome": "verified",
+      "note": "gs_scope looked wrong at first (FindLaw/onecle.com serve stale pre-2021 statute text) but PA 102-0004 confirms current data.js text is right -- don't trust FindLaw on 720 ILCS 570/414 going forward. Added Live4Lali's phone, swapped a legacy-domain source for the live one.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "gs_scope undersold real arrest immunity as just quantity-limited possession defense -- fixed with 2022 PA 102-0476; added Live4Lali mail option."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "verified",
+          "note": "gs_scope looked wrong at first (FindLaw/onecle.com serve stale pre-2021 statute text) but PA 102-0004 confirms current data.js text is right -- don't trust FindLaw on 720 ILCS 570/414 going forward. Added Live4Lali's phone, swapped a legacy-domain source for the live one."
         }
       ]
     },
     "IN": {
       "state": "Indiana",
-      "last_reviewed": "2026-07-14",
+      "last_reviewed": "2026-08-01",
       "last_outcome": "changed",
-      "note": "All flat fields fresh; added Overdose Lifeline as its own community program (was only cited as a source before).",
-      "reviews": 1,
+      "note": "Big one: Aaron's Law only protects whoever gives the naloxone, not the overdose victim -- old text was vague enough to imply otherwise, confirmed via statute text + the state's own Aaron's Law primer. Also: 'IC 16-47-11.5', cited on several rehab-directory sites as a broader IN good-samaritan law, appears fabricated -- not in Justia's IN Code index, don't trust sources repeating it.",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-14",
           "outcome": "changed",
           "note": "All flat fields fresh; added Overdose Lifeline as its own community program (was only cited as a source before)."
+        },
+        {
+          "date": "2026-08-01",
+          "outcome": "changed",
+          "note": "Big one: Aaron's Law only protects whoever gives the naloxone, not the overdose victim -- old text was vague enough to imply otherwise, confirmed via statute text + the state's own Aaron's Law primer. Also: 'IC 16-47-11.5', cited on several rehab-directory sites as a broader IN good-samaritan law, appears fabricated -- not in Justia's IN Code index, don't trust sources repeating it."
         }
       ]
     },
