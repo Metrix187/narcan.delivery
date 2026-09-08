@@ -302,7 +302,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"StopODNE.com locator for free NARCAN at participating pharmacies.","barriers_and_workarounds":"Rural awareness; use StopODNE map."},
     "sources":["https://stopodne.com/","https://www.npharm.org/ne-narcanprogram","https://dhhs.ne.gov/Pages/State-Opioid-Response.aspx","https://nebraskalegislature.gov/laws/statutes.php?statute=28-472"]
   },
-  { "state":"Nevada","abbreviation":"NV","last_updated":"2026-07-18",
+  { "state":"Nevada","abbreviation":"NV","last_updated":"2026-09-08",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity for possession/use."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
@@ -322,7 +322,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Call 2-1-1 or visit Doorway hub.","barriers_and_workarounds":"Travel to hubs; mail order backup."},
     "sources":["https://www.thedoorway.nh.gov/","https://www.nhhrc.org/nhssps","https://nextdistro.org/newhampshire","https://gc.nh.gov/rsa/html/xxx/318-b/318-B-28-b.htm"]
   },
-  { "state":"New Jersey","abbreviation":"NJ","last_updated":"2026-07-18",
+  { "state":"New Jersey","abbreviation":"NJ","last_updated":"2026-09-08",
     "legal_framework":{"naloxone_legal_status":"Standing order / Naloxone365","good_samaritan_overdose_immunity":{"exists":true,"scope":"Immunity for use/simple possession."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order / Naloxone365.","medicaid_coverage_notes":"Covered.","typical_cost":"Free (Naloxone365)"},
@@ -332,17 +332,17 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Naloxone365 Pharmacy (Free) or NJHRC.","barriers_and_workarounds":"Excellent access via Naloxone365."},
     "sources":["https://www.nj.gov/humanservices/stopoverdoses/","https://njharmreduction.org","https://nextdistro.org/newjersey"]
   },
-  { "state":"New Mexico","abbreviation":"NM","last_updated":"2026-07-18",
+  { "state":"New Mexico","abbreviation":"NM","last_updated":"2026-09-08",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and victim from possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered (no copay).","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"CORE Program","services":"Free virtual training and kits","website":"https://projectecho.unm.edu/new-mexico-opioid-use-disorder-continuing-education/","phone":"505-925-1116"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newmexico"}]
+      "mail_based_programs":[{"name":"NM Dept of Health Harm Reduction","cost":"Free","website":"https://www.nmharmreduction.org/naloxone-saves/"},{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/newmexico"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy or CORE virtual program.","barriers_and_workarounds":"Rural access; CORE program ships statewide."},
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Order free by mail from NMDOH, or any pharmacy.","barriers_and_workarounds":"Rural access; NMDOH mails two free boxes to any address."},
     "sources":["https://www.nmharmreduction.org/naloxone-saves/","https://www.nmhealth.org/about/phd/idb/hrp/","https://nextdistro.org/newmexico"]
   },
-  { "state":"New York","abbreviation":"NY","last_updated":"2026-07-18",
+  { "state":"New York","abbreviation":"NY","last_updated":"2026-09-08",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects helper/victim from possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered; N-CAP knocks up to $40 off a pharmacy copay (no enrollment).","typical_cost":"OTC ~$45"},
@@ -375,15 +375,15 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Call ND HHS for mail or Pharmacy.","barriers_and_workarounds":"Rural sparse population; mail order key."},
     "sources":["https://www.hhs.nd.gov/opioids","https://nextdistro.org/northdakota"]
   },
-  { "state":"Ohio","abbreviation":"OH","last_updated":"2026-07-18",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects seeker, helper, victim."}},
+  { "state":"Ohio","abbreviation":"OH","last_updated":"2026-09-08",
+    "legal_framework":{"naloxone_legal_status":"No prescription needed (pharmacy protocol)","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects seeker, helper, victim from minor possession. Can only be used twice; you must get a treatment screening and referral within 30 days."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
+      "pharmacies":{"mechanism":"Pharmacy protocol, no prescription.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Project DAWN","services":"Free statewide distribution","website":"https://odh.ohio.gov/know-our-programs/project-dawn/"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/ohio"}]
+      "mail_based_programs":[{"name":"Harm Reduction Ohio","cost":"Free","website":"https://nextdistro.org/hro"},{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/ohio"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Project DAWN site or Pharmacy.","barriers_and_workarounds":"Project DAWN is very widespread."},
-    "sources":["https://odh.ohio.gov/know-our-programs/project-dawn/","https://www.harmreductionohio.org/order-naloxone-free-from-harm-reduction-ohio/","https://nextdistro.org/ohio"]
+    "sources":["https://odh.ohio.gov/know-our-programs/project-dawn/","https://odh.ohio.gov/know-our-programs/oh-against-od/good-samaritan-law/call-no-matter-what","https://www.pharmacy.ohio.gov/naloxone","https://www.harmreductionohio.org/order-naloxone-free-from-harm-reduction-ohio/","https://nextdistro.org/ohio"]
   },
   { "state":"Oklahoma","abbreviation":"OK","last_updated":"2026-07-18",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects helper only (not victim)."}},

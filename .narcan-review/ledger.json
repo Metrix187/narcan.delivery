@@ -573,71 +573,101 @@
     },
     "NJ": {
       "state": "New Jersey",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-08",
       "last_outcome": "verified",
-      "note": "Naloxone365 still free/anonymous/14+ at 650+ pharmacies; NJHRC 1-877-4NARCAN confirmed; nothing changed",
-      "reviews": 1,
+      "note": "Naloxone365 alive (free, anonymous, 14+), NJHRC hotline + site current, all sources 200",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "verified",
           "note": "Naloxone365 still free/anonymous/14+ at 650+ pharmacies; NJHRC 1-877-4NARCAN confirmed; nothing changed"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "verified",
+          "note": "Naloxone365 alive (free, anonymous, 14+), NJHRC hotline + site current, all sources 200"
         }
       ]
     },
     "NM": {
       "state": "New Mexico",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-08",
       "last_outcome": "changed",
-      "note": "CORE data.js link was a dead University-of-Minnesota domain; replaced with real UNM projectecho CORE page + confirmed phone 505-925-1116",
-      "reviews": 1,
+      "note": "added NMDOH free mail order (nmharmreduction.org) as mail program; rewrote quick-path off CORE-only; standing order confirmed",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "CORE data.js link was a dead University-of-Minnesota domain; replaced with real UNM projectecho CORE page + confirmed phone 505-925-1116"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "changed",
+          "note": "added NMDOH free mail order (nmharmreduction.org) as mail program; rewrote quick-path off CORE-only; standing order confirmed"
         }
       ]
     },
     "NV": {
       "state": "Nevada",
-      "last_reviewed": "2026-07-18",
-      "last_outcome": "changed",
-      "note": "Trac-B domain tracb.org is dead (DNS); fixed to tracbexchange.com (same phone); swapped two fragile/stale citation sources for NRS 453C + org site",
-      "reviews": 1,
+      "last_reviewed": "2026-09-08",
+      "last_outcome": "verified",
+      "note": "Trac-B alive, phone/address match, NEXT NV live, standing order + NRS 453C current",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "Trac-B domain tracb.org is dead (DNS); fixed to tracbexchange.com (same phone); swapped two fragile/stale citation sources for NRS 453C + org site"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "verified",
+          "note": "Trac-B alive, phone/address match, NEXT NV live, standing order + NRS 453C current"
         }
       ]
     },
     "NY": {
       "state": "New York",
-      "last_reviewed": "2026-07-18",
-      "last_outcome": "changed",
-      "note": "N-CAP (up to 40 off pharmacy copay, no enrollment) added to medicaid_notes; OEND community link upgraded from bare health.ny.gov to nyoverdose.org locator",
-      "reviews": 1,
+      "last_reviewed": "2026-09-08",
+      "last_outcome": "verified",
+      "note": "N-CAP still $40 no enrollment incl OTC, pharmacy standing order live, nyoverdose.org up",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "N-CAP (up to 40 off pharmacy copay, no enrollment) added to medicaid_notes; OEND community link upgraded from bare health.ny.gov to nyoverdose.org locator"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "verified",
+          "note": "N-CAP still $40 no enrollment incl OTC, pharmacy standing order live, nyoverdose.org up"
         }
       ]
     },
     "OH": {
       "state": "Ohio",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-08",
       "last_outcome": "changed",
-      "note": "Project DAWN + NEXT data.js URLs were stale (legacy wps/portal + generic), fixed. Flagged: OH mechanism is per-pharmacy protocol (ORC 3715.502), not one unified standing order - kept label, needs a human call",
-      "reviews": 1,
+      "note": "added Harm Reduction Ohio mail (nextdistro.org/hro); legal status corrected to pharmacy protocol (ORC 4729.44) not standing order; GS scope now names the 2-use cap + 30-day referral; es/ Project DAWN counts refreshed 310/73 -> 150+/83",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "Project DAWN + NEXT data.js URLs were stale (legacy wps/portal + generic), fixed. Flagged: OH mechanism is per-pharmacy protocol (ORC 3715.502), not one unified standing order - kept label, needs a human call"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "changed",
+          "note": "added Harm Reduction Ohio mail (nextdistro.org/hro, no local-access gate); Project DAWN URL fine, odh.ohio.gov 404s to bots only"
+        },
+        {
+          "date": "2026-09-08",
+          "outcome": "changed",
+          "note": "added Harm Reduction Ohio mail (nextdistro.org/hro); legal status corrected to pharmacy protocol (ORC 4729.44) not standing order; GS scope now names the 2-use cap + 30-day referral; es/ Project DAWN counts refreshed 310/73 -> 150+/83"
         }
       ]
     },

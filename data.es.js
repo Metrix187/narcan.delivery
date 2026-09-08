@@ -279,13 +279,13 @@ window.NALOXONE_ES = {
     "community_services": ["Envío gratuito al por mayor"]
   },
   "OH": {
-    "naloxone_legal_status": "Orden permanente estatal",
+    "naloxone_legal_status": "Sin receta (protocolo de farmacia)",
     "gs_scope": "Protege de cargos menores por posesión a quien busca ayuda, quien ayuda y la víctima; limitada a dos usos y requiere una derivación a tratamiento.",
-    "pharmacy_mechanism": "Las farmacias la entregan bajo la orden permanente; disponible sin receta.",
+    "pharmacy_mechanism": "Las farmacias la entregan bajo un protocolo aprobado por un médico; disponible sin receta.",
     "medicaid_notes": "Cubierta por Medicaid de Ohio.",
     "typical_cost": "Sin receta ~$45; gratis mediante Project DAWN y el correo de HRO",
-    "how": "Project DAWN opera más de 310 programas de distribución gratuita en 73 de los 88 condados (localizador y panel en odh.ohio.gov). Harm Reduction Ohio envía Narcan y tiras reactivas gratis por correo a los 88 condados; pide en harmreductionohio.org. NEXT Distro está en nextdistro.org/ohio.",
-    "barriers": "Los 15 condados sin sitios de Project DAWN están totalmente cubiertos por el programa de correo de Harm Reduction Ohio.",
+    "how": "Project DAWN opera más de 150 programas activos, con más de 500 sitios de distribución gratuita en unos 83 de los 88 condados (localizador y panel en odh.ohio.gov). Harm Reduction Ohio envía Narcan y tiras reactivas gratis por correo a los 88 condados; pide en harmreductionohio.org. NEXT Distro está en nextdistro.org/ohio.",
+    "barriers": "Los 5 condados sin sitios de Project DAWN están totalmente cubiertos por el programa de correo de Harm Reduction Ohio.",
     "community_services": ["Distribución gratuita estatal"]
   },
   "MN": {
