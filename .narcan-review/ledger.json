@@ -673,141 +673,191 @@
     },
     "OK": {
       "state": "Oklahoma",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "okimready no longer lists vending machines (state machines pulled 2024) - fixed services; dropped unverifiable ODMHSAS phone 405-764-4807; NEXT to /oklahoma",
-      "reviews": 1,
+      "note": "Vending machines confirmed still gone (state program ended late 2024, some community-run ones remain); fentanyl test strips no longer mailed via OK I'm Ready, updated copy",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "okimready no longer lists vending machines (state machines pulled 2024) - fixed services; dropped unverifiable ODMHSAS phone 405-764-4807; NEXT to /oklahoma"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Vending machines confirmed still gone (state program ended late 2024, some community-run ones remain); fentanyl test strips no longer mailed via OK I'm Ready, updated copy"
         }
       ]
     },
     "OR": {
       "state": "Oregon",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "swapped a personal staff email (kelsi.junge@multco.us) for durable multco.us/info/overdose-prevention; NEXT to /oregon; flat all verified vs oregon.gov",
-      "reviews": 1,
+      "note": "Renamed mail program to NEXT Distro / Project RED per confirmed partnership; all other fields verified current",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "swapped a personal staff email (kelsi.junge@multco.us) for durable multco.us/info/overdose-prevention; NEXT to /oregon; flat all verified vs oregon.gov"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Renamed mail program to NEXT Distro / Project RED per confirmed partnership; all other fields verified current"
         }
       ]
     },
     "PA": {
       "state": "Pennsylvania",
-      "last_reviewed": "2026-07-18",
-      "last_outcome": "changed",
-      "note": "verbose copy holds fact-for-fact vs pa.gov; only rot was the citation: health.pa.gov/naloxone now redirects to a generic page, swapped for pa.gov/agencies/health/programs/opioids/naloxone",
-      "reviews": 1,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "Act 139 Good Samaritan scope, standing order, Medicaid, and PPP/NEXT Distro mail program all confirmed accurate; added PPP phone number",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "verbose copy holds fact-for-fact vs pa.gov; only rot was the citation: health.pa.gov/naloxone now redirects to a generic page, swapped for pa.gov/agencies/health/programs/opioids/naloxone"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Act 139 Good Samaritan scope, standing order, Medicaid, and PPP/NEXT Distro mail program all confirmed accurate; added PPP phone number"
         }
       ]
     },
     "RI": {
       "state": "Rhode Island",
-      "last_reviewed": "2026-07-18",
-      "last_outcome": "verified",
-      "note": "best-in-class access; RIGL 21-28.9-4 caller+victim true immunity no caps; Prevent Overdose RI + URI mail both alive",
-      "reviews": 1,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "changed",
+      "note": "Drop-in center program was misattributed to Prevent Overdose RI (an info hub with no phone) -- corrected to Project Weber/RENEW, the org that actually runs the drop-in centers at that phone number",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "verified",
           "note": "best-in-class access; RIGL 21-28.9-4 caller+victim true immunity no caps; Prevent Overdose RI + URI mail both alive"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Drop-in center program was misattributed to Prevent Overdose RI (an info hub with no phone) -- corrected to Project Weber/RENEW, the org that actually runs the drop-in centers at that phone number"
         }
       ]
     },
     "SC": {
       "state": "South Carolina",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "gs_scope was misleading: caller is first-caller-only but the victim has separate immunity (44-53-1930); dropped an empty-placeholder + expired-cert source; NEXT to /southcarolina",
-      "reviews": 1,
+      "note": "DAODAS merged into BHDD (Dept of Behavioral Health and Developmental Disabilities); old daodas.sc.gov URL now redirects, updated org name/URL and sources entry",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "gs_scope was misleading: caller is first-caller-only but the victim has separate immunity (44-53-1930); dropped an empty-placeholder + expired-cert source; NEXT to /southcarolina"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "DAODAS merged into BHDD (Dept of Behavioral Health and Developmental Disabilities); old daodas.sc.gov URL now redirects, updated org name/URL and sources entry"
         }
       ]
     },
     "SD": {
       "state": "South Dakota",
-      "last_reviewed": "2026-07-18",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "one-time GS cap is SDCL 34-20A-113 not -111 (fixed cite); deep-linked SD DOH naloxone page + added Emily's Hope PORT (605-215-0654); NEXT to /southdakota",
-      "reviews": 1,
+      "note": "Emily's Hope PORT now covers 9 counties not 8; added SD Opioid Resource Hotline to quick-access guidance",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-18",
           "outcome": "changed",
           "note": "one-time GS cap is SDCL 34-20A-113 not -111 (fixed cite); deep-linked SD DOH naloxone page + added Emily's Hope PORT (605-215-0654); NEXT to /southdakota"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Emily's Hope PORT now covers 9 counties not 8; added SD Opioid Resource Hotline to quick-access guidance"
         }
       ]
     },
     "TN": {
       "state": "Tennessee",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "GS scope was wrong (said training required; it is not, and caller/victim get possession immunity); community URL to ROPS page; flagged NEXT Distro TN mail paused until 7/31/26; added Tennessee Harm Reduction",
-      "reviews": 1,
+      "note": "tennesseeharmreduction.com is dead (account suspended) -- swapped for Hellbender Harm Reduction, NEXT Distro's actual TN fulfillment partner; removed stale 7/31/26 mail-pause note (mail is running); tightened TennCare copay detail",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "GS scope was wrong (said training required; it is not, and caller/victim get possession immunity); community URL to ROPS page; flagged NEXT Distro TN mail paused until 7/31/26; added Tennessee Harm Reduction"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "tennesseeharmreduction.com is dead (account suspended) -- swapped for Hellbender Harm Reduction, NEXT Distro's actual TN fulfillment partner; removed stale 7/31/26 mail-pause note (mail is running); tightened TennCare copay detail"
         }
       ]
     },
     "TX": {
       "state": "Texas",
-      "last_reviewed": "2026-07-19",
-      "last_outcome": "changed",
-      "note": "fixed shutdown date (More Narcan Please closed Feb 2024 not 2026, per Texas Tribune); GS was mislabeled - it is a weak first-caller defense not admin-only; added Naloxone Texas program; NEXT to /texas",
-      "reviews": 1,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "Naloxone Texas, TTOR, and the 18-month Good Samaritan nuance all confirmed current",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "fixed shutdown date (More Narcan Please closed Feb 2024 not 2026, per Texas Tribune); GS was mislabeled - it is a weak first-caller defense not admin-only; added Naloxone Texas program; NEXT to /texas"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Naloxone Texas, TTOR, and the 18-month Good Samaritan nuance all confirmed current"
         }
       ]
     },
     "UT": {
       "state": "Utah",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "verified",
-      "note": "verbose copy holds fact-for-fact; opidemic.utah.gov + utahnaloxone.org + nextdistro/utah all live; populated the empty sources cell. Next pass: read UT SB 87 (2026) naloxone amendments",
-      "reviews": 1,
+      "note": "Stop the Opidemic, UtahNaloxone.org, NEXT Distro, and the affirmative-defense Good Samaritan scope all confirmed current",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "verified",
           "note": "verbose copy holds fact-for-fact; opidemic.utah.gov + utahnaloxone.org + nextdistro/utah all live; populated the empty sources cell. Next pass: read UT SB 87 (2026) naloxone amendments"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Stop the Opidemic, UtahNaloxone.org, NEXT Distro, and the affirmative-defense Good Samaritan scope all confirmed current"
         }
       ]
     },
     "VA": {
       "state": "Virginia",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "HB 2117 confirmed vs statute; dropped stale EXPANDED marker, added probation/parole detail; LENOWISCO phone verified on VDH page; NEXT to /virginia",
-      "reviews": 1,
+      "note": "Added LENOWISCO's actual page + a new program (Virginia Harm Reduction Coalition / carrynaloxone.org, new 2026 vending boxes in Roanoke/Martinsville/Henry County); renamed mail program to note Chris Atwood Foundation partnership",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "HB 2117 confirmed vs statute; dropped stale EXPANDED marker, added probation/parole detail; LENOWISCO phone verified on VDH page; NEXT to /virginia"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Added LENOWISCO's actual page + a new program (Virginia Harm Reduction Coalition / carrynaloxone.org, new 2026 vending boxes in Roanoke/Martinsville/Henry County); renamed mail program to note Chris Atwood Foundation partnership"
         }
       ]
     },
