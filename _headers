@@ -1,6 +1,6 @@
 /*
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
-  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; connect-src 'self'; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
@@ -12,7 +12,21 @@
 /*.css
   Cache-Control: public, max-age=31536000, immutable
 
-/*.js
+# Explicit per-file rules instead of a /*.js glob: on Pages the glob was
+# outranking the /sw.js no-cache rule below and pinning the worker for a year.
+/app.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/data.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/data.es.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/card/card.js
+  Cache-Control: public, max-age=31536000, immutable
+
+/sw-register.js
   Cache-Control: public, max-age=31536000, immutable
 
 /*.woff2

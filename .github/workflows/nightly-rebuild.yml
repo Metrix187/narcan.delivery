@@ -19,15 +19,21 @@ on:
     - cron: '0 9 * * *'   # 09:00 UTC daily (~4am ET / 2am MT)
   workflow_dispatch: {}
 
+permissions:
+  contents: read
+
 jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Cloudflare Pages deploy hook
+        # secret goes through env, not inlined into the script body
+        env:
+          HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
         run: |
-          if [ -z "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}" ]; then
+          if [ -z "$HOOK" ]; then
             echo "::warning::CLOUDFLARE_DEPLOY_HOOK secret not set — skipping."
             exit 0
           fi
-          curl -fsSL -X POST "${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}"
+          curl -fsSL -X POST "$HOOK"
           echo "✓ Triggered Cloudflare Pages rebuild"

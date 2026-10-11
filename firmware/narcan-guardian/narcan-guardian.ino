@@ -45,6 +45,10 @@
 #include <Adafruit_NeoPixel.h>
 #include "secrets.h"
 
+// esp-idf's built-in x509 bundle, linked into every arduino-esp32 3.x core.
+extern const uint8_t x509_crt_imported_bundle_bin_start[] asm("_binary_x509_crt_bundle_start");
+extern const uint8_t x509_crt_imported_bundle_bin_end[]   asm("_binary_x509_crt_bundle_end");
+
 // ---- Pins (Waveshare ESP32-C6-LCD-1.47) ---------------------------------
 #define LCD_MOSI 6
 #define LCD_SCLK 7
@@ -168,15 +172,31 @@ void loadManifest() {
 }
 
 // ---- Network ------------------------------------------------------------
+// Verify TLS against the core's built-in Mozilla root bundle instead of
+// trusting whatever answers. Cloudflare rotates between Google Trust Services,
+// Let's Encrypt and SSL.com, so pinning one root would just break on rotation.
+// 3.3.12+ grew useBuiltinCACertBundle(); older 3.x gets the same bundle via the
+// esp-idf symbols. Either way, no setInsecure().
+void trustBuiltinRoots(WiFiClientSecure &client) {
+#if ESP_ARDUINO_VERSION >= ESP_ARDUINO_VERSION_VAL(3, 3, 12)
+  client.useBuiltinCACertBundle();
+#else
+  client.setCACertBundle(x509_crt_imported_bundle_bin_start,
+                         x509_crt_imported_bundle_bin_end - x509_crt_imported_bundle_bin_start);
+#endif
+}
+
 bool fetchSnapshot(String &out) {
   WiFiClientSecure client;
-  client.setInsecure();                      // TODO: pin the site's CA for strictness
+  trustBuiltinRoots(client);
   HTTPClient http;
   if (!http.begin(client, DATA_JSON_URL)) return false;
   http.addHeader("cache-control", "no-cache");
   int code = http.GET();
   if (code != HTTP_CODE_OK) { lastError = "HTTP " + String(code); http.end(); return false; }
   int len = http.getSize();
+  // chunked (no content-length) would sneak past the size ceiling, so reject it
+  if (len < 0) { lastError = "no content-length"; http.end(); return false; }
   if (len > (int)MAX_CSV_BYTES) { lastError = "too large"; http.end(); return false; }
   out = http.getString();
   http.end();
@@ -185,7 +205,7 @@ bool fetchSnapshot(String &out) {
 
 void firePostHook(const char *url) {
   if (!url || strlen(url) == 0) return;
-  WiFiClientSecure client; client.setInsecure();
+  WiFiClientSecure client; trustBuiltinRoots(client);
   HTTPClient http;
   if (http.begin(client, url)) { http.POST(""); http.end(); }
 }

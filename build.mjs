@@ -106,7 +106,8 @@ self.addEventListener('fetch', (e) => {
       const cache = await caches.open(CACHE);
       try {
         const res = await fromNetwork(req, 3500);
-        if (res.ok) cache.put(req, res.clone());
+        // key nav entries by path only, so /?state=XX variants don't pile up
+        if (res.ok) cache.put(url.origin + url.pathname, res.clone());
         return res;
       } catch {
         return (await cache.match(req, { ignoreSearch: true }))

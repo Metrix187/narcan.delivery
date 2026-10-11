@@ -27,6 +27,11 @@ outside the cloud entirely:
 - On `DEAD`, optionally POSTs your Cloudflare deploy hook, which rebuilds the
   site from git and can clear a bad deploy.
 
+> **Reflash needed (again, 2026-10):** TLS is now actually verified against
+> the core's built-in root bundle instead of `setInsecure()`, and chunked
+> responses are rejected. A device on the old build is still trusting any
+> cert, so reflash it.
+>
 > **Reflash needed:** this firmware was rewritten for the post-sheet world
 > (JSON validation, `DATA_JSON_URL`, `/latest.json`). A device still running
 > the sheet-era build will go STALE once the sheet is unpublished, which is
