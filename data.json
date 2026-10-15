@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-08T20:30:58.191Z",
+  "generated_at": "2026-10-15T21:40:40.824Z",
   "source": "https://narcan.delivery",
   "license": "Public domain (CC0). Attribution appreciated.",
   "count": 50,
@@ -165,7 +165,7 @@
     {
       "state": "Arkansas",
       "abbreviation": "AR",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Protocol",
         "good_samaritan_overdose_immunity": {
@@ -188,9 +188,9 @@
         ],
         "mail_based_programs": [
           {
-            "name": "NEXT Distro",
+            "name": "NEXT Distro / Northwest Arkansas Harm Reduction",
             "cost": "Free",
-            "website": "https://nextdistro.org"
+            "website": "https://nextdistro.org/arkansas"
           }
         ]
       },
@@ -718,7 +718,7 @@
     {
       "state": "Iowa",
       "abbreviation": "IA",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-10-15",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -734,10 +734,9 @@
         },
         "community_programs": [
           {
-            "name": "Iowa Harm Reduction Coalition",
-            "services": "Text-based supply",
-            "website": "https://www.iowaharmreductioncoalition.org",
-            "phone": "319-214-0540"
+            "name": "Iowa HHS Naloxone Distribution Sites",
+            "services": "State list of community sites handing out free naloxone",
+            "website": "https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone-distribution-sites"
           }
         ],
         "mail_based_programs": [
@@ -749,12 +748,13 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "State TeleNaloxone mail program ENDED Sept 2024. Find free kits at participating pharmacies, community orgs, and vending machines via https://www.naloxoneiowa.org",
+        "how_to_get_naloxone_quickly": "State TeleNaloxone mail program ENDED Sept 2024. Since June 2026, participating pharmacies hand out free HHS-paid Narcan (via Narcan Direct). Find them, plus community orgs and vending machines, via https://www.naloxoneiowa.org",
         "barriers_and_workarounds": "No state mail program anymore; Good Samaritan immunity is one-time-only."
       },
       "sources": [
         "https://www.naloxoneiowa.org/",
         "https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone",
+        "https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone-distribution-sites",
         "https://www.legis.iowa.gov/docs/code/124.418.pdf",
         "https://www.iarx.org/naloxone"
       ]
@@ -1112,7 +1112,7 @@
       },
       "sources": [
         "https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/",
-        "https://www.health.state.mn.us/communities/opioids/basics/naloxone.html",
+        "https://www.health.state.mn.us/communities/overdose/index.html",
         "https://nextdistro.org/minnesota",
         "https://www.revisor.mn.gov/statutes/cite/604A.05"
       ]
@@ -1669,7 +1669,7 @@
     {
       "state": "Oklahoma",
       "abbreviation": "OK",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescriptive authority",
         "good_samaritan_overdose_immunity": {
@@ -1686,7 +1686,7 @@
         "community_programs": [
           {
             "name": "OK I'm Ready",
-            "services": "Free mail-order naloxone and test strips, plus a locator map",
+            "services": "Free mail-order naloxone, plus a locator map (fentanyl test strips are no longer mailed, but sold OTC)",
             "website": "https://okimready.org/overdose/"
           },
           {
@@ -1703,7 +1703,7 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "State vending machines were REMOVED end of 2024. Order free Narcan + fentanyl test strips by mail at https://okimready.org, or https://nextdistro.org/oklahoma",
+        "how_to_get_naloxone_quickly": "The state's naloxone vending machines are gone (canceled late 2024); a handful of communities run their own now. Order free Narcan by mail at https://okimready.org (test strips no longer mailed) or https://nextdistro.org/oklahoma",
         "barriers_and_workarounds": "Victim not protected by Good Samaritan law; mail order is now the main free channel."
       },
       "sources": [
@@ -1715,7 +1715,7 @@
     {
       "state": "Oregon",
       "abbreviation": "OR",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescribing",
         "good_samaritan_overdose_immunity": {
@@ -1743,7 +1743,7 @@
         ],
         "mail_based_programs": [
           {
-            "name": "NEXT Distro",
+            "name": "NEXT Distro / Project RED",
             "cost": "Free",
             "website": "https://nextdistro.org/oregon"
           }
@@ -1761,7 +1761,7 @@
     {
       "state": "Pennsylvania",
       "abbreviation": "PA",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1779,7 +1779,8 @@
           {
             "name": "Prevention Point Pittsburgh",
             "services": "Mail-to-home kits",
-            "website": "https://pppgh.org"
+            "website": "https://pppgh.org",
+            "phone": "412-247-3404"
           }
         ],
         "mail_based_programs": [
@@ -1803,7 +1804,7 @@
     {
       "state": "Rhode Island",
       "abbreviation": "RI",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Collaborative practice agreement",
         "good_samaritan_overdose_immunity": {
@@ -1819,9 +1820,9 @@
         },
         "community_programs": [
           {
-            "name": "Prevent Overdose RI",
-            "services": "Drop-in centers",
-            "website": "https://preventoverdoseri.org",
+            "name": "Project Weber/RENEW",
+            "services": "Drop-in centers (Providence, Pawtucket, Kennedy Plaza) with free naloxone, syringe exchange, and fentanyl test strips",
+            "website": "https://weberrenew.org",
             "phone": "401-383-4888"
           }
         ],
@@ -1846,7 +1847,7 @@
     {
       "state": "South Carolina",
       "abbreviation": "SC",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Joint protocol",
         "good_samaritan_overdose_immunity": {
@@ -1862,9 +1863,9 @@
         },
         "community_programs": [
           {
-            "name": "DAODAS Community Distributors",
-            "services": "Free kits",
-            "website": "https://www.daodas.sc.gov/services/prevention/overdose-death-prevention/"
+            "name": "SC BHDD Community Naloxone Distributors (formerly DAODAS)",
+            "services": "Free kits through community distributor organizations statewide",
+            "website": "https://bhdd.sc.gov/office-substance-use-services/services/prevention/overdose-death-prevention"
           }
         ],
         "mail_based_programs": [
@@ -1881,14 +1882,14 @@
       },
       "sources": [
         "https://dph.sc.gov/diseases-conditions/substance-use-prevention-resources/naloxone-distribution-and-opioid-overdose",
-        "https://www.daodas.sc.gov/services/prevention/overdose-death-prevention/",
+        "https://bhdd.sc.gov/office-substance-use-services/services/prevention/overdose-death-prevention",
         "https://nextdistro.org/southcarolina"
       ]
     },
     {
       "state": "South Dakota",
       "abbreviation": "SD",
-      "last_updated": "2026-07-18",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1910,7 +1911,7 @@
           },
           {
             "name": "Emily's Hope PORT",
-            "services": "Free naloxone + test strips and peer support for overdose survivors (8 eastern SD counties)",
+            "services": "Free naloxone + test strips and peer support for overdose survivors (9 eastern SD counties)",
             "website": "https://emilyshope.charity/our-impact/port/",
             "phone": "605-215-0654"
           }
@@ -1924,7 +1925,7 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "Pharmacy or NEXT Distro.",
+        "how_to_get_naloxone_quickly": "Pharmacy, NEXT Distro by mail, or call the SD Opioid Resource Hotline (1-800-920-4343, or text OPIOID to 898211).",
         "barriers_and_workarounds": "Immunity is one-time-only per person; mail order preferred."
       },
       "sources": [
@@ -1937,7 +1938,7 @@
     {
       "state": "Tennessee",
       "abbreviation": "TN",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1948,7 +1949,7 @@
       "access_channels": {
         "pharmacies": {
           "mechanism": "Standing order.",
-          "medicaid_coverage_notes": "TennCare covers.",
+          "medicaid_coverage_notes": "TennCare covers up to 2 naloxone products/month, max $5 copay.",
           "typical_cost": "OTC ~$45"
         },
         "community_programs": [
@@ -1958,9 +1959,9 @@
             "website": "https://www.tn.gov/behavioral-health/substance-abuse-services/prevention/rops.html"
           },
           {
-            "name": "Tennessee Harm Reduction",
-            "services": "Free NARCAN by mail + syringe services",
-            "website": "https://tennesseeharmreduction.com/"
+            "name": "Hellbender Harm Reduction",
+            "services": "Free NARCAN by mail (NEXT Distro's Tennessee fulfillment partner)",
+            "website": "https://www.hellbenderharmreduction.org/"
           }
         ],
         "mail_based_programs": [
@@ -1972,20 +1973,20 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "Pharmacy (no Rx) or a Regional Overdose Prevention Specialist (ROPS).",
-        "barriers_and_workarounds": "Rural access; NEXT Distro mail is paused until 7/31/26. Use ROPS or a pharmacy."
+        "how_to_get_naloxone_quickly": "Pharmacy (no Rx) or a Regional Overdose Prevention Specialist (ROPS). NEXT Distro mail is running again too.",
+        "barriers_and_workarounds": "Rural access is the main gap; ROPS, pharmacies, and mail order all work now."
       },
       "sources": [
         "https://www.tn.gov/behavioral-health/substance-abuse-services/prevention/rops.html",
         "https://nextdistro.org/tennessee",
-        "https://tennesseeharmreduction.com/how-do-i-get-free-narcan-in-tennessee/",
+        "https://www.hellbenderharmreduction.org/",
         "https://law.justia.com/codes/tennessee/title-63/chapter-1/part-1/section-63-1-156/"
       ]
     },
     {
       "state": "Texas",
       "abbreviation": "TX",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2033,7 +2034,7 @@
     {
       "state": "Utah",
       "abbreviation": "UT",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2075,7 +2076,7 @@
     {
       "state": "Vermont",
       "abbreviation": "VT",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2101,23 +2102,29 @@
             "name": "UVM Community First Responder Program",
             "cost": "Free",
             "website": "https://www.uvm.edu/extension/community-first-responder-program"
+          },
+          {
+            "name": "VADIC Overdose Prevention Kit",
+            "cost": "Free",
+            "website": "https://vadic.vthelplink.org/overdose-prevention-kit.html"
           }
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "Free naloxone via UVM Community First Responder program (short online training), a pharmacy, or a district health office.",
+        "how_to_get_naloxone_quickly": "Order a free kit (no training needed) from VADIC at vthelplink.org, complete the UVM Community First Responder training for a mailed kit, or ask any pharmacy.",
         "barriers_and_workarounds": "Strong laws aid access."
       },
       "sources": [
         "https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention",
         "https://www.uvm.edu/extension/community-first-responder-program",
+        "https://vadic.vthelplink.org/overdose-prevention-kit.html",
         "https://legislature.vermont.gov/statutes/section/18/084/04254"
       ]
     },
     {
       "state": "Virginia",
       "abbreviation": "VA",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2140,12 +2147,19 @@
           {
             "name": "LENOWISCO Harm Reduction",
             "services": "Southwest VA outreach",
+            "website": "https://www.vdh.virginia.gov/lenowisco/harm-reduction/",
             "phone": "276-298-6657"
+          },
+          {
+            "name": "Virginia Harm Reduction Coalition",
+            "services": "Naloxone vending boxes and outreach distribution (Roanoke, Martinsville, Henry County)",
+            "website": "https://www.carrynaloxone.org/",
+            "phone": "540-541-2022"
           }
         ],
         "mail_based_programs": [
           {
-            "name": "NEXT Distro",
+            "name": "NEXT Distro / Chris Atwood Foundation",
             "cost": "Free",
             "website": "https://nextdistro.org/virginia"
           }
@@ -2164,7 +2178,7 @@
     {
       "state": "Washington",
       "abbreviation": "WA",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2206,7 +2220,7 @@
     {
       "state": "West Virginia",
       "abbreviation": "WV",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -2217,14 +2231,19 @@
       "access_channels": {
         "pharmacies": {
           "mechanism": "Standing order.",
-          "medicaid_coverage_notes": "Covered.",
+          "medicaid_coverage_notes": "Covered; copay is $3 or less per month.",
           "typical_cost": "OTC ~$45"
         },
         "community_programs": [
           {
             "name": "SOAR WV",
-            "services": "Free naloxone finder + harm reduction statewide",
+            "services": "Naloxone resource page (their own locator map is outdated, per the org -- ask a local pharmacist or use a mail program instead)",
             "website": "https://soarwv.org/resources/naloxone-narcan/"
+          },
+          {
+            "name": "WV Drug Intervention Institute (Nalox(ONE) WV)",
+            "services": "Free/low-cost naloxone co-dispensed at partner pharmacies, plus free online naloxone training",
+            "website": "https://www.wvdii.org/naloxonewv"
           }
         ],
         "mail_based_programs": [
@@ -2242,18 +2261,18 @@
       "sources": [
         "https://soarwv.org/resources/naloxone-narcan/",
         "https://nextdistro.org/westvirginia",
-        "https://oeps.wv.gov/"
+        "https://www.wvdii.org/naloxonewv"
       ]
     },
     {
       "state": "Wisconsin",
       "abbreviation": "WI",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Broad emergency immunity."
+          "scope": "Wis. Stat. 961.443: immunity from possession/paraphernalia prosecution for the caller who seeks help, but not for the person who overdosed, and it doesn't cover probation or parole revocation. A bill to expand this (restore victim protection) is pending in the legislature."
         }
       },
       "access_channels": {
@@ -2264,8 +2283,8 @@
         },
         "community_programs": [
           {
-            "name": "NARCAN Direct Program",
-            "services": "Free Narcan + training via 140+ partner agencies statewide",
+            "name": "Naloxone Direct Program",
+            "services": "Free naloxone for county/tribal health depts, EMS, law enforcement, and community orgs to distribute",
             "website": "https://www.dhs.wisconsin.gov/opioids/narcan-direct.htm"
           },
           {
@@ -2283,7 +2302,7 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "Participating Pharmacy.",
+        "how_to_get_naloxone_quickly": "A 24/7 Nalox-ZONE box (600+ across 60 counties) is usually fastest; a participating pharmacy also works.",
         "barriers_and_workarounds": "Check enrolled pharmacy list."
       },
       "sources": [
@@ -2296,7 +2315,7 @@
     {
       "state": "Wyoming",
       "abbreviation": "WY",
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-10-15",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescriptive authority",
         "good_samaritan_overdose_immunity": {
@@ -2313,8 +2332,8 @@
         "community_programs": [
           {
             "name": "Wyoming Dept. of Health",
-            "services": "Community Naloxone Resource Map + overdose response resources",
-            "website": "https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid-information-wyoming/opioid-overdose-response/"
+            "services": "Free NARCAN for organizations + overdose response training",
+            "website": "https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid/opioid-overdose-response/"
           }
         ],
         "mail_based_programs": [
@@ -2326,11 +2345,11 @@
         ]
       },
       "practical_guidance": {
-        "how_to_get_naloxone_quickly": "New in May 2026: the WDH Community Naloxone Resource Map lists free Narcan at 30 sites in 22 of 23 counties (on the health.wyo.gov opioid overdose response page). Any pharmacy works too.",
+        "how_to_get_naloxone_quickly": "Any pharmacy sells NARCAN OTC, or order it free by mail from NEXT Distro. Businesses and organizations can get free state-supplied NARCAN through WDH (health.wyo.gov opioid overdose response page).",
         "barriers_and_workarounds": "Rural; new law improves safety."
       },
       "sources": [
-        "https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid-information-wyoming/opioid-overdose-response/",
+        "https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid/opioid-overdose-response/",
         "https://nextdistro.org/wyoming"
       ]
     }

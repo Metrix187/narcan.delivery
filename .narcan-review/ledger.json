@@ -3,10 +3,10 @@
   "states": {
     "AK": {
       "state": "Alaska",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "NEXT Distro doesn't actually mail to AK (routes to iknowmine) - dropped it; gs_scope tightened to stay-and-cooperate conditions; added ANTHC vending machines (Seward/Juneau, new since last review)",
-      "reviews": 2,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "ANTHC vending machines and iknowmine mail program both confirmed alive (last month's link-rot flags were transient); Project HOPE standing order confirmed",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-11",
@@ -17,15 +17,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "NEXT Distro doesn't actually mail to AK (routes to iknowmine) - dropped it; gs_scope tightened to stay-and-cooperate conditions; added ANTHC vending machines (Seward/Juneau, new since last review)"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "ANTHC vending machines and iknowmine mail program both confirmed alive (last month's link-rot flags were transient); Project HOPE standing order confirmed"
         }
       ]
     },
     "AL": {
       "state": "Alabama",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "NEXT Distro doesn't mail to AL either (routes to JCDH) - swapped mail program; gs_scope and Medicaid copay tightened to statute/FAQ text; added Elmore/Montgomery walk-in kiosk",
-      "reviews": 2,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "Good Samaritan scope, standing order, Elmore/Montgomery kiosks, and Jefferson County program all confirmed current",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-11",
@@ -36,15 +41,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "NEXT Distro doesn't mail to AL either (routes to JCDH) - swapped mail program; gs_scope and Medicaid copay tightened to statute/FAQ text; added Elmore/Montgomery walk-in kiosk"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Good Samaritan scope, standing order, Elmore/Montgomery kiosks, and Jefferson County program all confirmed current"
         }
       ]
     },
     "AR": {
       "state": "Arkansas",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "403 on standing-order PDF confirmed as bot-wall not dead, content reverified (now covers nalmefene too). All fields hold, no changes.",
-      "reviews": 2,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "changed",
+      "note": "Mail program pointed at NEXT Distro's generic homepage instead of the actual Arkansas page (which names Northwest Arkansas Harm Reduction as the real fulfillment partner) -- fixed",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-11",
@@ -55,15 +65,20 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "403 on standing-order PDF confirmed as bot-wall not dead, content reverified (now covers nalmefene too). All fields hold, no changes."
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Mail program pointed at NEXT Distro's generic homepage instead of the actual Arkansas page (which names Northwest Arkansas Harm Reduction as the real fulfillment partner) -- fixed"
         }
       ]
     },
     "AZ": {
       "state": "Arizona",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "gs_scope now covers paraphernalia per actual A.R.S. 13-3423 text (sunsets 7/1/28, flag for a future pass); SPW mail program corrected to its outreach-area limit",
-      "reviews": 2,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "SPW mail program, 7-county outreach, DHS, and SODAz pharmacy locator all confirmed current",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-11",
@@ -74,15 +89,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "gs_scope now covers paraphernalia per actual A.R.S. 13-3423 text (sunsets 7/1/28, flag for a future pass); SPW mail program corrected to its outreach-area limit"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "SPW mail program, 7-county outreach, DHS, and SODAz pharmacy locator all confirmed current"
         }
       ]
     },
     "CA": {
       "state": "California",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "gs_scope tightened to actual HSC 11376.5 text (no sales/DUI, no invocation cap); added CalRx $19 mail program and NEXT Distro's San Francisco mail exclusion",
-      "reviews": 2,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "Santa Barbara coalition site confirmed alive (link-rot flag was transient), CalRx 9/twin-pack confirmed against the official calrx.ca.gov page, SF mail exclusion confirmed",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-11",
@@ -93,6 +113,11 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "gs_scope tightened to actual HSC 11376.5 text (no sales/DUI, no invocation cap); added CalRx $19 mail program and NEXT Distro's San Francisco mail exclusion"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Santa Barbara coalition site confirmed alive (link-rot flag was transient), CalRx 9/twin-pack confirmed against the official calrx.ca.gov page, SF mail exclusion confirmed"
         }
       ]
     },
@@ -212,10 +237,10 @@
     },
     "IA": {
       "state": "Iowa",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "gs_scope reconfirmed against the current Iowa Code 124.418 text, 'one-time' framing exact. TeleNaloxone-ended framing still accurate; state's pharmacy backend quietly rebranded to 'Narcan Direct' (Jun 2026), nothing user-facing changed. IHRC now also ships mail statewide on its own - possible future line item.",
-      "reviews": 2,
+      "last_reviewed": "2026-10-15",
+      "last_outcome": "changed",
+      "note": "iowaharmreductioncoalition.org expired, now a parked ad page - swapped IHRC for the Iowa HHS naloxone distribution sites list. noted June 2026 pharmacy switch from MedOne to Narcan Direct (still free)",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -226,6 +251,11 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "gs_scope reconfirmed against the current Iowa Code 124.418 text, 'one-time' framing exact. TeleNaloxone-ended framing still accurate; state's pharmacy backend quietly rebranded to 'Narcan Direct' (Jun 2026), nothing user-facing changed. IHRC now also ships mail statewide on its own - possible future line item."
+        },
+        {
+          "date": "2026-10-15",
+          "outcome": "changed",
+          "note": "iowaharmreductioncoalition.org expired, now a parked ad page - swapped IHRC for the Iowa HHS naloxone distribution sites list. noted June 2026 pharmacy switch from MedOne to Narcan Direct (still free)"
         }
       ]
     },
@@ -421,10 +451,10 @@
     },
     "MN": {
       "state": "Minnesota",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-10-15",
       "last_outcome": "changed",
-      "note": "Added the real Steve's Law conditions the old copy dropped (give name, stay, cooperate) per revisor.mn.gov 604A.05; some secondary sources wrongly claim 2024 removed them. Added IPTF website.",
-      "reviews": 2,
+      "note": "MDH moved its opioid pages under /communities/overdose/; old naloxone page 403s, source swapped to the overdose index",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -435,6 +465,11 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "Added the real Steve's Law conditions the old copy dropped (give name, stay, cooperate) per revisor.mn.gov 604A.05; some secondary sources wrongly claim 2024 removed them. Added IPTF website."
+        },
+        {
+          "date": "2026-10-15",
+          "outcome": "changed",
+          "note": "MDH moved its opioid pages under /communities/overdose/; old naloxone page 403s, source swapped to the overdose index"
         }
       ]
     },
@@ -863,71 +898,101 @@
     },
     "VT": {
       "state": "Vermont",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "mail program was mislabeled - nextdistro/vermont disclaims affiliation, real free mailer is UVM Community First Responder; gs_scope given real statute detail (18 VSA 4254); community URL narrowed",
-      "reviews": 1,
+      "note": "Added VADIC's no-training-needed mail kit (vthelplink.org) alongside UVM CFRP -- VDH's own page now leads with VADIC",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "mail program was mislabeled - nextdistro/vermont disclaims affiliation, real free mailer is UVM Community First Responder; gs_scope given real statute detail (18 VSA 4254); community URL narrowed"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Added VADIC's no-training-needed mail kit (vthelplink.org) alongside UVM CFRP -- VDH's own page now leads with VADIC"
         }
       ]
     },
     "WA": {
       "state": "Washington",
-      "last_reviewed": "2026-07-19",
-      "last_outcome": "changed",
-      "note": "verified RCW 69.50.315 myself (caller+victim, possession only); real WA mailer is Peoples Harm Reduction Alliance not NEXT; how_to + gs_scope sharpened",
-      "reviews": 1,
+      "last_reviewed": "2026-09-12",
+      "last_outcome": "verified",
+      "note": "Standing order, Medicaid coverage, PHRA mail, and Stop Overdose WA all confirmed current (stopoverdose.org 403'd on fetch, likely bot-block not dead)",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "verified RCW 69.50.315 myself (caller+victim, possession only); real WA mailer is Peoples Harm Reduction Alliance not NEXT; how_to + gs_scope sharpened"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "Standing order, Medicaid coverage, PHRA mail, and Stop Overdose WA all confirmed current (stopoverdose.org 403'd on fetch, likely bot-block not dead)"
         }
       ]
     },
     "WI": {
       "state": "Wisconsin",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "community was a pharmacy directory - swapped to NARCAN Direct + added Nalox-ZONE (confirmed real brand, not a typo); dead contracts source URL swapped for /opioids/narcan-direct.htm; NEXT to /wisconsin",
-      "reviews": 1,
+      "note": "Good Samaritan scope was wrongly described as 'broad emergency immunity' -- actually caller-only, no victim protection, no probation/parole coverage (expansion bill pending); renamed NARCAN Direct to its current name Naloxone Direct; confirmed Nalox-ZONE 600+/60 counties",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "community was a pharmacy directory - swapped to NARCAN Direct + added Nalox-ZONE (confirmed real brand, not a typo); dead contracts source URL swapped for /opioids/narcan-direct.htm; NEXT to /wisconsin"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "Good Samaritan scope was wrongly described as 'broad emergency immunity' -- actually caller-only, no victim protection, no probation/parole coverage (expansion bill pending); renamed NARCAN Direct to its current name Naloxone Direct; confirmed Nalox-ZONE 600+/60 counties"
         }
       ]
     },
     "WV": {
       "state": "West Virginia",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-09-12",
       "last_outcome": "changed",
-      "note": "verified GS myself: treatment requirement is on the VICTIM not the caller (fixed); community oeps.wv.gov/harm_reduction is 404 -> SOAR WV; dead helpandhope source dropped; left medicaid as Covered (SOAR-only 3-dollar figure unconfirmed)",
-      "reviews": 1,
+      "note": "SOAR WV's own naloxone locator map is outdated per the org itself; added WV Drug Intervention Institute's Nalox(ONE) WV program; added Medicaid copay figure; dropped oeps.wv.gov source (unrelated to naloxone)",
+      "reviews": 2,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "verified GS myself: treatment requirement is on the VICTIM not the caller (fixed); community oeps.wv.gov/harm_reduction is 404 -> SOAR WV; dead helpandhope source dropped; left medicaid as Covered (SOAR-only 3-dollar figure unconfirmed)"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "changed",
+          "note": "SOAR WV's own naloxone locator map is outdated per the org itself; added WV Drug Intervention Institute's Nalox(ONE) WV program; added Medicaid copay figure; dropped oeps.wv.gov source (unrelated to naloxone)"
         }
       ]
     },
     "WY": {
       "state": "Wyoming",
-      "last_reviewed": "2026-07-19",
+      "last_reviewed": "2026-10-15",
       "last_outcome": "changed",
-      "note": "SF0074 + WDH resource map confirmed; dropped stale NEW marker on the year-old law; community + mail URLs to WY-specific pages",
-      "reviews": 1,
+      "note": "WDH overdose response page moved to /opioid/opioid-overdose-response/ (old url 404s). Community Naloxone Resource Map is gone from their site, even the april press release links to the dead page, so dropped the map claims",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-19",
           "outcome": "changed",
           "note": "SF0074 + WDH resource map confirmed; dropped stale NEW marker on the year-old law; community + mail URLs to WY-specific pages"
+        },
+        {
+          "date": "2026-09-12",
+          "outcome": "verified",
+          "note": "SF0074 Good Samaritan law, standing order, and NEXT Distro all confirmed current; couldn't re-confirm exact resource-map site count this run, left as-is"
+        },
+        {
+          "date": "2026-10-15",
+          "outcome": "changed",
+          "note": "WDH overdose response page moved to /opioid/opioid-overdose-response/ (old url 404s). Community Naloxone Resource Map is gone from their site, even the april press release links to the dead page, so dropped the map claims"
         }
       ]
     }

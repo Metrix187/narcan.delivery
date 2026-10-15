@@ -43,12 +43,12 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Walk into any pharmacy; no Rx needed.","barriers_and_workarounds":"Cost for uninsured; use community programs."},
     "sources":["https://www.azdhs.gov/opioid/naloxone/index.php","https://www.azdhs.gov/documents/prevention/womens-childrens-health/injury-prevention/opioid-prevention/naloxone-standing-order.pdf","https://www.azleg.gov/ars/13/03423.htm","https://azahcccs.gov/Members/BehavioralHealthServices/OpioidUseDisorderAndTreatment/Responsiding_To_An_Opioid_Overdose.html","https://spwaz.org/get-supplies/","https://www.stopodaz.org","https://nextdistro.org/arizona"]
   },
-  { "state":"Arkansas","abbreviation":"AR","last_updated":"2026-08-01",
+  { "state":"Arkansas","abbreviation":"AR","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide Protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects both the caller and the overdosing person who seek help in good faith; immunity from arrest and simple-possession charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacists initiate therapy under protocol.","medicaid_coverage_notes":"Medicaid covers.","typical_cost":"OTC ~$45-65"},
       "community_programs":[{"name":"ARORP / ReviveAR (formerly Narcansas)","services":"Naloxone locator + overdose response help via the ReviveAR app","website":"https://www.arorp.org/revivear-app/"}],
-      "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org"}]
+      "mail_based_programs":[{"name":"NEXT Distro / Northwest Arkansas Harm Reduction","cost":"Free","website":"https://nextdistro.org/arkansas"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy protocol or County Health Dept.","barriers_and_workarounds":"Rural access; use NEXT Distro."},
     "sources":["https://healthy.arkansas.gov/wp-content/uploads/Naloxone_Standing_Order_Dr_Bala.pdf","https://www.arorp.org/revivear-app/","https://nextdistro.org/arkansas","https://nastad.org/resources/pharmacists-authority-initiate-harm-reduction-services"]
@@ -169,15 +169,15 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"OptIN.in.gov locator or NaloxBoxes.","barriers_and_workarounds":"Rural access; check NaloxBox locations."},
     "sources":["https://www.overdoselifeline.org/naloxone-indiana-distribution/","https://optin.in.gov","https://www.in.gov/health/overdose-prevention/naloxone/","https://codes.findlaw.com/in/title-16-health/in-code-sect-16-42-27-2/","https://www.in.gov/health/overdose-prevention/files/Aarons-Law-Primer.pdf"]
   },
-  { "state":"Iowa","abbreviation":"IA","last_updated":"2026-08-01",
+  { "state":"Iowa","abbreviation":"IA","last_updated":"2026-10-15",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"One-time immunity for reporter AND the overdose victim; must call first, give your name, and stay on scene."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"Iowa Harm Reduction Coalition","services":"Text-based supply","website":"https://www.iowaharmreductioncoalition.org","phone":"319-214-0540"}],
+      "community_programs":[{"name":"Iowa HHS Naloxone Distribution Sites","services":"State list of community sites handing out free naloxone","website":"https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone-distribution-sites"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/iowa"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"State TeleNaloxone mail program ENDED Sept 2024. Find free kits at participating pharmacies, community orgs, and vending machines via https://www.naloxoneiowa.org","barriers_and_workarounds":"No state mail program anymore; Good Samaritan immunity is one-time-only."},
-    "sources":["https://www.naloxoneiowa.org/","https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone","https://www.legis.iowa.gov/docs/code/124.418.pdf","https://www.iarx.org/naloxone"]
+    "practical_guidance":{"how_to_get_naloxone_quickly":"State TeleNaloxone mail program ENDED Sept 2024. Since June 2026, participating pharmacies hand out free HHS-paid Narcan (via Narcan Direct). Find them, plus community orgs and vending machines, via https://www.naloxoneiowa.org","barriers_and_workarounds":"No state mail program anymore; Good Samaritan immunity is one-time-only."},
+    "sources":["https://www.naloxoneiowa.org/","https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone","https://hhs.iowa.gov/health-prevention/addiction-substance-use-disorders/medications-addiction-treatment/naloxone-distribution-sites","https://www.legis.iowa.gov/docs/code/124.418.pdf","https://www.iarx.org/naloxone"]
   },
   { "state":"Kansas","abbreviation":"KS","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide pharmacy protocol","good_samaritan_overdose_immunity":{"exists":true,"scope":"SB 419 (2024): immunity from prosecution for possession/use for the caller and the person overdosing. Excludes people on parole, probation, or work release."}},
@@ -260,7 +260,7 @@ window.NALOXONE_DATA = [
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/minnesota"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Naloxone Finder Tool or Pharmacy.","barriers_and_workarounds":"Rural north; use mail order."},
-    "sources":["https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/","https://www.health.state.mn.us/communities/opioids/basics/naloxone.html","https://nextdistro.org/minnesota","https://www.revisor.mn.gov/statutes/cite/604A.05"]
+    "sources":["https://steverummlerhopenetwork.org/what-we-do/naloxone-access-points/","https://www.health.state.mn.us/communities/overdose/index.html","https://nextdistro.org/minnesota","https://www.revisor.mn.gov/statutes/cite/604A.05"]
   },
   { "state":"Mississippi","abbreviation":"MS","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Standing order (voluntary pharmacy participation)","good_samaritan_overdose_immunity":{"exists":true,"scope":"Narrow: covers caller and person overdosing for small-amount possession and paraphernalia only. Larger amounts, distribution, and trafficking are not covered."}},
@@ -481,15 +481,15 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Pharmacy (standing order or OTC) or free kits from sites listed on Stop the Opidemic and UtahNaloxone.org (health departments, libraries, community partners)","barriers_and_workarounds":"Rural pharmacy access; out-of-pocket cost for uninsured people; variable pharmacy stocking; confusion about legal protections and OTC vs prescription routes."},
     "sources":["https://opidemic.utah.gov/","https://www.utahnaloxone.org/","https://nextdistro.org/utah"]
   },
-  { "state":"Vermont","abbreviation":"VT","last_updated":"2026-07-19",
+  { "state":"Vermont","abbreviation":"VT","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"18 V.S.A. 4254: caller and victim protected from arrest and prosecution for drug possession and related violations."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
       "community_programs":[{"name":"Vermont Dept. of Health","services":"Free distribution","website":"https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention"}],
-      "mail_based_programs":[{"name":"UVM Community First Responder Program","cost":"Free","website":"https://www.uvm.edu/extension/community-first-responder-program"}]
+      "mail_based_programs":[{"name":"UVM Community First Responder Program","cost":"Free","website":"https://www.uvm.edu/extension/community-first-responder-program"},{"name":"VADIC Overdose Prevention Kit","cost":"Free","website":"https://vadic.vthelplink.org/overdose-prevention-kit.html"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Free naloxone via UVM Community First Responder program (short online training), a pharmacy, or a district health office.","barriers_and_workarounds":"Strong laws aid access."},
-    "sources":["https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention","https://www.uvm.edu/extension/community-first-responder-program","https://legislature.vermont.gov/statutes/section/18/084/04254"]
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Order a free kit (no training needed) from VADIC at vthelplink.org, complete the UVM Community First Responder training for a mailed kit, or ask any pharmacy.","barriers_and_workarounds":"Strong laws aid access."},
+    "sources":["https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention","https://www.uvm.edu/extension/community-first-responder-program","https://vadic.vthelplink.org/overdose-prevention-kit.html","https://legislature.vermont.gov/statutes/section/18/084/04254"]
   },
   { "state":"Virginia","abbreviation":"VA","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"HB 2117 (2025): good-faith callers and helpers cannot be arrested or prosecuted for personal-use possession, or jailed for a related probation/parole violation. Excludes distribution, felon-in-possession, outstanding warrants."}},
@@ -505,7 +505,7 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"REVIVE! offers free training and naloxone through local health departments and CSBs (find yours on the dbhds.virginia.gov REVIVE page). Any pharmacy works too, and nextdistro.org/virginia mails it free.","barriers_and_workarounds":"Rural SW VA has dedicated programs."},
     "sources":["https://dbhds.virginia.gov/behavioral-health/substance-abuse-services/revive/","https://nextdistro.org/virginia","https://law.lis.virginia.gov/vacode/title18.2/chapter7/section18.2-251.03/"]
   },
-  { "state":"Washington","abbreviation":"WA","last_updated":"2026-07-19",
+  { "state":"Washington","abbreviation":"WA","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"RCW 69.50.315: caller and victim protected from simple-possession prosecution; not distribution, and evidence stays usable for other charges."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
@@ -515,35 +515,35 @@ window.NALOXONE_DATA = [
     "practical_guidance":{"how_to_get_naloxone_quickly":"Free naloxone by mail from People's Harm Reduction Alliance (phra.org/naloxone), a pharmacy (no Rx), or find a site at stopoverdose.org.","barriers_and_workarounds":"State mail program is robust."},
     "sources":["https://doh.wa.gov/you-and-your-family/drug-user-health/overdose-education-naloxone-distribution","https://stopoverdose.org/find-naloxone-near-me-washington-state/","https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.315"]
   },
-  { "state":"West Virginia","abbreviation":"WV","last_updated":"2026-07-19",
+  { "state":"West Virginia","abbreviation":"WV","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Caller who stays and IDs themselves is immune from minor possession, underage-drinking, and public-intox charges. The overdose victim gets the same but must complete a court-approved treatment program."}},
     "access_channels":{
-      "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"SOAR WV","services":"Free naloxone finder + harm reduction statewide","website":"https://soarwv.org/resources/naloxone-narcan/"}],
+      "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered; copay is $3 or less per month.","typical_cost":"OTC ~$45"},
+      "community_programs":[{"name":"SOAR WV","services":"Naloxone resource page (their own locator map is outdated, per the org -- ask a local pharmacist or use a mail program instead)","website":"https://soarwv.org/resources/naloxone-narcan/"},{"name":"WV Drug Intervention Institute (Nalox(ONE) WV)","services":"Free/low-cost naloxone co-dispensed at partner pharmacies, plus free online naloxone training","website":"https://www.wvdii.org/naloxonewv"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/westvirginia"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Harm Reduction Program or Pharmacy.","barriers_and_workarounds":"Pharmacy barriers; use community sites."},
-    "sources":["https://soarwv.org/resources/naloxone-narcan/","https://nextdistro.org/westvirginia","https://oeps.wv.gov/"]
+    "sources":["https://soarwv.org/resources/naloxone-narcan/","https://nextdistro.org/westvirginia","https://www.wvdii.org/naloxonewv"]
   },
-  { "state":"Wisconsin","abbreviation":"WI","last_updated":"2026-07-19",
-    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Broad emergency immunity."}},
+  { "state":"Wisconsin","abbreviation":"WI","last_updated":"2026-09-12",
+    "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Wis. Stat. 961.443: immunity from possession/paraphernalia prosecution for the caller who seeks help, but not for the person who overdosed, and it doesn't cover probation or parole revocation. A bill to expand this (restore victim protection) is pending in the legislature."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"NARCAN Direct Program","services":"Free Narcan + training via 140+ partner agencies statewide","website":"https://www.dhs.wisconsin.gov/opioids/narcan-direct.htm"},{"name":"Nalox-ZONE","services":"Free 24/7 public naloxone boxes, 600+ across 60 counties","website":"https://wisconsinvoicesforrecovery.org/naloxzone/"}],
+      "community_programs":[{"name":"Naloxone Direct Program","services":"Free naloxone for county/tribal health depts, EMS, law enforcement, and community orgs to distribute","website":"https://www.dhs.wisconsin.gov/opioids/narcan-direct.htm"},{"name":"Nalox-ZONE","services":"Free 24/7 public naloxone boxes, 600+ across 60 counties","website":"https://wisconsinvoicesforrecovery.org/naloxzone/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/wisconsin"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"Participating Pharmacy.","barriers_and_workarounds":"Check enrolled pharmacy list."},
+    "practical_guidance":{"how_to_get_naloxone_quickly":"A 24/7 Nalox-ZONE box (600+ across 60 counties) is usually fastest; a participating pharmacy also works.","barriers_and_workarounds":"Check enrolled pharmacy list."},
     "sources":["https://www.dhs.wisconsin.gov/aoda/naloxone.htm","https://www.dhs.wisconsin.gov/opioids/narcan-direct.htm","https://wisconsinvoicesforrecovery.org/naloxzone/","https://nextdistro.org/wisconsin"]
   },
-  { "state":"Wyoming","abbreviation":"WY","last_updated":"2026-07-19",
+  { "state":"Wyoming","abbreviation":"WY","last_updated":"2026-10-15",
     "legal_framework":{"naloxone_legal_status":"Pharmacist prescriptive authority","good_samaritan_overdose_immunity":{"exists":true,"scope":"SF0074 (2025): last state to adopt immunity. Good-faith callers who stay are protected, up to 2 incidents per 12 months (2nd requires agreeing to treatment)."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Pharmacist authority.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"Wyoming Dept. of Health","services":"Community Naloxone Resource Map + overdose response resources","website":"https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid-information-wyoming/opioid-overdose-response/"}],
+      "community_programs":[{"name":"Wyoming Dept. of Health","services":"Free NARCAN for organizations + overdose response training","website":"https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid/opioid-overdose-response/"}],
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/wyoming"}]
     },
-    "practical_guidance":{"how_to_get_naloxone_quickly":"New in May 2026: the WDH Community Naloxone Resource Map lists free Narcan at 30 sites in 22 of 23 counties (on the health.wyo.gov opioid overdose response page). Any pharmacy works too.","barriers_and_workarounds":"Rural; new law improves safety."},
-    "sources":["https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid-information-wyoming/opioid-overdose-response/","https://nextdistro.org/wyoming"]
+    "practical_guidance":{"how_to_get_naloxone_quickly":"Any pharmacy sells NARCAN OTC, or order it free by mail from NEXT Distro. Businesses and organizations can get free state-supplied NARCAN through WDH (health.wyo.gov opioid overdose response page).","barriers_and_workarounds":"Rural; new law improves safety."},
+    "sources":["https://health.wyo.gov/publichealth/prevention/substanceabuseandsuicide/opioid/opioid-overdose-response/","https://nextdistro.org/wyoming"]
   }
 ];
 

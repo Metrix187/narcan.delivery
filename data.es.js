@@ -394,9 +394,9 @@ window.NALOXONE_ES = {
     "pharmacy_mechanism": "Orden permanente estatal; las farmacias participantes también entregan kits gratis a través del programa comunitario de naloxona en farmacias de Iowa HHS.",
     "medicaid_notes": "Cubierta por Medicaid de Iowa.",
     "typical_cost": "Sin receta ~$45; gratis en farmacias participantes y organizaciones comunitarias",
-    "how": "El programa estatal de correo TeleNaloxone terminó el 30 de septiembre de 2024. Usa el directorio Naloxone Iowa (naloxoneiowa.org) para encontrar kits gratis en farmacias participantes, organizaciones comunitarias, máquinas expendedoras y cajas de naloxona.",
+    "how": "El programa estatal de correo TeleNaloxone terminó el 30 de septiembre de 2024. Desde junio de 2026, las farmacias participantes entregan Narcan gratis pagado por Iowa HHS (vía Narcan Direct). Usa el directorio Naloxone Iowa (naloxoneiowa.org) para encontrar kits gratis en farmacias participantes, organizaciones comunitarias, máquinas expendedoras y cajas de naloxona.",
     "barriers": "La inmunidad del Buen Samaritano de un solo uso es riesgosa para quienes responden de forma repetida. Ya no hay un programa estatal de correo, así que apóyate en el directorio y los distribuidores comunitarios.",
-    "community_services": ["Suministro por mensaje de texto"]
+    "community_services": ["Lista estatal de sitios comunitarios con naloxona gratis"]
   },
   "KY": {
     "naloxone_legal_status": "Protocolo de farmacia",
@@ -513,9 +513,9 @@ window.NALOXONE_ES = {
     "gs_scope": "Bajo la SF0074 (2025), Wyoming se convirtió en el último estado en adoptar la inmunidad del Buen Samaritano por sobredosis. Quienes llaman de buena fe, describen la ubicación y se quedan hasta que lleguen los socorristas están protegidos, hasta por dos incidentes cada 12 meses; el segundo requiere aceptar un programa de tratamiento.",
     "pharmacy_mechanism": "Los farmacéuticos recetan o entregan directamente; disponible sin receta.",
     "medicaid_notes": "Cubierta por Medicaid de Wyoming.",
-    "typical_cost": "Sin receta ~$45; gratis en 30 sitios mapeados",
-    "how": "El WDH lanzó el Community Naloxone Resource Map, con Narcan gratis en 30 sitios en 22 de los 23 condados. Las empresas y organizaciones también pueden obtener Narcan gratuito suministrado por el estado para distribuir (página de respuesta a sobredosis de opioides en health.wyo.gov), y hay correo gratis mediante NEXT Distro (nextdistro.org).",
-    "barriers": "La ley del Buen Samaritano es completamente nueva (2025), así que la concienciación pública es mínima. Un condado todavía no tiene un sitio mapeado, así que el pedido por correo sigue siendo relevante.",
+    "typical_cost": "Sin receta ~$45",
+    "how": "Cualquier farmacia vende NARCAN sin receta. Las empresas y organizaciones también pueden obtener Narcan gratuito suministrado por el estado para distribuir (página de respuesta a sobredosis de opioides en health.wyo.gov), y hay correo gratis mediante NEXT Distro (nextdistro.org).",
+    "barriers": "La ley del Buen Samaritano es completamente nueva (2025), así que la concienciación pública es mínima. Wyoming es muy rural, así que el pedido gratis por correo (NEXT Distro) sigue siendo muy útil.",
     "community_services": ["Recursos de respuesta a sobredosis"]
   }
 };
