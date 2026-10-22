@@ -498,7 +498,7 @@ window.NALOXONE_DATA = [
       "community_programs":[
         {"name":"Virginia Dept. of Health","services":"Community distribution","website":"https://www.vdh.virginia.gov/naloxone/"},
         {"name":"LENOWISCO Harm Reduction","services":"Southwest VA outreach","website":"https://www.vdh.virginia.gov/lenowisco/harm-reduction/","phone":"276-298-6657"},
-        {"name":"Virginia Harm Reduction Coalition","services":"Naloxone vending boxes and outreach distribution (Roanoke, Martinsville, Henry County)","website":"https://www.carrynaloxone.org/","phone":"540-541-2022"}
+        {"name":"Virginia Harm Reduction Coalition","services":"Naloxone vending boxes and outreach distribution (Roanoke, Martinsville, Henry County)","website":"https://therc.vdh.virginia.gov/search/754392f9-c924-5e4d-a6d8-70232064e385","phone":"540-541-2022"}
       ],
       "mail_based_programs":[{"name":"NEXT Distro / Chris Atwood Foundation","cost":"Free","website":"https://nextdistro.org/virginia"}]
     },
