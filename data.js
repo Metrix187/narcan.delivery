@@ -270,7 +270,7 @@ window.NALOXONE_DATA = [
       "mail_based_programs":[{"name":"NEXT Distro","cost":"Free","website":"https://nextdistro.org/mississippi"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"MSDH free mail (form + short video), NEXT Distro, or MS Harm Reduction.","barriers_and_workarounds":"Pharmacy refusal common; mail order reliable."},
-    "sources":["https://msdh.ms.gov/page/44,0,382,61.html","https://msharmreduction.org/","https://nextdistro.org/mississippi","https://odfree.org/prevention/","https://codes.findlaw.com/ms/title-41-public-health/ms-code-sect-41-29-149-1/"]
+    "sources":["https://msdh.ms.gov/programs-services/health-and-safety/opioids-substance-abuse/what-to-do-in-case-of-an-overdose","https://msharmreduction.org/","https://nextdistro.org/mississippi","https://odfree.org/prevention/","https://codes.findlaw.com/ms/title-41-public-health/ms-code-sect-41-29-149-1/"]
   },
   { "state":"Missouri","abbreviation":"MO","last_updated":"2026-08-02",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"Protects caller and person overdosing from possession and paraphernalia charges when they seek help. Does not cover distribution or outstanding warrants."}},
@@ -485,11 +485,11 @@ window.NALOXONE_DATA = [
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"18 V.S.A. 4254: caller and victim protected from arrest and prosecution for drug possession and related violations."}},
     "access_channels":{
       "pharmacies":{"mechanism":"Statewide standing order.","medicaid_coverage_notes":"Covered.","typical_cost":"OTC ~$45"},
-      "community_programs":[{"name":"Vermont Dept. of Health","services":"Free distribution","website":"https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention"}],
+      "community_programs":[{"name":"Vermont Dept. of Health","services":"Free distribution","website":"https://www.healthvermont.gov/alcohol-drugs/overdose-response/respond-overdose"}],
       "mail_based_programs":[{"name":"UVM Community First Responder Program","cost":"Free","website":"https://www.uvm.edu/extension/community-first-responder-program"},{"name":"VADIC Overdose Prevention Kit","cost":"Free","website":"https://vadic.vthelplink.org/overdose-prevention-kit.html"}]
     },
     "practical_guidance":{"how_to_get_naloxone_quickly":"Order a free kit (no training needed) from VADIC at vthelplink.org, complete the UVM Community First Responder training for a mailed kit, or ask any pharmacy.","barriers_and_workarounds":"Strong laws aid access."},
-    "sources":["https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention","https://www.uvm.edu/extension/community-first-responder-program","https://vadic.vthelplink.org/overdose-prevention-kit.html","https://legislature.vermont.gov/statutes/section/18/084/04254"]
+    "sources":["https://www.healthvermont.gov/alcohol-drugs/overdose-response/respond-overdose","https://www.uvm.edu/extension/community-first-responder-program","https://vadic.vthelplink.org/overdose-prevention-kit.html","https://legislature.vermont.gov/statutes/section/18/084/04254"]
   },
   { "state":"Virginia","abbreviation":"VA","last_updated":"2026-09-12",
     "legal_framework":{"naloxone_legal_status":"Statewide standing order","good_samaritan_overdose_immunity":{"exists":true,"scope":"HB 2117 (2025): good-faith callers and helpers cannot be arrested or prosecuted for personal-use possession, or jailed for a related probation/parole violation. Excludes distribution, felon-in-possession, outstanding warrants."}},
