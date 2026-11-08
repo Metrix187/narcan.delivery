@@ -123,10 +123,10 @@
     },
     "CO": {
       "state": "Colorado",
-      "last_reviewed": "2026-08-01",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "changed",
-      "note": "added missing sources array (was empty); gs_scope split into its two real statutes (18-1-711 caller/victim immunity + 18-1-712 good-faith naloxone administration); added The Naloxone Project's 3 PD-station vending machines",
-      "reviews": 2,
+      "note": "DDPHE page moved + no longer mentions mail order; updated url/services. denver health 303-436-4949 is the appointment line, kept",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -137,15 +137,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "added missing sources array (was empty); gs_scope split into its two real statutes (18-1-711 caller/victim immunity + 18-1-712 good-faith naloxone administration); added The Naloxone Project's 3 PD-station vending machines"
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "DDPHE page moved + no longer mentions mail order; updated url/services. denver health 303-436-4949 is the appointment line, kept"
         }
       ]
     },
     "CT": {
       "state": "Connecticut",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "added missing sources array (was empty); gs_scope tightened from vague 'prosecution' to possession/paraphernalia specifics plus the warrant/search carve-out (CGS 21a-279 + 21a-267)",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "flagged",
+      "note": "ACT rebranded Advancing CT Together, site scrubbed naloxone/syringe refs (EO 14151); 860-922-3173 only on NASEN. CTHRA is NEXT affiliate, candidate replacement",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -156,15 +161,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "added missing sources array (was empty); gs_scope tightened from vague 'prosecution' to possession/paraphernalia specifics plus the warrant/search carve-out (CGS 21a-279 + 21a-267)"
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "flagged",
+          "note": "ACT rebranded Advancing CT Together, site scrubbed naloxone/syringe refs (EO 14151); 860-922-3173 only on NASEN. CTHRA is NEXT affiliate, candidate replacement"
         }
       ]
     },
     "DE": {
       "state": "Delaware",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "reverified the 07-14 gs_scope fix directly against 16 Del. C. 4769 today, still holds. Added state's own good-samaritan-law page to sources.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS scope: 16 Del C 4769(c) covers all below class C felony, not felonies-excluded; added good-faith + medical info conditions",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -175,15 +185,20 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "reverified the 07-14 gs_scope fix directly against 16 Del. C. 4769 today, still holds. Added state's own good-samaritan-law page to sources."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS scope: 16 Del C 4769(c) covers all below class C felony, not felonies-excluded; added good-faith + medical info conditions"
         }
       ]
     },
     "FL": {
       "state": "Florida",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "reverified the 07-14 gs_scope fix against flsenate.gov 893.21 today, including the death/distribution carve-out - still accurate. Nothing changed this pass.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS scope: 893.21 excludes 893.13(6)(c) >10g; added probation/parole",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -194,15 +209,20 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "reverified the 07-14 gs_scope fix against flsenate.gov 893.21 today, including the death/distribution carve-out - still accurate. Nothing changed this pass."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS scope: 893.21 excludes 893.13(6)(c) >10g; added probation/parole"
         }
       ]
     },
     "GA": {
       "state": "Georgia",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "reverified the 07-14 gs_scope fix against Georgia DPH's own naloxone page today (added as a stronger primary source than legalclarity.org). GA Overdose Prevention's 121+/40+ pickup-point figures unconfirmed this pass (interactive map didn't render in fetch) - worth a manual spot-check next time.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GHRC ships narcan to every county (site), added website; ganaloxone.com is just a google maps redirect, swapped source",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -213,15 +233,20 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "reverified the 07-14 gs_scope fix against Georgia DPH's own naloxone page today (added as a stronger primary source than legalclarity.org). GA Overdose Prevention's 121+/40+ pickup-point figures unconfirmed this pass (interactive map didn't render in fetch) - worth a manual spot-check next time."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GHRC ships narcan to every county (site), added website; ganaloxone.com is just a google maps redirect, swapped source"
         }
       ]
     },
     "HI": {
       "state": "Hawaii",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "gs_scope reconfirmed via full HRS 329-43.6 text (a stray web snippet claimed a naloxone-administration requirement exists; it doesn't, discarded). Added Kumukahi's real website (was phone-only) and the statute itself, since HI had zero legal citation for its own gs claim before.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS scope narrowed to possession + probation/parole per HRS 329-43.6. HHHRC mail is Kauai/Lanai/Molokai only, nextdistro page says otherwise",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -232,6 +257,11 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "gs_scope reconfirmed via full HRS 329-43.6 text (a stray web snippet claimed a naloxone-administration requirement exists; it doesn't, discarded). Added Kumukahi's real website (was phone-only) and the statute itself, since HI had zero legal citation for its own gs claim before."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS scope narrowed to possession + probation/parole per HRS 329-43.6. HHHRC mail is Kauai/Lanai/Molokai only, nextdistro page says otherwise"
         }
       ]
     },
@@ -261,10 +291,10 @@
     },
     "ID": {
       "state": "Idaho",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "gs_scope reconfirmed via two independent statute fetches, still solid. CDH's listed phone was actually their press/media contact, not the program line -- swapped to the real public number (208-401-5104).",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "all current",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -275,15 +305,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "gs_scope reconfirmed via two independent statute fetches, still solid. CDH's listed phone was actually their press/media contact, not the program line -- swapped to the real public number (208-401-5104)."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current"
         }
       ]
     },
     "IL": {
       "state": "Illinois",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "verified",
-      "note": "gs_scope looked wrong at first (FindLaw/onecle.com serve stale pre-2021 statute text) but PA 102-0004 confirms current data.js text is right -- don't trust FindLaw on 720 ILCS 570/414 going forward. Added Live4Lali's phone, swapped a legacy-domain source for the live one.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "CRA phone -> 773-367-3771 (their contact page); GS added 570/414(e) prior-suspicion carve-out. CRA paused weekend services",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -294,15 +329,20 @@
           "date": "2026-08-01",
           "outcome": "verified",
           "note": "gs_scope looked wrong at first (FindLaw/onecle.com serve stale pre-2021 statute text) but PA 102-0004 confirms current data.js text is right -- don't trust FindLaw on 720 ILCS 570/414 going forward. Added Live4Lali's phone, swapped a legacy-domain source for the live one."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "CRA phone -> 773-367-3771 (their contact page); GS added 570/414(e) prior-suspicion carve-out. CRA paused weekend services"
         }
       ]
     },
     "IN": {
       "state": "Indiana",
-      "last_reviewed": "2026-08-01",
-      "last_outcome": "changed",
-      "note": "Big one: Aaron's Law only protects whoever gives the naloxone, not the overdose victim -- old text was vague enough to imply otherwise, confirmed via statute text + the state's own Aaron's Law primer. Also: 'IC 16-47-11.5', cited on several rehab-directory sites as a broader IN good-samaritan law, appears fabricated -- not in Justia's IN Code index, don't trust sources repeating it.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "all current; overdose lifeline page doesn't mention the IDOH partnership clause, left it; optin.in.gov renders no locator to fetch",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-14",
@@ -313,15 +353,20 @@
           "date": "2026-08-01",
           "outcome": "changed",
           "note": "Big one: Aaron's Law only protects whoever gives the naloxone, not the overdose victim -- old text was vague enough to imply otherwise, confirmed via statute text + the state's own Aaron's Law primer. Also: 'IC 16-47-11.5', cited on several rehab-directory sites as a broader IN good-samaritan law, appears fabricated -- not in Justia's IN Code index, don't trust sources repeating it."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current; overdose lifeline page doesn't mention the IDOH partnership clause, left it; optin.in.gov renders no locator to fetch"
         }
       ]
     },
     "KS": {
       "state": "Kansas",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "verified",
-      "note": "All current. SB419 GS scope, DCCCA kits/vending + NEXT Distro all re-confirmed live. Noted HB2250 (jul 2026) extends shelf life 10yr past expiry, no field fits it yet.",
-      "reviews": 2,
+      "note": "DCCCA 8 vending cities confirmed; GS from secondary sources only (enrolled sb419 pdf unread)",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -332,15 +377,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current. SB419 GS scope, DCCCA kits/vending + NEXT Distro all re-confirmed live. Noted HB2250 (jul 2026) extends shelf life 10yr past expiry, no field fits it yet."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "DCCCA 8 vending cities confirmed; GS from secondary sources only (enrolled sb419 pdf unread)"
         }
       ]
     },
     "KY": {
       "state": "Kentucky",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "changed",
-      "note": "Pulled primary KRS 218A.133 text: 2024 amendment adds drug-death manslaughter/reckless homicide cover, and warrant/lawful-search calls are NOT good faith. Secondary sources had this backwards.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "all current; 'since 2024' on the homicide carve-in not confirmed",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -351,15 +401,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "Pulled primary KRS 218A.133 text: 2024 amendment adds drug-death manslaughter/reckless homicide cover, and warrant/lawful-search calls are NOT good faith. Secondary sources had this backwards."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current; 'since 2024' on the homicide carve-in not confirmed"
         }
       ]
     },
     "LA": {
       "state": "Louisiana",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "changed",
-      "note": "GS scope was flattened to possession only; RS 14:403.10 also covers paraphernalia, pretrial/probation/parole sanctions, civil forfeiture. Swapped findlaw for legis.la.gov primary. Medicaid copay unconfirmed (403).",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "all current; LA Health Hub app reviews paused since 5/2025 (org-facing anyway)",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -370,15 +425,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "GS scope was flattened to possession only; RS 14:403.10 also covers paraphernalia, pretrial/probation/parole sanctions, civil forfeiture. Swapped findlaw for legis.la.gov primary. Medicaid copay unconfirmed (403)."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current; LA Health Hub app reviews paused since 5/2025 (org-facing anyway)"
         }
       ]
     },
     "MA": {
       "state": "Massachusetts",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "verified",
-      "note": "All current. GS scope matches MGL c94C 34A, MassHealth \\ copay confirmed, You Can confirmed MA-only. CNP phone 617-624-5135 unverified, mass.gov 403s every fetcher.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "CNP is org-only + old phone not on page, dropped phone; GS adds caller/victim + no trafficking per 94C s34A",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -389,15 +449,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current. GS scope matches MGL c94C 34A, MassHealth \\ copay confirmed, You Can confirmed MA-only. CNP phone 617-624-5135 unverified, mass.gov 403s every fetcher."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "CNP is org-only + old phone not on page, dropped phone; GS adds caller/victim + no trafficking per 94C s34A"
         }
       ]
     },
     "MD": {
       "state": "Maryland",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "verified",
-      "note": "All current, no change. GS scope, \\ Medicaid copay, Staying Alive and NEXT Distro all confirmed against primary MD sources.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS adds probation/parole per CP 1-210(d). $1 medicaid copay only on old sources",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -408,15 +473,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current, no change. GS scope, \\ Medicaid copay, Staying Alive and NEXT Distro all confirmed against primary MD sources."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS adds probation/parole per CP 1-210(d). $1 medicaid copay only on old sources"
         }
       ]
     },
     "ME": {
       "state": "Maine",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "verified",
-      "note": "All current. GS scope verified against 17-A 1111-B. Watch item: LD 1646 would broaden it further but got Ought Not To Pass mar 2026, carried over.",
-      "reviews": 2,
+      "note": "all current; MAP lists 207-319-8284 and -8823, both official",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -427,15 +497,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current. GS scope verified against 17-A 1111-B. Watch item: LD 1646 would broaden it further but got Ought Not To Pass mar 2026, carried over."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current; MAP lists 207-319-8284 and -8823, both official"
         }
       ]
     },
     "MI": {
       "state": "Michigan",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "changed",
-      "note": "Renamed community program MDHHS Portal to its real name, Naloxone Direct Portal, per MDHHS mar 2026 release. Everything else verified (michigan.gov 403s WebFetch, loads fine in browser).",
-      "reviews": 2,
+      "note": "GS scope now says who's covered (MCL 333.7403(3)). michigan.gov bot-walled",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -446,6 +521,11 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "Renamed community program MDHHS Portal to its real name, Naloxone Direct Portal, per MDHHS mar 2026 release. Everything else verified (michigan.gov 403s WebFetch, loads fine in browser)."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS scope now says who's covered (MCL 333.7403(3)). michigan.gov bot-walled"
         }
       ]
     },
@@ -475,10 +555,10 @@
     },
     "MO": {
       "state": "Missouri",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "changed",
-      "note": "All programs/URLs alive. GS scope now says both parties covered and names the distribution/warrant limits (RSMo 195.205).",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "standing order runs 6/3/2026-6/2/2027; all current",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -489,15 +569,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "All programs/URLs alive. GS scope now says both parties covered and names the distribution/warrant limits (RSMo 195.205)."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "standing order runs 6/3/2026-6/2/2027; all current"
         }
       ]
     },
     "MS": {
       "state": "Mississippi",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "changed",
-      "note": "GS scope now names both parties + paraphernalia and the distribution/trafficking exclusion. Dropped a subagent's 5g figure, statute says under 4g and I could not reach a .gov copy. Standing order real but pharmacy participation spotty, kept that framing.",
-      "reviews": 2,
+      "note": "stand up ms locator shows 13 regions not 14, dropped the count",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -508,15 +593,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "GS scope now names both parties + paraphernalia and the distribution/trafficking exclusion. Dropped a subagent's 5g figure, statute says under 4g and I could not reach a .gov copy. Standing order real but pharmacy participation spotty, kept that framing."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "stand up ms locator shows 13 regions not 14, dropped the count"
         }
       ]
     },
     "MT": {
       "state": "Montana",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "changed",
-      "note": "Open Aid Alliance phone 406-543-6691 had zero corroboration anywhere; CDC NPIN + 3 other sources all say 406-543-4770, swapped it. Standing order renewed jan 2026. GS scope now says both parties (MCA 50-32-609).",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "OAA phone + savealife mail page confirmed in browser. 2026 standing order lapses 12/31, recheck jan",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -527,15 +617,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "Open Aid Alliance phone 406-543-6691 had zero corroboration anywhere; CDC NPIN + 3 other sources all say 406-543-4770, swapped it. Standing order renewed jan 2026. GS scope now says both parties (MCA 50-32-609)."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "OAA phone + savealife mail page confirmed in browser. 2026 standing order lapses 12/31, recheck jan"
         }
       ]
     },
     "NC": {
       "state": "North Carolina",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "changed",
-      "note": "All programs alive. GS scope now captures NC's strict all-conditions-or-nothing structure (call 911, give name, stay on scene, no active warrant) per GS 90-96.2.",
-      "reviews": 2,
+      "note": "GS: 90-96.2 has no stay-on-scene rule, it's first-caller + name; statute source pdf->html",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -546,15 +641,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "All programs alive. GS scope now captures NC's strict all-conditions-or-nothing structure (call 911, give name, stay on scene, no active warrant) per GS 90-96.2."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS: 90-96.2 has no stay-on-scene rule, it's first-caller + name; statute source pdf->html"
         }
       ]
     },
     "ND": {
       "state": "North Dakota",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "verified",
-      "note": "All current, no change. Legal status, 3-people-per-incident GS cap, Medicaid standing order, and both program contacts confirmed against primary sources.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS: no 3-person cap in current 19-03.1-23.4, rewrote from statute; added ndlegis source",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -565,15 +665,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current, no change. Legal status, 3-people-per-incident GS cap, Medicaid standing order, and both program contacts confirmed against primary sources."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS: no 3-person cap in current 19-03.1-23.4, rewrote from statute; added ndlegis source"
         }
       ]
     },
     "NE": {
       "state": "Nebraska",
-      "last_reviewed": "2026-08-02",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "changed",
-      "note": "Was underselling access: StopODNE gets you free NARCAN at participating pharmacies (SOR grant funded), not just an OTC-price locator. Updated cost + quick-get. Note stopodne.com's own contact footer has a placeholder fake phone.",
-      "reviews": 2,
+      "note": "GS adds stay + cooperate per 28-472(1)(d)",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -584,15 +689,20 @@
           "date": "2026-08-02",
           "outcome": "changed",
           "note": "Was underselling access: StopODNE gets you free NARCAN at participating pharmacies (SOR grant funded), not just an OTC-price locator. Updated cost + quick-get. Note stopodne.com's own contact footer has a placeholder fake phone."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS adds stay + cooperate per 28-472(1)(d)"
         }
       ]
     },
     "NH": {
       "state": "New Hampshire",
-      "last_reviewed": "2026-08-02",
-      "last_outcome": "verified",
-      "note": "All current, no change. Caller-vs-self-reporter asymmetry in RSA 318-B:28-b double-checked against statute text and is exactly right.",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "changed",
+      "note": "GS: RSA 318-B:28-b II and III both bar arrest/prosecution since 2021, self-reporter isn't defense-only",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -603,15 +713,20 @@
           "date": "2026-08-02",
           "outcome": "verified",
           "note": "All current, no change. Caller-vs-self-reporter asymmetry in RSA 318-B:28-b double-checked against statute text and is exactly right."
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "changed",
+          "note": "GS: RSA 318-B:28-b II and III both bar arrest/prosecution since 2021, self-reporter isn't defense-only"
         }
       ]
     },
     "NJ": {
       "state": "New Jersey",
-      "last_reviewed": "2026-09-08",
+      "last_reviewed": "2026-11-08",
       "last_outcome": "verified",
-      "note": "Naloxone365 alive (free, anonymous, 14+), NJHRC hotline + site current, all sources 200",
-      "reviews": 2,
+      "note": "all current",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -622,15 +737,20 @@
           "date": "2026-09-08",
           "outcome": "verified",
           "note": "Naloxone365 alive (free, anonymous, 14+), NJHRC hotline + site current, all sources 200"
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current"
         }
       ]
     },
     "NM": {
       "state": "New Mexico",
-      "last_reviewed": "2026-09-08",
-      "last_outcome": "changed",
-      "note": "added NMDOH free mail order (nmharmreduction.org) as mail program; rewrote quick-path off CORE-only; standing order confirmed",
-      "reviews": 2,
+      "last_reviewed": "2026-11-08",
+      "last_outcome": "verified",
+      "note": "all current; CORE page only mentions training, not kits",
+      "reviews": 3,
       "history": [
         {
           "date": "2026-07-18",
@@ -641,6 +761,11 @@
           "date": "2026-09-08",
           "outcome": "changed",
           "note": "added NMDOH free mail order (nmharmreduction.org) as mail program; rewrote quick-path off CORE-only; standing order confirmed"
+        },
+        {
+          "date": "2026-11-08",
+          "outcome": "verified",
+          "note": "all current; CORE page only mentions training, not kits"
         }
       ]
     },

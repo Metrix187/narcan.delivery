@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T21:40:40.824Z",
+  "generated_at": "2026-11-08T05:12:59.077Z",
   "source": "https://narcan.delivery",
   "license": "Public domain (CC0). Attribution appreciated.",
   "count": 50,
@@ -7,7 +7,7 @@
     {
       "state": "Alabama",
       "abbreviation": "AL",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Prescription/Standing Order/OTC",
         "good_samaritan_overdose_immunity": {
@@ -63,7 +63,7 @@
     {
       "state": "Alaska",
       "abbreviation": "AK",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist Independent Prescribing",
         "good_samaritan_overdose_immunity": {
@@ -113,7 +113,7 @@
     {
       "state": "Arizona",
       "abbreviation": "AZ",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -208,7 +208,7 @@
     {
       "state": "California",
       "abbreviation": "CA",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-09-12",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist Furnishing Protocol",
         "good_samaritan_overdose_immunity": {
@@ -263,7 +263,7 @@
     {
       "state": "Colorado",
       "abbreviation": "CO",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -280,8 +280,8 @@
         "community_programs": [
           {
             "name": "Denver Dept. of Public Health & Environment",
-            "services": "Free naloxone by mail order, at libraries, the Wellness Winnie mobile unit, and syringe access sites",
-            "website": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Strategies/Overdose-Prevention/Overdose-Prevention-Resources"
+            "services": "Naloxone at Denver libraries, the Wellness Winnie mobile unit, and syringe access sites",
+            "website": "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Support/Behavioral-Health-Initiatives/Overdose-Prevention/Overdose-Prevention-Resources-Training"
           },
           {
             "name": "Harm Reduction Action Center",
@@ -317,7 +317,7 @@
         "https://colorado.public.law/statutes/crs_18-1-711",
         "https://colorado.public.law/statutes/crs_18-1-712",
         "https://cdphe.colorado.gov/overdose-prevention/naloxone-standing-orders",
-        "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Strategies/Overdose-Prevention/Overdose-Prevention-Resources",
+        "https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Public-Health-Environment/Community-Behavioral-Health/Behavioral-Health-Support/Behavioral-Health-Initiatives/Overdose-Prevention/Overdose-Prevention-Resources-Training",
         "https://www.harmreductionactioncenter.org",
         "https://www.denverhealth.org/news/2025/01/denver-health-introduces-naloxone-vending-machine",
         "https://naloxoneproject.com",
@@ -373,12 +373,12 @@
     {
       "state": "Delaware",
       "abbreviation": "DE",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Standing Order / Community Access",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects caller + victim from arrest/prosecution for drug possession (felonies excluded)."
+          "scope": "Protects caller + victim from arrest/prosecution for possession, paraphernalia, and other lower-level drug crimes (not class A, B, or C felonies). Caller must report in good faith and tell medics what was taken."
         }
       },
       "access_channels": {
@@ -415,12 +415,12 @@
     {
       "state": "Florida",
       "abbreviation": "FL",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects caller & victim from possession/paraphernalia arrest; not distribution or overdose-death charges."
+          "scope": "Protects caller & victim from possession/paraphernalia arrest, plus probation and parole violations; not possession over 10 grams of certain drugs, distribution, or overdose-death charges."
         }
       },
       "access_channels": {
@@ -457,7 +457,7 @@
     {
       "state": "Georgia",
       "abbreviation": "GA",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide Standing Order",
         "good_samaritan_overdose_immunity": {
@@ -479,7 +479,8 @@
           },
           {
             "name": "Georgia Harm Reduction Coalition",
-            "services": "Community outreach",
+            "services": "Free Narcan shipped to any Georgia county, plus community outreach",
+            "website": "https://georgiaharmreduction.org",
             "phone": "404-817-9994"
           }
         ],
@@ -501,18 +502,18 @@
         "https://legalclarity.org/understanding-georgias-good-samaritan-law-and-its-protections/",
         "https://www.atlantanewsfirst.com/2026/06/10/free-naloxone-map-across-state-unveiled-new-247-narcan-kiosk-opens-atlanta/",
         "https://georgiaoverdoseprevention.org/request-naloxone-kit/",
-        "https://ganaloxone.com"
+        "https://georgiaharmreduction.org"
       ]
     },
     {
       "state": "Hawaii",
       "abbreviation": "HI",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescriptive authority",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects caller/victim from drug/paraphernalia charges."
+          "scope": "Protects caller/victim from drug/paraphernalia possession charges and probation/parole violations. Selling and other charges are not covered."
         }
       },
       "access_channels": {
@@ -569,7 +570,7 @@
     {
       "state": "Idaho",
       "abbreviation": "ID",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescriptive authority",
         "good_samaritan_overdose_immunity": {
@@ -617,12 +618,12 @@
     {
       "state": "Illinois",
       "abbreviation": "IL",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Real arrest immunity, not just a trial defense -- protects caller & victim for possession, paraphernalia, and small-quantity delivery."
+          "scope": "Real arrest immunity, not just a trial defense -- protects caller & victim for possession, paraphernalia, and small-quantity delivery. Not if police already had cause to detain or search you before the call."
         }
       },
       "access_channels": {
@@ -636,7 +637,7 @@
             "name": "Chicago Recovery Alliance",
             "services": "Free naloxone and outreach",
             "website": "https://anypositivechange.org",
-            "phone": "312-953-3797"
+            "phone": "773-367-3771"
           }
         ],
         "mail_based_programs": [
@@ -669,7 +670,7 @@
     {
       "state": "Indiana",
       "abbreviation": "IN",
-      "last_updated": "2026-08-01",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Aaron's Law / standing order",
         "good_samaritan_overdose_immunity": {
@@ -762,7 +763,7 @@
     {
       "state": "Kansas",
       "abbreviation": "KS",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide pharmacy protocol",
         "good_samaritan_overdose_immunity": {
@@ -810,7 +811,7 @@
     {
       "state": "Kentucky",
       "abbreviation": "KY",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacy protocol",
         "good_samaritan_overdose_immunity": {
@@ -852,7 +853,7 @@
     {
       "state": "Louisiana",
       "abbreviation": "LA",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -895,7 +896,7 @@
     {
       "state": "Maine",
       "abbreviation": "ME",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -939,12 +940,12 @@
     {
       "state": "Maryland",
       "abbreviation": "MD",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects caller/victim from possession/paraphernalia charges; felonies excluded."
+          "scope": "Protects caller/victim from possession/paraphernalia charges and probation/parole violations; felonies excluded."
         }
       },
       "access_channels": {
@@ -981,12 +982,12 @@
     {
       "state": "Massachusetts",
       "abbreviation": "MA",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects from possession charges plus probation, pretrial, and parole violations."
+          "scope": "Protects caller and victim from possession charges plus probation, pretrial, and parole violations; not trafficking or distribution."
         }
       },
       "access_channels": {
@@ -998,9 +999,8 @@
         "community_programs": [
           {
             "name": "Community Naloxone Program",
-            "services": "Free distribution",
-            "website": "https://www.mass.gov/info-details/community-naloxone-program-cnp",
-            "phone": "617-624-5135"
+            "services": "Free state naloxone for community groups to hand out (not for individual orders)",
+            "website": "https://www.mass.gov/info-details/community-naloxone-program-cnp"
           }
         ],
         "mail_based_programs": [
@@ -1023,18 +1023,19 @@
       "sources": [
         "https://www.mass.gov/info-details/where-to-get-naloxone-in-massachusetts",
         "https://www.mass.gov/info-details/community-naloxone-program-cnp",
-        "https://nextdistro.org/massachusetts"
+        "https://nextdistro.org/massachusetts",
+        "https://malegislature.gov/Laws/GeneralLaws/PartI/TitleXV/Chapter94C/Section34A"
       ]
     },
     {
       "state": "Michigan",
       "abbreviation": "MI",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Limited to personal use amounts."
+          "scope": "Protects caller and victim from drug possession charges, personal-use amounts only."
         }
       },
       "access_channels": {
@@ -1120,7 +1121,7 @@
     {
       "state": "Mississippi",
       "abbreviation": "MS",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Standing order (voluntary pharmacy participation)",
         "good_samaritan_overdose_immunity": {
@@ -1143,7 +1144,7 @@
           },
           {
             "name": "Stand Up Mississippi",
-            "services": "Free naloxone locator via 14 regional mental health centers",
+            "services": "Free naloxone locator via regional mental health centers",
             "website": "https://standupms.org/naloxone/",
             "phone": "601-359-1288"
           }
@@ -1161,7 +1162,7 @@
         "barriers_and_workarounds": "Pharmacy refusal common; mail order reliable."
       },
       "sources": [
-        "https://msdh.ms.gov/page/44,0,382,61.html",
+        "https://msdh.ms.gov/programs-services/health-and-safety/opioids-substance-abuse/what-to-do-in-case-of-an-overdose",
         "https://msharmreduction.org/",
         "https://nextdistro.org/mississippi",
         "https://odfree.org/prevention/",
@@ -1171,7 +1172,7 @@
     {
       "state": "Missouri",
       "abbreviation": "MO",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1221,7 +1222,7 @@
     {
       "state": "Montana",
       "abbreviation": "MT",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1265,12 +1266,12 @@
     {
       "state": "Nebraska",
       "abbreviation": "NE",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Immunity for caller and victim from drug-possession charges (narrow: only those offenses, not homicide or others)."
+          "scope": "Immunity for caller and victim from drug-possession charges (narrow: only those offenses, not homicide or others). Caller must stay on scene and cooperate."
         }
       },
       "access_channels": {
@@ -1351,12 +1352,12 @@
     {
       "state": "New Hampshire",
       "abbreviation": "NH",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Caller reporting for another is immune; self-reporter gets only a legal defense."
+          "scope": "Protects caller and person overdosing from arrest and charges for drug possession found because of the call. Possession only, not selling."
         }
       },
       "access_channels": {
@@ -1395,7 +1396,7 @@
     {
       "state": "New Jersey",
       "abbreviation": "NJ",
-      "last_updated": "2026-09-08",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Standing order / Naloxone365",
         "good_samaritan_overdose_immunity": {
@@ -1438,7 +1439,7 @@
     {
       "state": "New Mexico",
       "abbreviation": "NM",
-      "last_updated": "2026-09-08",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
@@ -1528,12 +1529,12 @@
     {
       "state": "North Carolina",
       "abbreviation": "NC",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Statewide standing order",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects caller and person overdosing, but only if they call 911, give their name, and stay on scene. Miss any one condition and protection is lost. Does not apply during an active warrant search."
+          "scope": "Protects caller and person overdosing from small-amount possession and paraphernalia charges, but only if the caller believes they're the first to call 911 and gives their name. Does not apply during a warrant arrest or search."
         }
       },
       "access_channels": {
@@ -1567,18 +1568,18 @@
         "https://www.nchrc.org",
         "https://nextdistro.org/ncgate",
         "https://www.ncdhhs.gov/about/department-initiatives/overdose-epidemic/syringe-and-naloxone-access",
-        "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_90/GS_90-96.2.pdf"
+        "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_90/GS_90-96.2.html"
       ]
     },
     {
       "state": "North Dakota",
       "abbreviation": "ND",
-      "last_updated": "2026-08-02",
+      "last_updated": "2026-11-08",
       "legal_framework": {
         "naloxone_legal_status": "Pharmacist prescriptive authority",
         "good_samaritan_overdose_immunity": {
           "exists": true,
-          "scope": "Protects up to 3 people/incident."
+          "scope": "Protects caller and person overdosing from drug possession, paraphernalia, and sharing charges, if the caller stays on scene until help arrives and cooperates. Does not apply during a warrant arrest or search."
         }
       },
       "access_channels": {
@@ -1614,7 +1615,8 @@
       },
       "sources": [
         "https://www.hhs.nd.gov/opioids",
-        "https://nextdistro.org/northdakota"
+        "https://nextdistro.org/northdakota",
+        "https://ndlegis.gov/cencode/t19c03-1.pdf"
       ]
     },
     {
@@ -2094,7 +2096,7 @@
           {
             "name": "Vermont Dept. of Health",
             "services": "Free distribution",
-            "website": "https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention"
+            "website": "https://www.healthvermont.gov/alcohol-drugs/overdose-response/respond-overdose"
           }
         ],
         "mail_based_programs": [
@@ -2115,7 +2117,7 @@
         "barriers_and_workarounds": "Strong laws aid access."
       },
       "sources": [
-        "https://www.healthvermont.gov/emergency/injury-prevention/opioid-overdose-prevention",
+        "https://www.healthvermont.gov/alcohol-drugs/overdose-response/respond-overdose",
         "https://www.uvm.edu/extension/community-first-responder-program",
         "https://vadic.vthelplink.org/overdose-prevention-kit.html",
         "https://legislature.vermont.gov/statutes/section/18/084/04254"
@@ -2153,7 +2155,7 @@
           {
             "name": "Virginia Harm Reduction Coalition",
             "services": "Naloxone vending boxes and outreach distribution (Roanoke, Martinsville, Henry County)",
-            "website": "https://www.carrynaloxone.org/",
+            "website": "https://therc.vdh.virginia.gov/search/754392f9-c924-5e4d-a6d8-70232064e385",
             "phone": "540-541-2022"
           }
         ],

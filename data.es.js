@@ -50,7 +50,7 @@ window.NALOXONE_ES = {
   },
   "FL": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Inmunidad civil para quienes administran naloxona de buena fe.",
+    "gs_scope": "Protege a quien llama y a la víctima del arresto por posesión o parafernalia, y de violaciones de libertad condicional; no cubre posesión de más de 10 gramos de ciertas drogas, distribución ni cargos por muerte por sobredosis.",
     "pharmacy_mechanism": "Los farmacéuticos la entregan a cualquiera que la pida.",
     "medicaid_notes": "Cubierta.",
     "typical_cost": "Sin receta, alrededor de $45 a $50",
@@ -80,7 +80,7 @@ window.NALOXONE_ES = {
   },
   "IL": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Inmunidad ante cargos por posesión para quien llama y la víctima, pero con límites estrictos de cantidad (por ejemplo, menos de ~3g de heroína); no cubre cantidades mayores.",
+    "gs_scope": "Inmunidad ante cargos por posesión para quien llama y la víctima, pero con límites estrictos de cantidad (por ejemplo, menos de ~3g de heroína); no cubre cantidades mayores. Tampoco aplica si la policía ya tenía motivos para detenerte o registrarte antes de la llamada.",
     "pharmacy_mechanism": "Cualquier farmacia puede entregarla bajo la orden permanente estatal del IDPH; Narcan sin receta también disponible.",
     "medicaid_notes": "Cubierta por Medicaid de Illinois.",
     "typical_cost": "Sin receta ~$45; gratis mediante sitios DOPP/OEND y por correo",
@@ -110,17 +110,17 @@ window.NALOXONE_ES = {
   },
   "GA": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Protege de responsabilidad legal a quien administra naloxona.",
+    "gs_scope": "Protege a quien llama y a la víctima de cargos por posesión de pequeñas cantidades y parafernalia; no cubre el tráfico.",
     "pharmacy_mechanism": "Cualquier farmacia puede entregarla.",
     "medicaid_notes": "Cubierta.",
     "typical_cost": "Sin receta, alrededor de $45",
     "how": "Solicita un kit a Georgia Overdose Prevention, o pídeselo a un farmacéutico.",
     "barriers": "El acceso en zonas rurales es limitado, pero los programas por correo llegan a todas partes.",
-    "community_services": ["Kits gratis a pedido", "Alcance comunitario"]
+    "community_services": ["Kits gratis a pedido", "Narcan gratis enviado a cualquier condado de Georgia, más alcance comunitario"]
   },
   "NC": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Protege a quien llama y a la persona con la sobredosis de cargos por posesión de pequeñas cantidades; inmunidad civil por administrar naloxona.",
+    "gs_scope": "Protege a quien llama y a la persona con la sobredosis de cargos por posesión de pequeñas cantidades y parafernalia, pero solo si quien llama cree ser el primero en llamar al 911 y da su nombre. No aplica durante un arresto o registro con orden judicial.",
     "pharmacy_mechanism": "La mayoría de las farmacias minoristas la entregan sin receta bajo la orden permanente estatal; cubierta por la mayoría de los seguros.",
     "medicaid_notes": "Cubierta por Medicaid de NC.",
     "typical_cost": "Sin receta ~$45; gratis mediante NCHRC y programas de jeringas (SSP)",
@@ -160,13 +160,13 @@ window.NALOXONE_ES = {
   },
   "MA": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Protege a quien llama y a la víctima de cargos por posesión y de violaciones relacionadas de libertad condicional o vigilada.",
+    "gs_scope": "Protege a quien llama y a la víctima de cargos por posesión y de violaciones relacionadas de libertad condicional o vigilada; no cubre el tráfico ni la distribución.",
     "pharmacy_mechanism": "Todas las farmacias minoristas tienen naloxona bajo la orden permanente estatal; también disponible sin receta.",
     "medicaid_notes": "MassHealth la cubre con copago de $0.",
     "typical_cost": "Sin receta ~$45; gratis por correo y mediante sitios del CNP",
     "how": "El centro \"Where to get Naloxone\" de Mass.gov cubre todas las rutas: kits gratis por correo para residentes de MA (financiados por el DPH), sitios del Community Naloxone Program (CNP) que distribuyen kits gratis en todo el estado, y el localizador de programas de reducción de daños.",
     "barriers": "Copagos de seguros privados en las farmacias; los sitios del CNP y el programa gratuito de correo evitan todo costo.",
-    "community_services": ["Distribución gratuita"]
+    "community_services": ["Naloxona gratis del estado para que grupos comunitarios la repartan (no para pedidos individuales)"]
   },
   "VA": {
     "naloxone_legal_status": "Orden permanente estatal",
@@ -190,7 +190,7 @@ window.NALOXONE_ES = {
   },
   "MD": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Protege a quien llama y a la persona con la sobredosis de cargos por posesión o parafernalia; ayudar de buena fe también está protegido de responsabilidad civil.",
+    "gs_scope": "Protege a quien llama y a la persona con la sobredosis de cargos por posesión o parafernalia y de violaciones de libertad condicional; no cubre delitos graves.",
     "pharmacy_mechanism": "Todos los farmacéuticos con licencia de Maryland pueden entregar naloxona y los suministros para administrarla a cualquier persona bajo la orden permanente estatal.",
     "medicaid_notes": "Cubierta por Medicaid de Maryland.",
     "typical_cost": "Sin receta ~$45; gratis mediante los Overdose Response Programs",
@@ -310,7 +310,7 @@ window.NALOXONE_ES = {
   },
   "NE": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Débil. Es solo una protección probatoria (la evidencia de la llamada no puede usarse), no una verdadera inmunidad ante el arresto o el enjuiciamiento.",
+    "gs_scope": "Inmunidad para quien llama y la víctima ante cargos por posesión de drogas (limitada: solo esos delitos, no homicidio ni otros). Quien llama debe quedarse en el lugar y cooperar.",
     "pharmacy_mechanism": "Las farmacias participantes entregan kits de Narcan gratis, sin receta, a través del programa de DHHS/Nebraska Pharmacists Association (formulario corto en la farmacia; residentes de NE).",
     "medicaid_notes": "Cubierta por Medicaid de Nebraska.",
     "typical_cost": "Gratis en más de 60 farmacias participantes; sin receta ~$45 en otros lugares",
@@ -370,7 +370,7 @@ window.NALOXONE_ES = {
   },
   "DE": {
     "naloxone_legal_status": "Orden permanente y acceso comunitario",
-    "gs_scope": "Protege a las personas comunes y a los oficiales de seguridad pública que responden de buena fe.",
+    "gs_scope": "Protege a quien llama y a la víctima del arresto o el enjuiciamiento por posesión, parafernalia y otros delitos de drogas menores (no delitos graves de clase A, B o C). Quien llama debe reportar de buena fe y decir al personal médico qué se consumió.",
     "pharmacy_mechanism": "Cualquier farmacia puede entregarla bajo la orden permanente.",
     "medicaid_notes": "Cubierta sin copago.",
     "typical_cost": "Sin receta, alrededor de $45",
@@ -380,7 +380,7 @@ window.NALOXONE_ES = {
   },
   "HI": {
     "naloxone_legal_status": "Autoridad de prescripción del farmacéutico",
-    "gs_scope": "Protege tanto a quien llama como a la persona con la sobredosis de cargos por posesión de drogas y parafernalia cuando se busca ayuda de buena fe.",
+    "gs_scope": "Protege tanto a quien llama como a la persona con la sobredosis de cargos por posesión de drogas y parafernalia, y de violaciones de libertad condicional, cuando se busca ayuda de buena fe. No cubre la venta ni otros cargos.",
     "pharmacy_mechanism": "Los farmacéuticos pueden recetar y entregar directamente; el Narcan sin receta aprobado por la FDA también se vende sin necesidad de ninguna interacción.",
     "medicaid_notes": "Cubierta por Med-QUEST.",
     "typical_cost": "Sin receta ~$45 (caja de 2 dosis); gratis mediante HHHRC y máquinas expendedoras",
@@ -460,7 +460,7 @@ window.NALOXONE_ES = {
   },
   "NH": {
     "naloxone_legal_status": "Orden permanente estatal",
-    "gs_scope": "Protege del arresto o el enjuiciamiento por posesión cuando se busca ayuda de buena fe.",
+    "gs_scope": "Protege a quien llama y a la persona con la sobredosis del arresto o el enjuiciamiento por posesión de drogas encontradas a raíz de la llamada. Solo posesión, no venta.",
     "pharmacy_mechanism": "Las farmacias la entregan bajo la orden permanente; disponible sin receta.",
     "medicaid_notes": "Cubierta por Medicaid de NH.",
     "typical_cost": "Sin receta ~$45; gratis mediante los Doorway y los programas de jeringas",
@@ -470,7 +470,7 @@ window.NALOXONE_ES = {
   },
   "ND": {
     "naloxone_legal_status": "Autoridad de prescripción del farmacéutico",
-    "gs_scope": "Protege hasta a tres personas por incidente de sobredosis de cargos por posesión si se quedan y cooperan.",
+    "gs_scope": "Protege a quien llama y a la persona con la sobredosis de cargos por posesión, parafernalia y por compartir drogas, si quien llama se queda hasta que llegue la ayuda y coopera. No aplica durante un arresto o registro con orden judicial.",
     "pharmacy_mechanism": "Los farmacéuticos la entregan sin receta; la orden permanente de HHS la cubre sin costo para los miembros de Medicaid.",
     "medicaid_notes": "Una orden permanente hace que la naloxona cueste $0 para los miembros de Medicaid de ND en las farmacias inscritas.",
     "typical_cost": "Sin receta ~$45; kits gratis de ND HHS",
